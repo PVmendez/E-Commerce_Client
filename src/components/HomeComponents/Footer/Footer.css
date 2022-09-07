@@ -1,0 +1,24 @@
+.footerDiv {
+  background-color: #3e3735;
+}
+.footerRow {
+  position: relative;
+  color: whitesmoke;
+}
+
+.footerDiv::after {
+  width: 100%;
+  content: "";
+  background: url("./bd_img.webp") repeat-x;
+  height: 14px;
+  top: -7px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.footerIcon {
+  color: #fe6787;
+  cursor: pointer;
+}

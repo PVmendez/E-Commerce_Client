@@ -1,0 +1,26 @@
+.carousel-item {
+  object-fit: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.carouselImgDiv {
+  object-fit: cover;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-img {
+  min-height: 100%;
+}
+
+.carousel.slide {
+  padding: 0;
+}
+
+.carouselText {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: auto;
+}
