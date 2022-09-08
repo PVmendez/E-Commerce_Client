@@ -25,7 +25,7 @@ export default function Footer() {
       </div>
       <div className="footerDivider col-12"></div>
       <div className="logo d-flex justify-content-center mt-5">
-        <img src="./img/logo.png" alt="" />
+        <img src="../img/logo.png" alt="" />
       </div>
     </div>
   );
