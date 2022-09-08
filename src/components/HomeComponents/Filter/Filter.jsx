@@ -48,9 +48,6 @@ export default function Filter() {
         <img className="img-filter" src="../img/Bombon_9.jpg" alt="bombon9" />
       </div>
       <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2">
-        <img className="img-filter" src="../img/Bombon_9.jpg" alt="bombon10" />
-      </div>
-      <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2">
         <img className="img-filter" src="../img/Bombon_11.jpg" alt="bombon11" />
       </div>
       <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2">
