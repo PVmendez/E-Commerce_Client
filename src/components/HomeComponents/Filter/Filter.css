@@ -1,0 +1,30 @@
+.div-filter {
+  text-align: center;
+  margin-top: 6em;
+}
+
+.img-filter {
+  width: 200px;
+  height: 200px;
+}
+.title-filter {
+  color: #6c4a00;
+  font-weight: 800;
+  font-size: 2.5em;
+}
+.p-filter {
+  font-style: italic;
+  font-weight: 500;
+}
+.button-filter {
+  border: 1px solid #6c4a00;
+  margin-left: 5px;
+  font-size: small;
+  font-weight: 200;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 0.2%;
+  padding-bottom: 0.2%;
+  color: #6c4a00;
+  background-color: white;
+}
