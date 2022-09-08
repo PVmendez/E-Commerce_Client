@@ -1,0 +1,75 @@
+.cartRow {
+  justify-content: center;
+}
+
+.resumenCol {
+  border: 1px solid #6c4a00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ead5ad;
+}
+
+.titulosPedido {
+  background-color: #6c4a00;
+  height: 7vh;
+}
+
+.precioPedido {
+  background-color: #6c4a00;
+  height: 7vh;
+}
+
+.text-clear {
+  color: #ead5ad;
+  font-style: italic;
+  font-weight: 500;
+  font-family: "Vollkorn", serif;
+}
+
+.productoPedido {
+  height: 10vh;
+  object-fit: contain;
+}
+
+.imagenPedido {
+  height: 70%;
+}
+
+.productoNombre {
+  height: 20%;
+  margin: 0;
+}
+
+.button-filter-cuadrado {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #6c4a00;
+  margin-left: 5px;
+  font-size: small;
+  font-weight: 200;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 0.2%;
+  padding-bottom: 0.2%;
+  color: #6c4a00;
+  background-color: white;
+}
+
+.pedidoCantidadImput {
+  width: 5vw;
+  border: 1px solid #6c4a00;
+}
+
+.pedidoText {
+  display: flex;
+  justify-content: center;
+}
+
+.button-buy {
+  background-color: #ead5ad;
+}

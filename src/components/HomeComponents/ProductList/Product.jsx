@@ -2,16 +2,15 @@ import { Link } from "react-router-dom";
 
 export const Product = () => {
   return (
-    <div className="col-sm-3 col-md-6 col-lg-4">
+    <div className="col-sm-8 col-md-6 col-lg-4 my-2">
       <div className="card">
         <div className="card-body text-center">
           <img src="../img/Bombon_1.jpg" className="product-image" alt="" />
           <h5 className="card-title">
-            <b>Accessory</b>
+            <b>Bombon 1</b>
           </h5>
           <p className="card-text small">
-            With supporting text below as Link natural lead-in to additional
-            content.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quis reiciendis quidem aperiam omnis cum laudantium? Molestiae culpa animi a?
           </p>
           <p className="tags">Price $25.16</p>
           <Link

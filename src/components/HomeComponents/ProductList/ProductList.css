@@ -1,7 +1,3 @@
-.btn{
-	font-family: 'Kanit',sans-serif;
-}
-
 .btn-success{
 	background-color: #c0aa83;
 	border-color: #c0aa83;
@@ -12,6 +8,12 @@
 	background-color: #242424;
 	border-color: #242424;
 	color: #fff;
+}
+
+.masthead2{
+	background-image: url("../../../../public/img/Carousel_2.jpg");
+	background-position: 50% -26px;
+	background-color:#242424;
 }
 
 a.social-icon{
@@ -53,7 +55,6 @@ a.social-icon:hover{
 
 .main-menu{
 	color: #c0aa83;
-	font-family: 'Kanit',sans-serif;
 	font-size: 20px;
 	font-weight: 900;
 }
@@ -91,77 +92,10 @@ a.link-menu{
 	border-radius: 0.25rem !important;
 }
 
-.footer-title{
-	color: #fff;
-	font-family: 'Kanit',sans-serif;
-	font-size: 14px;
-	font-weight: 300;
-	line-height: 46px;
-}
-
-.copyright{
-	color:#c0aa83;
-	font-family: 'Kanit',sans-serif;
-	font-size: 14px;
-	font-weight: 300;
-}
-
-
-#mainNav{
-	-webkit-box-shadow: 0.05rem 1rem rgba(0, 0, 0, 0.15);
-	box-shadow: 0.05rem 1rem rgba(0, 0, 0, 0.15);
-	background-color: #fff;
-	-webkit-transition: background-color 0.2s ease; 
-	transition: background-color 0.2s ease; 
-}
-
-#mainNav .navbar-brand {
-
-	font-family: 'Kanit',sans-serif;
-	font-weight: 700;
-
-}
-
-#mainNav .navbar-nav .nav-item .nav-link {
-	color:#242424;
-	font-family: 'Kanit',sans-serif;
-	font-size: 0.9rem;
-	font-weight: 700;
-	padding:0.75rem 0;
-}
-
-.navbar-nav{
-	display: -webkit-box;
-	display: -ms-box;
-	display: flex;
-	-webkit-box-orient:vertical;
-	-webkit-box-direction:normal;
-	-ms-flex-direction:column;
-	flex-direction:column;
-	padding-left: 0;
-	margin-bottom: 0;
-	list-style: none;
-}
-
-.nav-item .nav-link{
-	padding-left: 0; 
-	padding-right: 0; 
-}
-
-#mainNav .navbar-nav .nav-item .nav-link:hover{
-  color: #c0aa83 !important;
-}
-
-li.nav-item {
-  display: inline;
-  padding: 10px;
-}
-
 .btn-light{
 	background-color: #c0aa83;
 	border-color: #c0aa83;
 	color: #fff;
-	font-family: 'Kanit',sans-serif;
 	font-size: 16px;
 	font-weight: 900;
 
@@ -171,7 +105,6 @@ li.nav-item {
 	background-color: #fff;
 	border-color: #c0aa83;
 	color: #c0aa83;
-	font-family: 'Kanit',sans-serif;
 	font-size: 16px;
 	font-weight: 900;
 
@@ -181,7 +114,6 @@ li.nav-item {
 	background-color: #242424;
 	border-color: #242424;
 	color: #fff;
-	font-family: 'Kanit',sans-serif;
 	font-size: 16px;
 	font-weight: 900;
 
@@ -191,7 +123,6 @@ li.nav-item {
 	background-color: #fff;
 	border-color: #242424;
 	color: #242424;
-	font-family: 'Kanit',sans-serif;
 	font-size: 16px;
 	font-weight: 900;
 
@@ -208,34 +139,29 @@ li.nav-item {
 
 .contact-heading{
 	color: #c0aa83;
-	font-family: 'Kanit',sans-serif;
 	font-size: 30px;
 	font-weight: 300;
 }
 
 .contact-info{
 	color: #fff;
-	font-family: 'Kanit',sans-serif;
 	font-size: 18px;
 }
 
 a.explore-link{
 	color: #fff;
-	font-family: 'Kanit',sans-serif;
 	font-size: 15px;
 	text-decoration: none;
 }
 
 a.explore-link:hover{
 	color: #c0aa83;
-	font-family: 'Kanit',sans-serif;
 	font-size: 15px;
 	text-decoration: none;
 }
 
 .logo-text-white{
 	color: #fff;
-	font-family: 'Kanit',sans-serif;
 	font-size: 16px;
 }
 
@@ -243,21 +169,17 @@ a.explore-link:hover{
 
 .blog-sidebar-title{
 	color: #242424;
-	font-family: 'Kanit',sans-serif;
 	font-size: 25px;
-	font-weight: 900;
 }
 
 .blog-sidebar-list{
 	color: #242424;
-	font-family: 'Kanit',sans-serif;
 	font-size: 16px;
 	font-weight: 900;
 }
 
 .blog-sidebar-text{
 	color: #242424;
-	font-family: 'Kanit',sans-serif;
 	font-size: 16px;
 	font-weight: 200;
 }
@@ -276,14 +198,12 @@ a.explore-link:hover{
 
 .tags{
 	color: #242424;
-	font-family: 'Kanit',sans-serif;
 	font-size: 20px;
 	font-weight: 200;
 }
 
 .tags{
 	color: #242424;
-	font-family: 'Kanit',sans-serif;
 	font-size: 20px;
 	font-weight: 200;
 }
@@ -300,25 +220,21 @@ a.explore-link:hover{
 
 .card-title{
 	color: #c0aa83;
-	font-family: 'Kanit',sans-serif;
 	font-size: 25px;
 	font-weight: 900;
 }
 
 .card-text{
-	font-family: 'Kanit',sans-serif;
 	font-size: 13px;
 }
 
 .price-tag{
 	color: #c0aa83;
-	font-family: 'Kanit',sans-serif;
 	font-size: 25px;
 	font-weight: 900;
 }
 
 .button-text{
-	font-family: 'Kanit',sans-serif;
 	font-size: 14px;
 	font-weight: 900;
 }
@@ -326,4 +242,22 @@ a.explore-link:hover{
 .product-image{
 	width: 200px;
 	height: 200px;
+}
+
+.masthead-title {
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .product-image{
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 200px) {
+  .product-image{
+    width: 100px;
+    height: 100px;
+  }
 }

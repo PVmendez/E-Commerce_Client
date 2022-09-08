@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Martel&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn:ital@1&display=swap");
 .carousel-item {
   object-fit: cover;
   height: 100vh;
@@ -44,12 +44,16 @@
 
 .carouselImgTitle {
   font-size: 8vw;
-  color: rgba(255, 174, 0, 0.8);
-  -webkit-text-stroke: 2px #3e3735;
-  font-weight: 500;
+  color: #6c4a00;
+  /* -webkit-text-stroke: 2px #3e3735; */
+  font-weight: 700;
+  text-shadow: 4px 1px 9px rgba(0, 0, 0, 0.44);
 }
 .carouselImgSub {
   font-size: 5vw;
   color: cornsilk;
+  text-shadow: 4px 1px 9px rgba(0, 0, 0, 0.44);
+  font-family: "Vollkorn", serif;
+  font-style: italic;
   /* -webkit-text-stroke: 2px rgba(255, 174, 0, 0.8); */
 }

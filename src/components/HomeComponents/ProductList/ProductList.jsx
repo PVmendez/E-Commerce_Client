@@ -1,49 +1,47 @@
 import "./ProductList.css";
 import { Product } from "./Product";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../../Footer/Footer";
+import { Link } from "react-router-dom";
 
 export const ProductList = () => {
   return (
     <>
+      <Navbar />
+      <header className="page-section masthead2">
+        <div className="container h-50">
+          <h1 className="mt-5 section-header text-white font-weight-bold">
+            PRODUCTOS
+          </h1>
+          <p className="main-menu text-white-75 font-weight-light mb-5">
+            <Link className="link-menu" to="/">
+              {"Home >"} <span className="masthead-title">Products</span>
+            </Link>
+          </p>
+        </div>
+      </header>
       <section className="page-section">
         <div className="container">
           <div className="row">
             <div className="col-lg-3 blog-form">
               <h2 className="blog-sidebar-title">
-                <b>Cart</b>
-              </h2>
-              <hr />
-              <p className="blog-sidebar-text">No products in the cart...</p>
-              <div>&nbsp;</div>
-              <div>&nbsp;</div>
-
-              <h2 className="blog-sidebar-title">
-                <b>Categories</b>
+                <b>CATEGORIAS</b>
               </h2>
               <hr />
 
               <p className="blog-sidebar-list">
                 <b>
-                  <span className="list-icon"> {">"} </span> Coffee
+                  <span className="list-icon"> {">"} </span> ...
                 </b>
               </p>
               <p className="blog-sidebar-list">
                 <b>
-                  <span className="list-icon"> {">"} </span> Green Coffee
+                  <span className="list-icon"> {">"} </span> ...
                 </b>
               </p>
               <p className="blog-sidebar-list">
                 <b>
-                  <span className="list-icon"> {">"} </span> Nigerian
-                </b>
-              </p>
-              <p className="blog-sidebar-list">
-                <b>
-                  <span className="list-icon"> {">"} </span> Roasted Coffee
-                </b>
-              </p>
-              <p className="blog-sidebar-list">
-                <b>
-                  <span className="list-icon"> {">"} </span> Uncategorized
+                  <span className="list-icon"> {">"} </span> ...
                 </b>
               </p>
 
@@ -51,7 +49,7 @@ export const ProductList = () => {
               <div>&nbsp;</div>
 
               <h2 className="blog-sidebar-title">
-                <b>Filter</b>
+                <b>FILTRO</b>
               </h2>
               <hr />
 
@@ -68,10 +66,10 @@ export const ProductList = () => {
                   </span>
                 </div>
               </div>
-
-              <p className="tags">Price $4 - $25</p>
+              <label for="customRange1" class="form-label">Chosen price range</label>
+              <input type="range" class="form-range" id="customRange1" />
               <button type="button" className="btn btn-dark btn-lg">
-                Filter
+                FILTRO
               </button>
 
               <div>&nbsp;</div>
@@ -86,11 +84,11 @@ export const ProductList = () => {
                 <b>#candy, #bean, #cup</b>
               </p>
               <p className="product-sidebar-list">
-                <b>#ethopian, #latte</b>
+                <b>#ethopian, #chocolatte</b>
               </p>
             </div>
 
-            <div className="col-lg-9" >
+            <div className="col-lg-9">
               <div className="row">
                 <div className="col">Showing all 9 results</div>
 
@@ -108,25 +106,13 @@ export const ProductList = () => {
               <div>&nbsp;</div>
               <div>&nbsp;</div>
 
-              <div className="row">
-                <Product />
-                <Product />
-                <Product />  
-              </div>
-
-              <div>&nbsp;</div>
-              <div>&nbsp;</div>
-
-              <div className="row">
+              <div className="row justify-content-center">
                 <Product />
                 <Product />
                 <Product />
-              </div>
-
-              <div>&nbsp;</div>
-              <div>&nbsp;</div>
-
-              <div className="row">
+                <Product />
+                <Product />
+                <Product />
                 <Product />
                 <Product />
                 <Product />
@@ -135,6 +121,7 @@ export const ProductList = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

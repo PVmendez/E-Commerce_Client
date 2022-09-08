@@ -25,13 +25,13 @@
 } */
 
 .footerIcon {
-  color: rgba(255, 174, 0, 0.8);
+  color: #b17a04;
   cursor: pointer;
 }
 
 .footerDivider {
   height: 1px;
-  background-color: rgba(255, 174, 0, 0.8);
+  background-color: #b17a04;
   border: none;
   width: 80%;
 }
