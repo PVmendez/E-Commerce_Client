@@ -1,0 +1,144 @@
+/*******************************/
+/********* General CSS *********/
+/*******************************/
+:root {
+  --main-color: rgba(108,73,0,0.8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Open Sans, Arial, sans-serif; 
+}
+
+body {
+  color: #797979;
+  background: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #414141;
+}
+
+a {
+  color: #313131;
+  transition: 0.3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: var(--main-color);
+  outline: none;
+  text-decoration: none;
+}
+
+/**********************************/
+/*********** Nav Bar CSS **********/
+/**********************************/
+.navbar {
+  position: relative;
+  transition: 0.5s;
+  z-index: 999;
+  margin: 0;
+}
+
+.navbar.nav-sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .navbar-brand {
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+}
+
+.navbar .navbar-brand img {
+  max-width: 100%;
+  height: 75px;
+}
+
+.navbar .dropdown-menu {
+  margin-top: 0;
+  border: 0;
+  border-radius: 0;
+  background: #000;
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    position: absolute;
+    width: 100%;
+    padding: 30px 60px;
+    background: transparent !important;
+    border-bottom: 1px dashed rgba(256, 256, 256, 0.2);
+    z-index: 9;
+  }
+
+  .navbar.nav-sticky {
+    padding: 10px 60px;
+    background: var(--main-color) !important;
+  }
+
+  .navbar .navbar-brand {
+    color: #000;
+  }
+
+  .navbar.nav-sticky .navbar-brand {
+    color: var(--main-color);
+  }
+
+  .navbar-light .navbar-nav .nav-link,
+  .navbar-light .navbar-nav .nav-link:focus {
+    padding: 10px 10px 8px 10px;
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .navbar-light.nav-sticky .navbar-nav .nav-link,
+  .navbar-light.nav-sticky .navbar-nav .nav-link:focus {
+    color: #000;
+  }
+
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar-light .navbar-nav .nav-link.active {
+    color: rgba(108,73,0,0.8);
+  }
+
+  .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
+  .navbar-light.nav-sticky .navbar-nav .nav-link.active {
+    color: var(--main-color);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar {
+    padding: 15px;
+    background: #ffffff !important;
+  }
+
+  .navbar .navbar-brand {
+    color: var(--main-color);
+  }
+
+  .navbar .navbar-nav {
+    margin-top: 15px;
+  }
+
+  .navbar a.nav-link {
+    padding: 5px;
+  }
+
+  .navbar .dropdown-menu {
+    box-shadow: none;
+  }
+}
