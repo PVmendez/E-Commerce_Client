@@ -32,7 +32,7 @@ export default function CarouselComponent() {
 
           <Carousel.Caption>
             <div className="carouselText">
-              <h3 className="carouselImgTitle">PASION</h3>
+              <h3 className="carouselImgTitle">PASIÓN</h3>
               <p className="carouselImgSub">por lo que hacemos</p>
             </div>
           </Carousel.Caption>
@@ -49,7 +49,7 @@ export default function CarouselComponent() {
           <Carousel.Caption>
             <div className="carouselText">
               <h3 className="carouselImgTitle">PERSONALIDAD</h3>
-              <p className="carouselImgSub">y caracter</p>
+              <p className="carouselImgSub">y carácter</p>
             </div>
           </Carousel.Caption>
         </Carousel.Item>
