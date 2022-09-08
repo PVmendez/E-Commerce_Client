@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn&display=swap");
+
+.aboutRow {
+  justify-content: center;
+}
+
+.aboutText {
+  font-family: "Vollkorn", serif;
+  font-style: italic;
+}
