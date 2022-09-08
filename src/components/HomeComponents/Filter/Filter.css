@@ -15,8 +15,8 @@
   height: 200px;
 }
 .title-filter {
-  color: #6c4a00;
-  font-weight: 800;
+  color: #b17a04;
+  font-weight: 700;
   font-size: 2.5em;
 }
 .p-filter {
@@ -25,7 +25,7 @@
   font-family: "Vollkorn", serif;
 }
 .button-filter {
-  border: 1px solid #6c4a00;
+  border: 1px solid #b17a04;
   margin-left: 5px;
   font-size: small;
   font-weight: 200;
@@ -33,6 +33,6 @@
   padding-right: 1%;
   padding-top: 0.2%;
   padding-bottom: 0.2%;
-  color: #6c4a00;
+  color: #b17a04;
   background-color: white;
 }
