@@ -5,11 +5,11 @@ export default function Footer() {
     <div className="row footerRow">
       <div className="footerDiv d-flex flex-column flex-md-row justify-content-center mt-5">
         <div className="col-12 col-md-3 col-xl-2 d-flex flex-column align-items-center my-md-5">
-          <h5 className="text-decoration-underline">Opening</h5>
+          <h5 className="footerTitle text-decoration-underline">Opening</h5>
           <p>We are open 24/7 so come visit us!</p>
         </div>
         <div className="col-12 col-md-3 col-xl-2 d-flex flex-column align-items-center my-md-5">
-          <h5 className="text-decoration-underline">Follow Us</h5>
+          <h5 className="footerTitle text-decoration-underline">Follow Us</h5>
           <p>
             <i className="fa-brands fa-twitter mx-2 fa-xl footerIcon"></i>
             <i className="fa-brands fa-pinterest mx-2 fa-xl footerIcon"></i>
@@ -18,7 +18,7 @@ export default function Footer() {
           </p>
         </div>
         <div className="col-12 col-md-3 col-xl-2 d-flex flex-column align-items-center my-md-5">
-          <h5 className="text-decoration-underline">Contact Us</h5>
+          <h5 className="footerTitle text-decoration-underline">Contact Us</h5>
           <p>Email: hacksweets@ha.com</p>
           <p>Phone: xxx-xxxx</p>
         </div>

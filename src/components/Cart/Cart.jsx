@@ -1,10 +1,13 @@
 import React from "react";
 import Footer from "../Footer/Footer";
 import "./Cart.css";
+import Navbar from "../Navbar/Navbar";
 
 export default function Cart() {
   return (
     <>
+      <Navbar />
+
       <div className="row cartRow mb-3">
         <div className="col-9 p-0">
           <div className="d-none d-md-flex titulosPedido align-items-center">

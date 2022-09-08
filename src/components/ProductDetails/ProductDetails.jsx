@@ -1,10 +1,12 @@
 import React from "react";
 import "./ProductDetails.css";
 import Footer from "../Footer/Footer";
+import Navbar from "../Navbar/Navbar";
 
 export default function ProductDetails() {
   return (
     <>
+      <Navbar />
       <div className="row mb-5">
         <div
           id="col1-productDetails"
