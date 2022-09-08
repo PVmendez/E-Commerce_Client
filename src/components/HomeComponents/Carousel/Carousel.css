@@ -1,7 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel&display=swap");
+
 .carousel-item {
   object-fit: cover;
   height: 100vh;
   position: relative;
+}
+
+.carouselRow {
+  width: 100%;
+  margin: 0;
 }
 
 .carouselImgDiv {
@@ -14,13 +21,35 @@
 
 .carousel-img {
   min-height: 100%;
+  object-fit: cover;
 }
 
 .carousel.slide {
   padding: 0;
 }
 
+.carousel-caption {
+  height: 100%;
+  display: flex;
+}
+
 .carouselText {
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
   margin: auto;
+}
+
+.filterScreen {
+  background-color: black;
+}
+
+.carouselImgTitle {
+  font-size: 8vw;
+  color: rgba(255, 174, 0, 0.8);
+  -webkit-text-stroke: 2px #3e3735;
+  font-family: "Martel", serif;
+}
+.carouselImgSub {
+  font-size: 5vw;
+  color: cornsilk;
+  /* -webkit-text-stroke: 2px rgba(255, 174, 0, 0.8); */
 }

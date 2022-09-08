@@ -4,7 +4,7 @@ import Carousel from "react-bootstrap/Carousel";
 
 export default function CarouselComponent() {
   return (
-    <div className="row">
+    <div className="row carouselRow">
       <Carousel>
         <Carousel.Item>
           <div className="carouselImgDiv">
@@ -16,8 +16,8 @@ export default function CarouselComponent() {
           </div>
           <Carousel.Caption>
             <div className="carouselText">
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3 className="carouselImgTitle">ARTE SUIZO</h3>
+              <p className="carouselImgSub">en chocolate</p>
             </div>
           </Carousel.Caption>
         </Carousel.Item>
@@ -32,13 +32,13 @@ export default function CarouselComponent() {
 
           <Carousel.Caption>
             <div className="carouselText">
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h3 className="carouselImgTitle">PASION</h3>
+              <p className="carouselImgSub">por lo que hacemos</p>
             </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <div className="carouselImgDiv">
+          <div className="carouselImgDiv filterScreen">
             <img
               className="carousel-img img-fluid d-block w-100"
               src="./img/Carousel_3.jpg"
@@ -48,10 +48,8 @@ export default function CarouselComponent() {
 
           <Carousel.Caption>
             <div className="carouselText">
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
+              <h3 className="carouselImgTitle">PERSONALIDAD</h3>
+              <p className="carouselImgSub">y caracter</p>
             </div>
           </Carousel.Caption>
         </Carousel.Item>

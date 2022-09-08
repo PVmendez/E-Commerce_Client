@@ -1,11 +1,17 @@
-.footerDiv {
-  background-color: #3e3735;
-}
+/* .footerDiv {
+  height: 50%;
+} */
 .footerRow {
-  position: relative;
+  background-color: #3e3735;
+  width: 100%;
+  margin: 0;
+  /* position: relative; */
   color: whitesmoke;
+  height: 60vh;
+  flex-direction: column;
+  align-items: center;
 }
-
+/* 
 .footerDiv::after {
   width: 100%;
   content: "";
@@ -16,9 +22,16 @@
   left: 0;
   right: 0;
   z-index: 3;
-}
+} */
 
 .footerIcon {
-  color: #fe6787;
+  color: rgba(255, 174, 0, 0.8);
   cursor: pointer;
+}
+
+.footerDivider {
+  height: 1px;
+  background-color: rgba(255, 174, 0, 0.8);
+  border: none;
+  width: 80%;
 }
