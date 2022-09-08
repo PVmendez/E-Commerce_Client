@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <div class="navbar navbar-expand-lg bg-light navbar-light ">
-    <div class="container-fluid">
+    <div class="container-fluid container-nav">
       <Link to="/" class="navbar-brand">
         <picture>
-          <img src="logo192.png" alt="" />
+          <img src="img/logo.png" alt="" />
         </picture>
       </Link>
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
