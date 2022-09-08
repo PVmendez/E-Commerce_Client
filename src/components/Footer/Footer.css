@@ -11,6 +11,10 @@
   flex-direction: column;
   align-items: center;
 }
+
+.footerTitle {
+  color: whitesmoke;
+}
 /* 
 .footerDiv::after {
   width: 100%;
