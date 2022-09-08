@@ -1,7 +1,7 @@
 import About from "./HomeComponents/About/About";
 import CarouselComponent from "./HomeComponents/Carousel/Carousel";
 import Filter from "./HomeComponents/Filter/Filter";
-import Footer from "./HomeComponents/Footer/Footer";
+import Footer from "./Footer/Footer";
 import Navbar from "./HomeComponents/Navbar/Navbar";
 import Popular from "./HomeComponents/Popular/Popular";
 
@@ -13,7 +13,6 @@ export default function Home() {
       <Navbar />
       <CarouselComponent />
       <Filter />
-      <Popular />
       <About />
       <Footer />
     </div>
