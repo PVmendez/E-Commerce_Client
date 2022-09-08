@@ -46,7 +46,7 @@
   font-size: 8vw;
   color: rgba(255, 174, 0, 0.8);
   -webkit-text-stroke: 2px #3e3735;
-  font-family: "Martel", serif;
+  font-weight: 500;
 }
 .carouselImgSub {
   font-size: 5vw;

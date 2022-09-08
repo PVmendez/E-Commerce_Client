@@ -3,7 +3,7 @@ import "./Filter.css";
 
 export default function Filter() {
   return (
-    <div className="row">
+    <div className="row filterRow">
       <div className="div-filter">
         <h2 className="title-filter">PRODUCTOS</h2>
         <div>

@@ -1,6 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn&display=swap");
+
 .div-filter {
   text-align: center;
   margin-top: 6em;
+}
+
+.filterRow {
+  width: 100%;
 }
 
 .img-filter {
@@ -15,6 +21,7 @@
 .p-filter {
   font-style: italic;
   font-weight: 500;
+  font-family: "Vollkorn", serif;
 }
 .button-filter {
   border: 1px solid #6c4a00;
