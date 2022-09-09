@@ -4,6 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import Header from "../Header";
 
 export default function ProductDetails() {
   const [product, setProduct] = useState({});
@@ -24,6 +25,7 @@ export default function ProductDetails() {
   return (
     <>
       <Navbar />
+      <Header product={product} />
       <div className="row mb-5">
         <div
           id="col1-productDetails"
@@ -43,9 +45,7 @@ export default function ProductDetails() {
           <p className="p-filter" id="p-productDetails">
             {product.description}
           </p>
-          <p>
-            <div> USD {product.price}</div>
-          </p>
+          <div> USD {product.price}</div>
           <div className="d-flex mt-4 align-items-center">
             <div
               style={{ fontSize: 35, fontWeight: 400 }}

@@ -1,9 +1,11 @@
 import "./Filter.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function Filter() {
   const [popularProducts, setPopularProducts] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getPopularProducts = async () => {
@@ -37,6 +39,9 @@ export default function Filter() {
           <div
             key={index}
             className="col-12 col-md-4 col-xl-3 d-flex justify-content-center p-0 flex-column flex-lg-row align-items-center"
+            onClick={() => {
+              navigate(`/products/${popularProduct.id}`);
+            }}
           >
             <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 d-flex justify-content-center">
               <img
