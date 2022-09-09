@@ -86,7 +86,7 @@ export const ProductList = () => {
             <div className="col-lg-9">
               <div className="row">
                 <div className="col">
-                  Showing all {productos && productos.length} results
+                  {productos && productos.length} resultados
                 </div>
               </div>
 

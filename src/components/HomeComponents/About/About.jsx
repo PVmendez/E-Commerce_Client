@@ -6,7 +6,7 @@ export default function About() {
     <>
       <div className="row aboutRow">
         <div className="col-8 d-flex justify-content-center flex-column align-items-center">
-          <h2 className="title-filter">SOBRE EL PROYECTO</h2>
+          <h2 className="title-filter mt-5">SOBRE EL PROYECTO</h2>
           <div>
             <i
               style={{ color: "#6c4a00" }}

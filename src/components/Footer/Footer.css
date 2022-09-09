@@ -1,11 +1,7 @@
-/* .footerDiv {
-  height: 50%;
-} */
 .footerRow {
   background-color: #3e3735;
   width: 100%;
   margin: 0;
-  /* position: relative; */
   color: whitesmoke;
   height: 60vh;
   flex-direction: column;
@@ -15,18 +11,6 @@
 .footerTitle {
   color: whitesmoke;
 }
-/* 
-.footerDiv::after {
-  width: 100%;
-  content: "";
-  background: url("./bd_img.webp") repeat-x;
-  height: 14px;
-  top: -7px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 3;
-} */
 
 .footerIcon {
   color: #b17a04;
