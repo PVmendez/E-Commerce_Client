@@ -14,7 +14,6 @@ export default function Filter() {
         baseURL: process.env.REACT_APP_API_BASE_URL,
         url: "/products/popular",
       });
-      console.log(result.data);
       setPopularProducts(result.data);
     };
     getPopularProducts();

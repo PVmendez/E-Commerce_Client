@@ -29,7 +29,6 @@ export const Register = () => {
         url: `/buyers/register`,
         data: { user: user },
       });
-      console.log(result.data);
       result.data ? navigate("/login") : navigate("/register");
     };
     getUserRegister();
@@ -37,7 +36,7 @@ export const Register = () => {
 
   return (
     <div className="register">
-      <div className="container">
+      <div className="container-register">
         <div className="cover">
           <div className="front">
             <div className="text">

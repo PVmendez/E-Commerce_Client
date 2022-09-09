@@ -16,7 +16,6 @@ export default function ProductDetails() {
         baseURL: process.env.REACT_APP_API_BASE_URL,
         url: `/products/${id}`,
       });
-      console.log(result.data);
       setProduct(result.data);
     };
     getProducts();

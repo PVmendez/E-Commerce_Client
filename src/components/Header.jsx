@@ -1,10 +1,8 @@
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Header({ product }) {
   const navigate = useNavigate();
-  const location = useLocation();
   let slug = "";
   if (product) {
     slug = product.slug;

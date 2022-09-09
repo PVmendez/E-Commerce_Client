@@ -2,7 +2,6 @@ import "./ProductList.css";
 import { Product } from "./Product";
 import Navbar from "../../Navbar/Navbar";
 import Footer from "../../Footer/Footer";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import React from "react";
 import { useState } from "react";
@@ -13,7 +12,6 @@ export const ProductList = () => {
   const [productos, setProductos] = useState();
   const [category, setCategory] = useState(0);
   useEffect(() => {
-    console.log(process.env.REACT_APP_API_BASE_URL);
     const getByCategory = async () => {
       const result = await axios({
         method: "get",
@@ -27,21 +25,8 @@ export const ProductList = () => {
 
   return (
     <>
-      {productos && console.log(productos)}
       <Navbar />
       <Header />
-      {/* <header className="page-section masthead2">
-        <div className="container h-50">
-          <h1 className="mt-5 section-header text-white font-weight-bold">
-            PRODUCTOS
-          </h1>
-          <p className="main-menu text-white-75 font-weight-light mb-5">
-            <Link className="link-menu" to="/">
-              {"Home >"} <span className="masthead-title">Products</span>
-            </Link>
-          </p>
-        </div>
-      </header> */}
       <section className="page-section">
         <div className="container">
           <div className="row">
@@ -57,9 +42,7 @@ export const ProductList = () => {
                   setCategory(0);
                 }}
               >
-                <p className="list-words">
-                  <span className="list-icon"> {">"} </span> Todos
-                </p>
+                <span className="list-words list-icon"> {">"} </span> Todos
               </p>
               <p
                 className="blog-sidebar-list"
@@ -67,9 +50,7 @@ export const ProductList = () => {
                   setCategory(1);
                 }}
               >
-                <p className="list-words">
-                  <span className="list-icon"> {">"} </span> Clasicos
-                </p>
+                <span className="list-words list-icon"> {">"} </span> Clasicos
               </p>
               <p
                 className="blog-sidebar-list"
@@ -77,9 +58,7 @@ export const ProductList = () => {
                   setCategory(2);
                 }}
               >
-                <p className="list-words">
-                  <span className="list-icon"> {">"} </span> Premium
-                </p>
+                <span className="list-words list-icon"> {">"} </span> Premium
               </p>
             </div>
 
@@ -92,8 +71,8 @@ export const ProductList = () => {
 
               <div className="row">
                 {productos &&
-                  productos.map((producto) => {
-                    return <Product producto={producto} />;
+                  productos.map((producto, index) => {
+                    return <Product key={index} producto={producto} />;
                   })}
               </div>
             </div>

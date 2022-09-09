@@ -29,8 +29,9 @@ export const Login = () => {
         url: `/buyers/login`,
         data: { user: user },
       });
-      console.log(result.data);
-      result.data ? navigate("/") : navigate("/register");
+      result ? 
+      navigate("/")
+      : navigate("/register")
     };
     getUserLogin();
 
@@ -45,7 +46,7 @@ export const Login = () => {
 
   return (
     <div className="login">
-      <div className="container">
+      <div className="container-login">
         <div className="cover">
           <div className="front">
             <div className="text">

@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 import "./ErrorPage.css"
 
 export const ErrorPage = () => {
   return (
     <>
+    <Navbar />
       <div className="main_body">
         <div className="center_body">
           <h1>404</h1>
@@ -14,6 +17,7 @@ export const ErrorPage = () => {
           </Link>
         </div>
       </div>
+    <Footer />
     </>
   );
 };
