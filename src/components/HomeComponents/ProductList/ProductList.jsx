@@ -87,9 +87,8 @@ export const ProductList = () => {
                   Showing all {productos && productos.length} results
                 </div>
               </div>
-              <div>&nbsp;</div>
 
-              <div className="row justify-content-center">
+              <div className="row">
                 {productos &&
                   productos.map((producto) => {
                     return <Product producto={producto} />;

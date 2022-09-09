@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 export const Product = ({ producto }) => {
   return (
-    <div className="col-sm-8 col-md-6 col-lg-4 my-2">
-      <div className="card card-body">
+    <div id="col-card" className=" col-sm-8 col-md-6 col-lg-3 my-2 mx-2 ">
+      <div className="card-body">
         <img
           src={`../img/${producto.image}`}
           className="product-image"

@@ -22,7 +22,7 @@ a.social-icon {
 a.social-icon:hover {
   color: #ebd7b5;
 }
-.card {
+#col-card {
   border: 1px solid #fff3db;
 }
 .social-icon {
