@@ -82,6 +82,7 @@ export const ProductList = () => {
 
               <div>&nbsp;</div>
               <div>&nbsp;</div>
+
             </div>
 
             <div className="col-lg-9">
