@@ -66,10 +66,10 @@ export const ProductList = () => {
                   </span>
                 </div>
               </div>
-              <label for="customRange1" class="form-label">
+              <label htmlFor="customRange1" className="form-label">
                 Chosen price range
               </label>
-              <input type="range" class="form-range" id="customRange1" />
+              <input type="range" className="form-range" id="customRange1" />
               <button type="button" className="btn btn-dark btn-lg">
                 FILTRO
               </button>

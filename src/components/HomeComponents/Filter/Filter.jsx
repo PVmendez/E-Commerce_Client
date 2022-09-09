@@ -1,7 +1,23 @@
-import React from "react";
 import "./Filter.css";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Filter() {
+  const [popularProducts, setPopularProducts] = useState(null);
+
+  useEffect(() => {
+    const getPopularProducts = async () => {
+      const result = await axios({
+        method: "GET",
+        url: "http://localhost:8000/products/popular",
+      });
+      console.log(result.data)
+      setPopularProducts(result.data);
+    };
+    getPopularProducts();
+    
+  }, []);
+
   return (
     <div className="row filterRow">
       <div className="div-filter">
