@@ -44,7 +44,7 @@ export default function ProductDetails() {
           <p className="p-filter" id="p-productDetails">
             {product.description}
           </p>
-          <div> USD {product.price}</div>
+          <div className="tags"> USD {product.price}</div>
           <div className="d-flex mt-4 align-items-center">
             <div
               style={{ fontSize: 35, fontWeight: 400 }}
@@ -65,7 +65,8 @@ export default function ProductDetails() {
           </div>
           <div>
             <button className="button-filter" id="button-productDetail">
-              ADD TO CART
+              <i className="fa fa-shopping-cart" aria-hidden="true"></i> Añadir
+              al carrito
             </button>
           </div>
         </div>

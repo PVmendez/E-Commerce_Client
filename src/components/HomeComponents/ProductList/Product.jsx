@@ -13,14 +13,15 @@ export const Product = ({ producto }) => {
           <b id="product-name">{producto.name}</b>
         </h5>
         <p className="card-text small">{producto.description}</p>
-        <p className="tags">Price ${producto.price}</p>
+        <p className="tags"> USD {producto.price}</p>
         <Link
           to="https://api.whatsapp.com/send?phone=2348162667912"
           target="_blank"
           id="btn-product"
           className="button-filter"
         >
-          <i className="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart
+          <i className="fa fa-shopping-cart" aria-hidden="true"></i> Añadir al
+          carrito
         </Link>
       </div>
     </div>
