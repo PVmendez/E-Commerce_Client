@@ -4,6 +4,7 @@
   padding-bottom: 3%;
   padding-top: 3%;
   text-decoration: none;
+  margin-left: 0;
 }
 #product-name {
   color: #b17a04;
@@ -211,8 +212,11 @@ a.explore-link:hover {
 
 .card-text {
   font-size: 13px;
+  height: 70px;
 }
-
+.card-body {
+  padding-bottom: 10px;
+}
 .price-tag {
   color: #c0aa83;
   font-size: 25px;
