@@ -1,18 +1,20 @@
 import { Link } from "react-router-dom";
 
-export const Product = () => {
+export const Product = ({ producto }) => {
   return (
     <div className="col-sm-8 col-md-6 col-lg-4 my-2">
       <div className="card">
         <div className="card-body text-center">
-          <img src="../img/Bombon_1.jpg" className="product-image" alt="" />
+          <img
+            src={`../img/${producto.image}`}
+            className="product-image"
+            alt=""
+          />
           <h5 className="card-title">
-            <b>Bombon 1</b>
+            <b>{producto.name}</b>
           </h5>
-          <p className="card-text small">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quis reiciendis quidem aperiam omnis cum laudantium? Molestiae culpa animi a?
-          </p>
-          <p className="tags">Price $25.16</p>
+          <p className="card-text small">{producto.description}</p>
+          <p className="tags">Price ${producto.price}</p>
           <Link
             to="https://api.whatsapp.com/send?phone=2348162667912"
             target="_blank"
