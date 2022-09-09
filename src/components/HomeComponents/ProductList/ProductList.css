@@ -1,15 +1,14 @@
-.btn-success {
-  background-color: #c0aa83;
-  border-color: #c0aa83;
-  color: #fff;
+#btn-product {
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 3%;
+  padding-top: 3%;
+  text-decoration: none;
 }
-
-.btn-success:hover {
-  background-color: #242424;
-  border-color: #242424;
-  color: #fff;
+#product-name {
+  color: #b17a04;
+  font-weight: 500;
 }
-
 .masthead2 {
   background-image: url("../../../../public/img/Carousel_2.jpg");
   background-position: 50% -26px;
@@ -21,9 +20,11 @@ a.social-icon {
 }
 
 a.social-icon:hover {
-  color: #c0aa83;
+  color: #ebd7b5;
 }
-
+.card {
+  border: 1px solid #fff3db;
+}
 .social-icon {
   background-color: #ece4c3;
   width: 80px;
@@ -180,13 +181,12 @@ a.explore-link:hover {
 }
 
 .blog-form {
-  background-color: #f4f4f4;
   padding: 50px;
   max-height: 500px;
 }
 
 .list-icon {
-  color: #c0aa83;
+  color: #d5b375;
 }
 
 .tags {
@@ -207,12 +207,6 @@ a.explore-link:hover {
 
 .product-sidebar-list:hover {
   color: #c0aa83;
-}
-
-.card-title {
-  color: #c0aa83;
-  font-size: 25px;
-  font-weight: 900;
 }
 
 .card-text {
@@ -238,7 +232,13 @@ a.explore-link:hover {
 .masthead-title {
   color: white;
 }
-
+#categories {
+  color: #d5b375;
+}
+.list-words {
+  font-weight: 500;
+  font-size: 20px;
+}
 @media (max-width: 1200px) {
   .product-image {
     width: 150px;

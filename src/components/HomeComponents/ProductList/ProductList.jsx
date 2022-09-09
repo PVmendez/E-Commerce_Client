@@ -45,7 +45,7 @@ export const ProductList = () => {
           <div className="row">
             <div className="col-lg-3 blog-form">
               <h2 className="blog-sidebar-title">
-                <b>CATEGORIAS</b>
+                <b id="categories">CATEGORIAS</b>
               </h2>
               <hr />
 
@@ -55,9 +55,9 @@ export const ProductList = () => {
                   setCategory(0);
                 }}
               >
-                <b>
+                <p className="list-words">
                   <span className="list-icon"> {">"} </span> Todos
-                </b>
+                </p>
               </p>
               <p
                 className="blog-sidebar-list"
@@ -65,9 +65,9 @@ export const ProductList = () => {
                   setCategory(1);
                 }}
               >
-                <b>
+                <p className="list-words">
                   <span className="list-icon"> {">"} </span> Clasicos
-                </b>
+                </p>
               </p>
               <p
                 className="blog-sidebar-list"
@@ -75,13 +75,10 @@ export const ProductList = () => {
                   setCategory(2);
                 }}
               >
-                <b>
+                <p className="list-words">
                   <span className="list-icon"> {">"} </span> Premium
-                </b>
+                </p>
               </p>
-
-              <div>&nbsp;</div>
-              <div>&nbsp;</div>
             </div>
 
             <div className="col-lg-9">
@@ -90,7 +87,6 @@ export const ProductList = () => {
                   Showing all {productos && productos.length} results
                 </div>
               </div>
-              <div>&nbsp;</div>
               <div>&nbsp;</div>
 
               <div className="row justify-content-center">
