@@ -9,7 +9,8 @@ export default function Filter() {
     const getPopularProducts = async () => {
       const result = await axios({
         method: "GET",
-        url: "http://localhost:8000/products/popular",
+        baseURL: process.env.REACT_APP_API_BASE_URL ,
+        url:  `/products/popular`,
       });
       console.log(result.data)
       setPopularProducts(result.data);

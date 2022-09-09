@@ -5,6 +5,7 @@ import { ProductList } from "./components/HomeComponents/ProductList/ProductList
 import Cart from "./components/Cart/Cart";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import { ErrorPage } from "./components/ErrorPage/ErrorPage";
+import { Login } from "./components/Login/Login";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route exact path="/products/chocolate" element={<ProductDetails />} />
       <Route exact path="/cart" element={<Cart />} />
       <Route path="*" element={<ErrorPage />} />
+      <Route exact path="/login" element={<Login />}/>
     </Routes>
   );
 }
