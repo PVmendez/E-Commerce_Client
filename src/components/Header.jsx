@@ -29,10 +29,10 @@ export default function Header({ product }) {
                 navigate("/products");
               }}
             >
-              /products /{slug}
+              /Products /{slug}
             </span>
           ) : (
-            <span>{location.pathname}</span>
+            <span>/Products</span>
           )}
         </p>
       </div>
