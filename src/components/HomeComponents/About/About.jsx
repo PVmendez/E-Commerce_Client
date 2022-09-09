@@ -14,7 +14,7 @@ export default function About() {
             ></i>
           </div>
           <p className="aboutText">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veli
             voluptatibus soluta tempore in expedita iusto, fuga ratione
             voluptates sapiente saepe iure harum, libero voluptatem assumenda,
             nulla non? Maxime, nobis non. Lorem ipsum dolor sit amet consectetur
