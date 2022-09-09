@@ -171,10 +171,10 @@ body{
   transition: all 0.4s ease;
 }
 .forms .form-content .button input:hover{
-  background: #fff;
+  background: #b17a04;
 }
 .forms .form-content label{
-  color: #000;
+  color: #b17a04;
   cursor: pointer;
 }
 .forms .form-content label:hover{
