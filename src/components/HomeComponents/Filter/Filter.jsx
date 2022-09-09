@@ -35,29 +35,13 @@ export default function Filter() {
       {popularProducts.map((popularProduct, index) => {
         return (
           <>
-            <div className="col-12 d-flex justify-content-center p-0 flex-column flex-lg-row align-items-center">
+            <div className="col-12 col-md-4 col-xl-3 d-flex justify-content-center p-0 flex-column flex-lg-row align-items-center">
               <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 d-flex justify-content-center">
                 <img
                   key={index}
                   className="img-filter"
                   src={`img/${popularProduct.image}`}
                   alt="bombon1"
-                />
-              </div>
-              <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 d-flex justify-content-center">
-                <img
-                  key={index}
-                  className="img-filter"
-                  src={`img/${popularProduct.image}`}
-                  alt="bombon2"
-                />
-              </div>
-              <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 d-flex justify-content-center">
-                <img
-                  key={index}
-                  className="img-filter"
-                  src={`img/${popularProduct.image}`}
-                  alt="bombon3"
                 />
               </div>
             </div>
