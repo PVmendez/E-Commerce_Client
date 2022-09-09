@@ -7,6 +7,7 @@ import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import Header from "../../Header";
 
 export const ProductList = () => {
   const [productos, setProductos] = useState();
@@ -28,7 +29,8 @@ export const ProductList = () => {
     <>
       {productos && console.log(productos)}
       <Navbar />
-      <header className="page-section masthead2">
+      <Header />
+      {/* <header className="page-section masthead2">
         <div className="container h-50">
           <h1 className="mt-5 section-header text-white font-weight-bold">
             PRODUCTOS
@@ -39,13 +41,13 @@ export const ProductList = () => {
             </Link>
           </p>
         </div>
-      </header>
+      </header> */}
       <section className="page-section">
         <div className="container">
           <div className="row">
             <div className="col-lg-3 blog-form">
               <h2 className="blog-sidebar-title">
-                <b>CATEGORIAS</b>
+                <b id="categories">CATEGORIAS</b>
               </h2>
               <hr />
 
@@ -55,9 +57,9 @@ export const ProductList = () => {
                   setCategory(0);
                 }}
               >
-                <b>
+                <p className="list-words">
                   <span className="list-icon"> {">"} </span> Todos
-                </b>
+                </p>
               </p>
               <p
                 className="blog-sidebar-list"
@@ -65,9 +67,9 @@ export const ProductList = () => {
                   setCategory(1);
                 }}
               >
-                <b>
+                <p className="list-words">
                   <span className="list-icon"> {">"} </span> Clasicos
-                </b>
+                </p>
               </p>
               <p
                 className="blog-sidebar-list"
@@ -75,14 +77,10 @@ export const ProductList = () => {
                   setCategory(2);
                 }}
               >
-                <b>
+                <p className="list-words">
                   <span className="list-icon"> {">"} </span> Premium
-                </b>
+                </p>
               </p>
-
-              <div>&nbsp;</div>
-              <div>&nbsp;</div>
-
             </div>
 
             <div className="col-lg-9">
@@ -91,10 +89,8 @@ export const ProductList = () => {
                   Showing all {productos && productos.length} results
                 </div>
               </div>
-              <div>&nbsp;</div>
-              <div>&nbsp;</div>
 
-              <div className="row justify-content-center">
+              <div className="row">
                 {productos &&
                   productos.map((producto) => {
                     return <Product producto={producto} />;

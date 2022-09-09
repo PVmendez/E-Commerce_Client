@@ -25,7 +25,7 @@
   font-family: "Vollkorn", serif;
 }
 .button-filter {
-  border: 1px solid #b17a04;
+  border: 1px solid #d5b375;
   margin-left: 5px;
   font-size: small;
   font-weight: 200;
@@ -33,6 +33,11 @@
   padding-right: 1%;
   padding-top: 0.2%;
   padding-bottom: 0.2%;
-  color: #b17a04;
+  color: #d5b375;
   background-color: white;
+}
+
+.button-filter:hover {
+  background-color: #d5b375;
+  color: white;
 }
