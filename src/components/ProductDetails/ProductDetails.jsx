@@ -1,9 +1,26 @@
-import React from "react";
 import "./ProductDetails.css";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
 export default function ProductDetails() {
+  const [product, setProduct] = useState({});
+  const { id } = useParams();
+  useEffect(() => {
+    const getProducts = async () => {
+      const result = await axios({
+        method: "GET",
+        baseURL: process.env.REACT_APP_API_BASE_URL,
+        url: `/products/${id}`,
+      });
+      console.log(result.data);
+      setProduct(result.data);
+    };
+    getProducts();
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -14,7 +31,7 @@ export default function ProductDetails() {
         >
           <img
             className="img-productDetails"
-            src="../img/Bombon_6.jpg"
+            src={`/img/${product.image}`}
             alt="Product"
           />
         </div>
@@ -22,15 +39,12 @@ export default function ProductDetails() {
           id="col2-productDetails"
           className="col-sm-6 col-12 d-flex justify-content-center flex-column "
         >
-          <span className="title-productDetails">Zapallo</span>
+          <span className="title-productDetails">{product.name}</span>
           <p className="p-filter" id="p-productDetails">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo
-            consequatur vero vitae quos itaque quae? Voluptates itaque
-            molestiae, alias id cumque, quo quaerat dolor quibusdam nostrum
-            aperiam voluptatum. Unde, fugit. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Quo laudantium officia illum qui vitae
-            quasi dignissimos alias atque corporis, iusto totam aut doloremque
-            labore quae fugit et adipisci hic? Cum?
+            {product.description}
+          </p>
+          <p>
+            <div> USD {product.price}</div>
           </p>
           <div className="d-flex mt-4 align-items-center">
             <div
@@ -39,6 +53,7 @@ export default function ProductDetails() {
             >
               -
             </div>
+
             <div className="mx-4" style={{ fontSize: 35, fontWeight: 600 }}>
               1
             </div>
