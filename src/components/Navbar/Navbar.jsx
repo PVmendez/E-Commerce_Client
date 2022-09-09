@@ -25,20 +25,17 @@ export default function Navbar() {
           id="navbarCollapse"
         >
           <div className="navbar-nav ml-auto">
-            <Link to="" className="nav-item nav-link">
-              FABRICACIÓN
+            <Link to="/" className="nav-item nav-link">
+              HOME
             </Link>
-            <Link to="" className="nav-item nav-link">
+            <Link to="/products" className="nav-item nav-link">
               PRODUCTOS
             </Link>
-            <Link to="/" className="nav-item nav-link">
-              PRESENTACIONES
+            <Link to="/cart" className="nav-item nav-link">
+              CARRITO
             </Link>
             <Link to="/" className="nav-item nav-link">
               LA EMPRESA
-            </Link>
-            <Link to="/" className="nav-item nav-link">
-              CONTACTO
             </Link>
           </div>
         </div>
