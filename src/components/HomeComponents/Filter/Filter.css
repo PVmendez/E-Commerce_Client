@@ -22,13 +22,18 @@
 .img-filter:hover {
   transform: scale(1.5);
   cursor: pointer;
-  filter: opacity(0.6);
+  filter: opacity(0.3);
 }
 
 .box-name {
+  z-index: 3;
   position: absolute;
-  top: 30px;
-  bottom: 5px;
+  top: 70px;
+  left: 0px;
+  font-size: 20px;
+  color: #b17a04;
+  border: 1px solid #b17a04;
+  padding: 5%;
   display: none;
 }
 
