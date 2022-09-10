@@ -1,11 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Vollkorn&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
 .aboutRow {
   justify-content: center;
   width: 100%;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .aboutText {
-  font-family: "Vollkorn", serif;
-  font-style: italic;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
 }

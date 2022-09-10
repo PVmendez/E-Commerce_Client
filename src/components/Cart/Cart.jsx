@@ -12,16 +12,16 @@ export default function Cart() {
       <div className="row cartRow mb-3">
         <div className="col-9 p-0">
           <div className="d-none d-md-flex titulosPedido align-items-center">
-            <p className="col-3 d-flex justify-content-center text-clear text-decoration-underline">
+            <p className="col-3 d-flex justify-content-center text-clear">
               Producto
             </p>
-            <p className="col-3 d-flex justify-content-center text-clear text-decoration-underline">
+            <p className="col-3 d-flex justify-content-center text-clear">
               Precio por unidad
             </p>
-            <p className="col-3 d-flex justify-content-center text-clear text-decoration-underline">
+            <p className="col-3 d-flex justify-content-center text-clear">
               Cantidad
             </p>
-            <p className="col-3 d-flex justify-content-center text-clear text-decoration-underline">
+            <p className="col-3 d-flex justify-content-center text-clear">
               Total
             </p>
           </div>
@@ -84,8 +84,8 @@ export default function Cart() {
           </div>
         </div>
         <div className="col-9 col-lg-6 resumenCol mt-3">
-          <h3 className="title-filter">Resumen del pedido</h3>
-          <div className="footerDivider col-12"></div>
+          <h3 className="cart-title">RESUMEN DEL PEDIDO</h3>
+
           <div className="d-flex justify-content-between">
             <p className="p-filter">Total Parcial:</p>
             <p className="p-filter">U$D 28.90</p>

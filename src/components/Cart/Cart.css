@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
 .cartRow {
   justify-content: center;
   padding-top: 150px;
@@ -9,24 +11,29 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #ead5ad;
 }
 
 .titulosPedido {
-  background-color: #6c4a00;
+  background-color: #d5b375;
   height: 7vh;
 }
 
 .precioPedido {
-  background-color: #6c4a00;
+  background-color: #d5b375;
   height: 7vh;
 }
-
+.cart-title {
+  font-size: 2em;
+  color: #b17a04;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 .text-clear {
-  color: #ead5ad;
-  font-style: italic;
+  color: white;
+
   font-weight: 500;
-  font-family: "Vollkorn", serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .productoPedido {
@@ -69,8 +76,4 @@
 .pedidoText {
   display: flex;
   justify-content: center;
-}
-
-.button-buy {
-  background-color: #ead5ad;
 }

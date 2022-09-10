@@ -212,8 +212,10 @@ a.explore-link:hover {
 }
 
 .card-text {
-  font-size: 13px;
-  height: 70px;
+  margin-top: 5px;
+  font-size: 17px;
+  height: 140px;
+  font-weight: 40px;
 }
 .card-body {
   padding-bottom: 10px;
