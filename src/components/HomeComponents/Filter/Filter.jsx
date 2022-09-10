@@ -33,16 +33,16 @@ export default function Filter() {
           <p className="p-filter">Esto es lo que hacemos.</p>
         </div>
       </div>
-      {popularProducts.map((popularProduct, index) => {
+      {popularProducts.map((popularProduct) => {
         return (
           <div
-            key={index}
+            key={popularProduct.id}
             className="col-12 col-md-4 col-xl-3 d-flex justify-content-center p-0 flex-column flex-lg-row align-items-center"
             onClick={() => {
               navigate(`/products/${popularProduct.id}`);
             }}
           >
-            <div className="div-img-filter">
+            <div className="div-filter">
               <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 d-flex justify-content-center">
                 <img
                   className="img-filter"
@@ -50,8 +50,8 @@ export default function Filter() {
                   alt="bombon1"
                 />
               </div>
-              <div className="button-hover d-none">
-                <button>Zapallo</button>
+              <div className="box-name">
+                <p>Zapallo</p>
               </div>
             </div>
           </div>

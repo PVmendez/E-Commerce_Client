@@ -10,7 +10,7 @@
   width: 100%;
   margin: 0;
 }
-.div-img-filter {
+.div-filter {
   position: relative;
 }
 .img-filter {
@@ -25,10 +25,15 @@
   filter: opacity(0.6);
 }
 
-.button-hover {
+.box-name {
   position: absolute;
   top: 30px;
   bottom: 5px;
+  display: none;
+}
+
+.div-filter:hover .box-name {
+  display: inline-block;
 }
 
 .title-filter {
