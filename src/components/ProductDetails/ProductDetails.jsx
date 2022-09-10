@@ -5,9 +5,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Header from "../Header";
+import { useDispatch } from "react-redux";
+import { addToCart, removeFromCart } from "../../Redux/userSlice/cartSlice";
 
 export default function ProductDetails() {
+  const dispatch = useDispatch();
   const [product, setProduct] = useState({});
+  const [quantity, setQuantity] = useState(1);
   const { slug } = useParams();
   useEffect(() => {
     const getProducts = async () => {
@@ -49,22 +53,62 @@ export default function ProductDetails() {
             <div
               style={{ fontSize: 35, fontWeight: 400 }}
               className="circle-counter  d-flex align-items-center justify-content-center"
+              onClick={() => {
+                setQuantity((prev) => {
+                  if (quantity === 1) {
+                    return -1;
+                  } else {
+                    return prev - 1;
+                  }
+                });
+              }}
             >
               -
             </div>
 
             <div className="mx-4" style={{ fontSize: 35, fontWeight: 600 }}>
-              1
+              {quantity}
             </div>
             <div
               style={{ fontSize: 35, fontWeight: 400 }}
               className="circle-counter d-flex align-items-center justify-content-center"
+              onClick={() => {
+                setQuantity((prev) => {
+                  if (quantity === -1) {
+                    return 1;
+                  } else {
+                    return prev + 1;
+                  }
+                });
+              }}
             >
               +
             </div>
           </div>
           <div>
-            <button className="button-filter" id="button-productDetail">
+            <button
+              className="button-filter"
+              id="button-productDetail"
+              onClick={() => {
+                if (quantity >= 0) {
+                  dispatch(
+                    addToCart({
+                      id: product.id,
+                      product: product,
+                      quantity: quantity,
+                    })
+                  );
+                } else {
+                  dispatch(
+                    removeFromCart({
+                      id: product.id,
+                      product: product,
+                      quantity: quantity,
+                    })
+                  );
+                }
+              }}
+            >
               <i className="fa fa-shopping-cart" aria-hidden="true"></i> Añadir
               al carrito
             </button>

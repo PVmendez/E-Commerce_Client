@@ -7,10 +7,8 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import Header from "../../Header";
-import { useNavigate } from "react-router-dom";
 
 export const ProductList = () => {
-  const navigate = useNavigate();
   const [productos, setProductos] = useState(null);
   const [category, setCategory] = useState(0);
   useEffect(() => {
@@ -80,15 +78,7 @@ export const ProductList = () => {
               <div className="row justify-content-md-around ">
                 {productos &&
                   productos.map((producto, index) => {
-                    return (
-                      <Product
-                        key={index}
-                        producto={producto}
-                        onClick={() => {
-                          navigate(`/productos/${producto.slug}`);
-                        }}
-                      />
-                    );
+                    return <Product key={index} producto={producto} />;
                   })}
               </div>
             </div>
