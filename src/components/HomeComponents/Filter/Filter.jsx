@@ -12,7 +12,7 @@ export default function Filter() {
       const result = await axios({
         method: "GET",
         baseURL: process.env.REACT_APP_API_BASE_URL,
-        url: "/products/popular",
+        url: "/products/?popular=true",
       });
       setPopularProducts(result.data);
     };
@@ -39,7 +39,7 @@ export default function Filter() {
             key={index}
             className="col-12 col-md-4 col-xl-3 d-flex justify-content-center p-0 flex-column flex-lg-row align-items-center"
             onClick={() => {
-              navigate(`/products/${popularProduct.id}`);
+              navigate(`/productos/${popularProduct.slug}`);
             }}
           >
             <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 d-flex justify-content-center">

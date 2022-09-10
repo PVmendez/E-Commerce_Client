@@ -8,18 +8,18 @@ import Header from "../Header";
 
 export default function ProductDetails() {
   const [product, setProduct] = useState({});
-  const { id } = useParams();
+  const { slug } = useParams();
   useEffect(() => {
     const getProducts = async () => {
       const result = await axios({
         method: "GET",
         baseURL: process.env.REACT_APP_API_BASE_URL,
-        url: `/products/${id}`,
+        url: `/products/${slug}`,
       });
       setProduct(result.data);
     };
     getProducts();
-  }, [id]);
+  }, [slug]);
 
   return (
     <>

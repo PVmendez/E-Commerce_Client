@@ -7,33 +7,30 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import Header from "../../Header";
+import { useNavigate } from "react-router-dom";
 
 export const ProductList = () => {
+  const navigate = useNavigate();
   const [productos, setProductos] = useState(null);
   const [category, setCategory] = useState(0);
   useEffect(() => {
+    let params = "";
     if (category > 0) {
-      const getByCategory = async () => {
-        const result = await axios({
-          method: "get",
-          baseURL: `${process.env.REACT_APP_API_BASE_URL}`,
-          url: `/products/?category=${category}`,
-        });
-
-        setProductos(result.data);
-      };
-      getByCategory();
+      params = `/products?category=${category}`;
+    } else {
+      params = "/products";
     }
-  }, [category]);
+    const getByCategory = async () => {
+      const result = await axios({
+        method: "get",
+        baseURL: `${process.env.REACT_APP_API_BASE_URL}`,
+        url: params,
+      });
 
-  const getAllProducts = async () => {
-    const result = await axios({
-      method: "get",
-      baseURL: `${process.env.REACT_APP_API_BASE_URL}`,
-      url: `/products`,
-    });
-    setProductos(result.data);
-  };
+      setProductos(result.data);
+    };
+    getByCategory();
+  }, [category]);
 
   return (
     <>
@@ -47,12 +44,10 @@ export const ProductList = () => {
                 <b id="categories">CATEGORIAS</b>
               </h2>
               <hr />
-
               <p
                 className="blog-sidebar-list"
                 onClick={() => {
                   setCategory(0);
-                  getAllProducts();
                 }}
               >
                 <span className="list-words list-icon"> {">"} </span> Todos
@@ -82,10 +77,18 @@ export const ProductList = () => {
                 </div>
               </div>
 
-              <div className="row">
+              <div className="row justify-content-md-around ">
                 {productos &&
                   productos.map((producto, index) => {
-                    return <Product key={index} producto={producto} />;
+                    return (
+                      <Product
+                        key={index}
+                        producto={producto}
+                        onClick={() => {
+                          navigate(`/productos/${producto.slug}`);
+                        }}
+                      />
+                    );
                   })}
               </div>
             </div>
