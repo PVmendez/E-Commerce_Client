@@ -9,19 +9,31 @@ import { useEffect } from "react";
 import Header from "../../Header";
 
 export const ProductList = () => {
-  const [productos, setProductos] = useState();
+  const [productos, setProductos] = useState(null);
   const [category, setCategory] = useState(0);
   useEffect(() => {
-    const getByCategory = async () => {
-      const result = await axios({
-        method: "get",
-        baseURL: `${process.env.REACT_APP_API_BASE_URL}`,
-        url: `/products/category/${category}`,
-      });
-      setProductos(result.data);
-    };
-    getByCategory();
+    if (category > 0) {
+      const getByCategory = async () => {
+        const result = await axios({
+          method: "get",
+          baseURL: `${process.env.REACT_APP_API_BASE_URL}`,
+          url: `/products/?category=${category}`,
+        });
+
+        setProductos(result.data);
+      };
+      getByCategory();
+    }
   }, [category]);
+
+  const getAllProducts = async () => {
+    const result = await axios({
+      method: "get",
+      baseURL: `${process.env.REACT_APP_API_BASE_URL}`,
+      url: `/products`,
+    });
+    setProductos(result.data);
+  };
 
   return (
     <>
@@ -40,6 +52,7 @@ export const ProductList = () => {
                 className="blog-sidebar-list"
                 onClick={() => {
                   setCategory(0);
+                  getAllProducts();
                 }}
               >
                 <span className="list-words list-icon"> {">"} </span> Todos

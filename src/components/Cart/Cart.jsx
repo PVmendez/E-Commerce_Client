@@ -52,6 +52,31 @@ export default function Cart() {
               <div className="footerDivider col-12 w-100"></div>
               <br />
             </div>
+            <div className="item-pedido d-flex align-items-center flex-wrap">
+              <div className="productoPedido col-12 d-flex justify-content-around align-items-center flex-md-column justify-content-md-center col-md-3">
+                <p className="p-filter productoNombre">Bombon_1</p>
+                <img src="./img/Bombon_1.jpg" className="imagenPedido" alt="" />
+              </div>
+              <div className="col-4 col-md-3">
+                <p className="p-filter m-0 d-md-flex justify-content-md-center pedidoText">
+                  U$D 28.90
+                </p>
+              </div>
+              <div className="col-4 col-md-3">
+                <div className=" d-flex justify-content-around">
+                  <button className="button-filter-cuadrado">+</button>
+                  <p className="p-filter fs-5">1</p>
+                  <button className="button-filter-cuadrado">-</button>
+                </div>
+              </div>
+              <div className="col-4 col-md-3">
+                <p className="p-filter m-0 d-md-flex justify-content-md-center pedidoText">
+                  U$D 28.90
+                </p>
+              </div>
+              <div className="footerDivider col-12 w-100"></div>
+              <br />
+            </div>
           </div>
           <div className="precioPedido d-flex justify-content-between px-5 align-items-center">
             <p className="text-clear m-0 fs-4">Total:</p>

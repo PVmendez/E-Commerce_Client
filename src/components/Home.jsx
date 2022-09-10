@@ -6,8 +6,6 @@ import CarouselComponent from "./HomeComponents/Carousel/Carousel";
 import "./HomeComponents/Home.css";
 
 export default function Home() {
-  
-
   return (
     <div className="Home">
       <Navbar />
