@@ -12,12 +12,12 @@ function App() {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
-      <Route exact path="/products" element={<ProductList />} />
-      <Route exact path="/products/:id" element={<ProductDetails />} />
-      <Route exact path="/cart" element={<Cart />} />
+      <Route exact path="/productos" element={<ProductList />} />
+      <Route exact path="/productos/:id" element={<ProductDetails />} />
+      <Route exact path="/carrito" element={<Cart />} />
       <Route path="*" element={<ErrorPage />} />
-      <Route exact path="/login" element={<Login />}/>
-      <Route exact path="/register" element={<Register />}/>
+      <Route exact path="/login" element={<Login />} />
+      <Route exact path="/registro" element={<Register />} />
     </Routes>
   );
 }

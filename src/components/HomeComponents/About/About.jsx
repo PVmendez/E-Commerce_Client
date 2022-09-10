@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./About.css";
 
 export default function About() {
@@ -28,7 +29,9 @@ export default function About() {
           </p>
         </div>
         <div className="d-flex justify-content-center">
-          <button className="button-filter">Ver mas</button>
+          <Link to="/about" className="button-filter">
+            Ver mas
+          </Link>
         </div>
       </div>
       <br />

@@ -29,9 +29,7 @@ export const Login = () => {
         url: `/buyers/login`,
         data: { user: user },
       });
-      result ? 
-      navigate("/")
-      : navigate("/register")
+      result ? navigate("/") : navigate("/register");
     };
     getUserLogin();
 
@@ -94,13 +92,14 @@ export const Login = () => {
                     />
                   </div>
                   <div className="text">
-                    <Link to="#">Forgot password?</Link>
+                    <Link to="#">Olvidaste tu contraseña?</Link>
                   </div>
                   <div className="button input-box">
                     <input type="submit" value="Iniciar Sesión" />
                   </div>
                   <div className="text sign-up-text">
-                    ¿Todavía no tienes cuenta? <Link to="/register">Registrate</Link>
+                    ¿Todavía no tienes cuenta?{" "}
+                    <Link to="/register">Registrate</Link>
                   </div>
                 </div>
               </form>
