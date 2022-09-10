@@ -42,12 +42,17 @@ export default function Filter() {
               navigate(`/products/${popularProduct.id}`);
             }}
           >
-            <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 d-flex justify-content-center">
-              <img
-                className="img-filter"
-                src={`img/${popularProduct.image}`}
-                alt="bombon1"
-              />
+            <div className="div-img-filter">
+              <div className="col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 d-flex justify-content-center">
+                <img
+                  className="img-filter"
+                  src={`img/${popularProduct.image}`}
+                  alt="bombon1"
+                />
+              </div>
+              <div className="button-hover d-none">
+                <button>Zapallo</button>
+              </div>
             </div>
           </div>
         );

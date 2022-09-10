@@ -3,17 +3,34 @@
 .div-filter {
   text-align: center;
   margin-top: 6em;
+  margin-bottom: 4em;
 }
 
 .filterRow {
   width: 100%;
   margin: 0;
 }
-
+.div-img-filter {
+  position: relative;
+}
 .img-filter {
   width: 200px;
   height: 200px;
+  transition: transform 0.2s;
 }
+
+.img-filter:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+  filter: opacity(0.6);
+}
+
+.button-hover {
+  position: absolute;
+  top: 30px;
+  bottom: 5px;
+}
+
 .title-filter {
   color: #b17a04;
   font-weight: 700;
