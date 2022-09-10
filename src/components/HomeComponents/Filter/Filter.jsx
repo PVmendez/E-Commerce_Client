@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Filter() {
   const [popularProducts, setPopularProducts] = useState([]);
+
   const navigate = useNavigate();
 
   useEffect(() => {

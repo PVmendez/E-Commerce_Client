@@ -31,3 +31,26 @@
     align-items: center;
   }
 }
+.recommendedUser {
+  display: flex;
+}
+.recommended {
+  border: 1px solid #fff3db;
+}
+.img-productRecommended {
+  height: 200px;
+  width: 100%;
+}
+.nameRecommended {
+  color: #6c4a00;
+  font-size: 20px;
+}
+
+.verMas {
+  align-self: center;
+  margin-left: 2em;
+  font-size: 1.5em;
+  color: #b17a04;
+  font-weight: 700;
+  text-decoration: none;
+}

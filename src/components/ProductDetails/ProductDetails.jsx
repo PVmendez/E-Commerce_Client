@@ -5,9 +5,15 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Header from "../Header";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function ProductDetails() {
   const [product, setProduct] = useState({});
+  const [recommendedProducts, setRecommendedProducts] = useState([]);
+
+  const navigate = useNavigate();
+
   const { slug } = useParams();
   useEffect(() => {
     const getProducts = async () => {
@@ -21,6 +27,18 @@ export default function ProductDetails() {
     getProducts();
   }, [slug]);
 
+  useEffect(() => {
+    const getRecommendedProducts = async () => {
+      const result = await axios({
+        method: "GET",
+        baseURL: process.env.REACT_APP_API_BASE_URL,
+        url: `/products/random/${product.id}`,
+      });
+      console.log(result.data);
+      setRecommendedProducts(result.data);
+    };
+    getRecommendedProducts();
+  }, []);
   return (
     <>
       <Navbar />
@@ -68,6 +86,38 @@ export default function ProductDetails() {
               <i className="fa fa-shopping-cart" aria-hidden="true"></i> Añadir
               al carrito
             </button>
+          </div>
+        </div>
+
+        <div className="mt-5 ms-5">
+          <p className="title-filter">Además te recomendamos...</p>
+          <div className="recommendedUser">
+            {recommendedProducts.map((recommendedProduct) => {
+              return (
+                <div
+                  onClick={() => {
+                    navigate(`/productos/${recommendedProduct.slug}`);
+                  }}
+                  className="recommended me-3 d-flex flex-column"
+                  key={recommendedProduct.id}
+                >
+                  <p className="nameRecommended align-self-center">
+                    {recommendedProduct.name}
+                  </p>
+
+                  <img
+                    className="img-productRecommended mt-0"
+                    src={`/img/${recommendedProduct.image}`}
+                    alt="recommendedUser"
+                  />
+                </div>
+              );
+            })}
+            <Link to="/productos" className="verMas">
+              <div>
+                Ver más <i class="fas fa-chevron-right"></i>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
