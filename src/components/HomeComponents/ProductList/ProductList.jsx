@@ -7,17 +7,26 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import Header from "../../Header";
+import { useNavigate } from "react-router-dom";
 
 export const ProductList = () => {
-  const [productos, setProductos] = useState();
+  const navigate = useNavigate();
+  const [productos, setProductos] = useState(null);
   const [category, setCategory] = useState(0);
   useEffect(() => {
+    let params = "";
+    if (category > 0) {
+      params = `/products?category=${category}`;
+    } else {
+      params = "/products";
+    }
     const getByCategory = async () => {
       const result = await axios({
         method: "get",
         baseURL: `${process.env.REACT_APP_API_BASE_URL}`,
-        url: `/products/category/${category}`,
+        url: params,
       });
+
       setProductos(result.data);
     };
     getByCategory();
@@ -35,7 +44,6 @@ export const ProductList = () => {
                 <b id="categories">CATEGORIAS</b>
               </h2>
               <hr />
-
               <p
                 className="blog-sidebar-list"
                 onClick={() => {
@@ -69,10 +77,18 @@ export const ProductList = () => {
                 </div>
               </div>
 
-              <div className="row">
+              <div className="row justify-content-md-around ">
                 {productos &&
                   productos.map((producto, index) => {
-                    return <Product key={index} producto={producto} />;
+                    return (
+                      <Product
+                        key={index}
+                        producto={producto}
+                        onClick={() => {
+                          navigate(`/productos/${producto.slug}`);
+                        }}
+                      />
+                    );
                   })}
               </div>
             </div>
