@@ -1,30 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
-.div-filter {
-  text-align: center;
-  margin-top: 6em;
-  margin-bottom: 4em;
-}
-
 .filterRow {
   width: 100%;
   margin: 0;
 }
+
 .div-filter {
+  text-align: center;
+  margin-top: 6em;
+  margin-bottom: 4em;
   position: relative;
 }
+
 .img-filter {
   width: 200px;
   height: 200px;
   transition: transform 0.2s;
 }
-
-.img-filter:hover {
-  transform: scale(1.5);
-  cursor: pointer;
-  filter: opacity(0.3);
-}
-
 .box-name {
   z-index: 3;
   position: absolute;
@@ -35,6 +27,13 @@
   border: 1px solid #b17a04;
   padding: 5%;
   display: none;
+  cursor: pointer;
+}
+
+.div-filter:hover .img-filter {
+  transform: scale(1.5);
+  cursor: pointer;
+  filter: opacity(0.3);
 }
 
 .div-filter:hover .box-name {

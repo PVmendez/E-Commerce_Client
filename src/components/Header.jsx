@@ -8,7 +8,7 @@ export default function Header({ product }) {
     slug = product.slug;
   }
   return (
-    <header className="page-section masthead2">
+    <header id="header" className="page-section masthead2">
       <div className="container h-50">
         <h1 className="mt-5 section-header text-white font-weight-bold">
           PRODUCTOS

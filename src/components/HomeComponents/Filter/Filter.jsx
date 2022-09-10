@@ -40,7 +40,7 @@ export default function Filter() {
             key={popularProduct.id}
             className="col-12 col-md-4 col-xl-3 d-flex justify-content-center p-0 flex-column flex-lg-row align-items-center"
             onClick={() => {
-              navigate(`/productos/${popularProduct.slug}`);
+              navigate(`/productos/${popularProduct.slug}#header`);
             }}
           >
             <div className=" div-filter col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 d-flex justify-content-center">
