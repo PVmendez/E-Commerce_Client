@@ -7,8 +7,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { addToCart, removeFromCart } from "../../Redux/userSlice/cartSlice";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Cart() {
+  const navigate = useNavigate();
   const cartStore = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const [totalPrice, setTotalPrice] = useState(0);
@@ -139,7 +141,12 @@ export default function Cart() {
             <p className="p-filter">U$D 32.90</p>
           </div>
           <div className="mb-3 w-100 d-flex justify-content-center">
-            <button className="button-filter button-buy px-2 py-1 fs-4">
+            <button
+              className="button-filter button-buy px-2 py-1 fs-4"
+              onClick={() => {
+                navigate("/pago");
+              }}
+            >
               Confirmar Pedido
             </button>
           </div>

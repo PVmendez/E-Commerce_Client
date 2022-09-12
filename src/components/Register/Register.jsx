@@ -14,6 +14,8 @@ export const Register = () => {
   });
   const navigate = useNavigate();
 
+  const [error, setError] = useState(null);
+
   const inputHandle = (e) => {
     let { name, value } = e.target;
     let newUser = { ...user, [name]: value };
@@ -22,14 +24,21 @@ export const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setError(null);
     const getUserRegister = async () => {
       const result = await axios({
         method: "POST",
         baseURL: process.env.REACT_APP_API_BASE_URL,
-        url: `/buyers/register`,
+        url: `/clients/register`,
         data: { user: user },
       });
-      result.data ? navigate("/login") : navigate("/register");
+      console.log(result);
+      if (result.status === 201) {
+        navigate("/login");
+      } else {
+        setError(result.status);
+        navigate("/registro");
+      }
     };
     getUserRegister();
   };
@@ -59,6 +68,7 @@ export const Register = () => {
           <div className="form-content">
             <div className="signup-form">
               <div className="title">Register</div>
+              {error && <p>Error: {error}. Este Email ya esta en uso </p>}
               <form className="register_form" onSubmit={(e) => handleSubmit(e)}>
                 <div className="input-boxes">
                   <div className="input-box">

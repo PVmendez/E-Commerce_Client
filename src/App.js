@@ -8,6 +8,8 @@ import { ErrorPage } from "./components/ErrorPage/ErrorPage";
 import { Login } from "./components/Login/Login";
 import { Register } from "./components/Register/Register";
 import { About } from "./components/About/About";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Payment from "./components/Payment";
 
 function App() {
   return (
@@ -20,6 +22,15 @@ function App() {
       <Route exact path="/login" element={<Login />} />
       <Route exact path="/registro" element={<Register />} />
       <Route exact path="/about" element={<About />} />
+      <Route
+        exact
+        path="/pago"
+        element={
+          <ProtectedRoute>
+            <Payment />
+          </ProtectedRoute>
+        }
+      />
     </Routes>
   );
 }

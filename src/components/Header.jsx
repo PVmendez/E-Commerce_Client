@@ -13,7 +13,7 @@ export default function Header({ product }) {
         <h1 className="mt-5 section-header text-white font-weight-bold">
           PRODUCTOS
         </h1>
-        <p className="link-menu main-menu text-white-75 font-weight-light mb-5">
+        <p className="link-menu main-menu text-white font-weight-light mb-5">
           <span
             onClick={() => {
               navigate("/");
@@ -24,13 +24,16 @@ export default function Header({ product }) {
           {product ? (
             <span
               onClick={() => {
-                navigate("/products");
+                navigate("/productos");
               }}
             >
-              /Products /{slug}
+              {">"} Productos{" "}
+              <span className="main-menu">
+                {">"} {slug}
+              </span>
             </span>
           ) : (
-            <span>/Products</span>
+            <span className="main-menu">{">"} Productos</span>
           )}
         </p>
       </div>
