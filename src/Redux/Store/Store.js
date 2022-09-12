@@ -1,10 +1,20 @@
-import { configureStore } from "@reduxjs/toolkit";
-import userReducer from "../userSlice/userSlice";
-import cartReducer from "../userSlice/cartSlice";
+import {configureStore} from "@reduxjs/toolkit";
+import { userSlice } from "../userSlice/userSlice";
+import { cartSlice } from "../userSlice/cartSlice";
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 
-export default configureStore({
+const persistConfig = {
+  key: 'root',
+  storage,
+}
+
+const persistedReducer = persistReducer(persistConfig, userSlice.reducer, cartSlice.reducer);
+
+export const store = configureStore({
   reducer: {
-    user: userReducer,
-    cart: cartReducer,
-  },
+    persist: persistedReducer,
+  }
 });
+
+export const persistor = persistStore(store)

@@ -31,7 +31,7 @@ export default function ProtectedRoute({ children }) {
         setIsLoading(false);
       }
     });
-  }, []);
+  }, [userState.token]);
   if (isLoading) {
     return <h2>loading</h2>;
   } else {

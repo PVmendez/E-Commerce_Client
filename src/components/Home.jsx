@@ -4,11 +4,10 @@ import Footer from "./Footer/Footer";
 import Navbar from "./Navbar/Navbar";
 import CarouselComponent from "./HomeComponents/Carousel/Carousel";
 import "./HomeComponents/Home.css";
-import { useSelector } from "react-redux";
+import { selectUser } from "../Redux/userSlice/userSlice";
 
 export default function Home() {
-  const userState = useSelector((state) => state.user.user);
-  console.log(userState);
+  console.log(selectUser);
   return (
     <div className="Home">
       <Navbar />

@@ -29,7 +29,6 @@ export const Login = () => {
         url: `/clients/login`,
         data: { user: user },
       });
-      console.log(result.data);
       dispatch(login(result.data));
       result ? navigate("/") : navigate("/registro");
     };

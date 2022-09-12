@@ -9,21 +9,17 @@ export const cartSlice = createSlice({
     addToCart: (state, action) => {
       if (current(state.cart).length === 0) {
         console.log("new 0");
-        state.cart.push(action.payload);
-      } else if (
-        current(state.cart).findIndex(
-          (item) => item.id === action.payload.id
-        ) >= 0
-      ) {
+        return state.cart.push(action.payload);
+      } 
+      if (current(state.cart).findIndex((item) => item.id === action.payload.id) >= 0) {
         const itemIndex = current(state.cart).findIndex(
           (item) => item.id === action.payload.id
         );
         console.log("exist");
-        state.cart[itemIndex].quantity += action.payload.quantity;
-      } else {
-        console.log("new");
-        state.cart.push(action.payload);
-      }
+        return state.cart[itemIndex].quantity += action.payload.quantity;
+      } 
+      console.log("new");
+      state.cart.push(action.payload);
       console.log(current(state.cart));
     },
     removeFromCart: (state, action) => {
