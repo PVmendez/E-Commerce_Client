@@ -21,7 +21,7 @@ export default function Filter() {
   }, []);
 
   return (
-    <div className="row filterRow">
+    <div className="row filterRow justify-content-center">
       <div className="div-filter">
         <h2 className="title-filter">DESTACADOS</h2>
         <div>
@@ -34,37 +34,32 @@ export default function Filter() {
           <p className="p-filter">Esto es lo que hacemos.</p>
         </div>
       </div>
-      {popularProducts.map((popularProduct) => {
-        return (
-          <div
-            key={popularProduct.id}
-            className="col-12 col-md-4 col-xl-3 d-flex justify-content-center p-0 flex-column flex-lg-row align-items-center"
-            onClick={() => {
-              navigate(`/productos/${popularProduct.slug}#header`);
-            }}
-          >
-            <div className=" div-filter col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 d-flex justify-content-center">
-              <img
-                className="img-filter"
-                src={`img/${popularProduct.image}`}
-                alt="bombon1"
-              />
-              <span className="box-name">{popularProduct.name}</span>
+      <div className="col-8 ">
+        <div className="row">
+        {popularProducts.map((popularProduct) => {
+          return (
+            <div
+              key={popularProduct.id}
+              className="col-12 col-md-4 col-xl-3 d-flex justify-content-center p-0 flex-column flex-lg-row align-items-center"
+              onClick={() => {
+                navigate(`/productos/${popularProduct.slug}#header`);
+              }}
+            >
+              <div className=" div-filter col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 d-flex justify-content-center">
+                <img
+                  className="img-filter"
+                  src={`img/${popularProduct.image}`}
+                  alt="bombon1"
+                />
+                <span className="box-name">{popularProduct.name}</span>
+              </div>
             </div>
-          </div>
-        );
-      })}
-      <div className="col-12 d-flex justify-content-center">
-        <button
-          className="button-filter"
-          onClick={() => {
-            navigate("/productos");
-          }}
-        >
-          {" "}
-          Ver Todos{" "}
-        </button>
+          );
+        })}
+        </div>
+        
       </div>
+      
     </div>
   );
 }

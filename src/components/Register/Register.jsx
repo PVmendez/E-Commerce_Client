@@ -83,7 +83,7 @@ export const Register = () => {
                     />
                   </div>
                   <div className="input-box">
-                    <i className="fas fa-envelope"></i>
+                    <i className="fas fa-user"></i>
                     <input
                       type="text"
                       placeholder="Lastname"
@@ -94,7 +94,7 @@ export const Register = () => {
                     />
                   </div>
                   <div className="input-box">
-                    <i className="fas fa-lock"></i>
+                    <i className="fas fa-envelope"></i>
                     <input
                       type="email"
                       placeholder="Email"
@@ -116,7 +116,7 @@ export const Register = () => {
                     />
                   </div>
                   <div className="input-box">
-                    <i className="fas fa-lock"></i>
+                  <i class="fa-solid fa-location-dot"></i>
                     <input
                       type="address"
                       placeholder="Address"
@@ -127,7 +127,7 @@ export const Register = () => {
                     />
                   </div>
                   <div className="input-box">
-                    <i className="fas fa-lock"></i>
+                  <i class="fa-solid fa-phone"></i>
                     <input
                       type="phone"
                       placeholder="Phone"

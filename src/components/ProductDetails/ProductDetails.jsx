@@ -42,7 +42,7 @@ export default function ProductDetails() {
       setRecommendedProducts(result.data);
     };
     getRecommendedProducts();
-  }, []);
+  }, [product.id]);
   return (
     <>
       <Navbar />
