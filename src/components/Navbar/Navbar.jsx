@@ -31,7 +31,7 @@ export default function Navbar() {
             <Link to="/productos" className="nav-item nav-link">
               PRODUCTOS
             </Link>
-            
+
             <Link to="/" className="nav-item nav-link">
               LA EMPRESA
             </Link>

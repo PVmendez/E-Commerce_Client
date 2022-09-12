@@ -47,7 +47,7 @@ export default function ProductDetails() {
     <>
       <Navbar />
       <Header product={product} />
-      <div className="row mb-5">
+      <div className="row mb-5 row-productDetails">
         <div
           id="col1-productDetails"
           className="col-sm-6 col-12 d-flex justify-content-center align-items-center"
@@ -133,11 +133,11 @@ export default function ProductDetails() {
           </div>
         </div>
 
-        <div className="mt-5 ms-5">
+        <div className="row mt-5 justify-content-around  row-recommendedProduct">
           <p className="title-filter">Además te recomendamos...</p>
-          <div className="recommendedUser">
-            {recommendedProducts.map((recommendedProduct) => {
-              return (
+          {recommendedProducts.map((recommendedProduct) => {
+            return (
+              <div className="col-12 col-sm-6 col-xl-2 justify-content-xl-around justify-content-center recommendedUser">
                 <div
                   onClick={() => {
                     navigate(`/productos/${recommendedProduct.slug}`);
@@ -155,14 +155,14 @@ export default function ProductDetails() {
                     alt="recommendedUser"
                   />
                 </div>
-              );
-            })}
-            <Link to="/productos" className="verMas">
-              <div>
-                Ver más <i class="fas fa-chevron-right"></i>
               </div>
-            </Link>
-          </div>
+            );
+          })}
+          <Link to="/productos" className="col-12 col-sm-6 col-xl-2 verMas">
+            <div className="d-flex justify-content-center align-items-center">
+              Ver más <i className="fas fa-chevron-right"></i>
+            </div>
+          </Link>
         </div>
       </div>
       <Footer />

@@ -49,9 +49,16 @@
 
 .verMas {
   align-self: center;
-  margin-left: 2em;
   font-size: 1.5em;
   color: #b17a04;
   font-weight: 700;
   text-decoration: none;
+}
+.row-productDetails {
+  width: 100%;
+  justify-content: center;
+}
+.row-recommendedProduct {
+  width: 100%;
+  padding: 0;
 }
