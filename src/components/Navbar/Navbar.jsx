@@ -31,15 +31,15 @@ export default function Navbar() {
             <Link to="/productos" className="nav-item nav-link">
               PRODUCTOS
             </Link>
-            
+
             <Link to="/" className="nav-item nav-link">
               LA EMPRESA
             </Link>
             <Link to="/carrito" className="nav-item nav-link">
-              <i class="fa-solid fa-cart-shopping"></i>
+              <i className="fa-solid fa-cart-shopping"></i>
             </Link>
             <Link to="/login" className="nav-item nav-link">
-              <i class="fa-solid fa-user"></i>
+              <i className="fa-solid fa-user"></i>
             </Link>
           </div>
         </div>
