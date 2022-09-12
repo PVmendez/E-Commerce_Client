@@ -159,7 +159,7 @@ export default function ProductDetails() {
             })}
             <Link to="/productos" className="verMas">
               <div>
-                Ver más <i class="fas fa-chevron-right"></i>
+                Ver más <i className="fas fa-chevron-right"></i>
               </div>
             </Link>
           </div>
