@@ -16,16 +16,15 @@ export default function Cart() {
   const [totalPrice, setTotalPrice] = useState(0);
   useEffect(() => {
     setTotalPrice(0);
-    for (let i = 0; i < cartStore.cart.length; i++) {
+    for (let i = 0; i < cartStore.length; i++) {
       setTotalPrice((prev) => {
         return (
-          prev + cartStore.cart[i].product.price * cartStore.cart[i].quantity
+          prev + cartStore[i].product.price * cartStore[i].quantity
         );
       });
     }
   }, [cartStore]);
 
-  console.log(cartStore);
   return (
     <>
       <Navbar />
@@ -51,7 +50,7 @@ export default function Cart() {
           </div>
           <div className="pedido">
             {/* Este div despues estaria en un map */}
-            {cartStore.cart.map((item, index, array) => {
+            {cartStore.map((item, index, array) => {
               return (
                 <div
                   key={item.id}

@@ -34,7 +34,7 @@ export default function Navbar() {
             <Link to="/cart" className="nav-item nav-link">
               CARRITO
             </Link>
-            <Link to="#" className="nav-item nav-link">
+            <Link to="/about" className="nav-item nav-link">
               LA EMPRESA
             </Link>
           </div>

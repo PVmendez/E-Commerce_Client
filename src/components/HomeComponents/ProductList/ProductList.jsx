@@ -69,13 +69,10 @@ export const ProductList = () => {
             </div>
 
             <div className="col-lg-9">
-              <div className="row">
-                <div className="col">
+              <div className="row justify-content-center justify-content-xxl-between justify-content-md-around  ">
+                <div className="col-12 text-center">
                   {productos && productos.length} resultados
                 </div>
-              </div>
-
-              <div className="row justify-content-md-around ">
                 {productos &&
                   productos.map((producto, index) => {
                     return <Product key={index} producto={producto} />;

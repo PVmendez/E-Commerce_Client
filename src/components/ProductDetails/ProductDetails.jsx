@@ -38,7 +38,6 @@ export default function ProductDetails() {
         baseURL: process.env.REACT_APP_API_BASE_URL,
         url: `/products/random/${product.id}`,
       });
-      console.log(result.data);
       setRecommendedProducts(result.data);
     };
     getRecommendedProducts();
@@ -135,9 +134,8 @@ export default function ProductDetails() {
 
         <div className="row mt-5 justify-content-around  row-recommendedProduct">
           <p className="title-filter">Además te recomendamos...</p>
-          {recommendedProducts.map((recommendedProduct) => {
-            return (
-              <div className="col-12 col-sm-6 col-xl-2 justify-content-xl-around justify-content-center recommendedUser">
+          {recommendedProducts.map((recommendedProduct, index) => 
+              <div key={index} className="col-12 col-sm-6 col-xl-2 justify-content-xl-around justify-content-center recommendedUser">
                 <div
                   onClick={() => {
                     navigate(`/productos/${recommendedProduct.slug}`);
@@ -156,8 +154,8 @@ export default function ProductDetails() {
                   />
                 </div>
               </div>
-            );
-          })}
+
+          )}
           <Link to="/productos" className="col-12 col-sm-6 col-xl-2 verMas">
             <div className="d-flex justify-content-center align-items-center">
               Ver más <i className="fas fa-chevron-right"></i>

@@ -26,6 +26,7 @@ a.social-icon:hover {
 }
 #col-card {
   border: 1px solid #fff3db;
+  width: 300px;
 }
 .social-icon {
   background-color: #ece4c3;
@@ -246,6 +247,11 @@ a.explore-link:hover {
   font-weight: 500;
   font-size: 20px;
 }
+
+.addBtn {
+  cursor: pointer;
+}
+
 @media (max-width: 1200px) {
   .product-image {
     width: 150px;
