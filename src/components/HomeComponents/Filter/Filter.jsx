@@ -54,6 +54,17 @@ export default function Filter() {
           </div>
         );
       })}
+      <div className="col-12 d-flex justify-content-center">
+        <button
+          className="button-filter"
+          onClick={() => {
+            navigate("/productos");
+          }}
+        >
+          {" "}
+          Ver Todos{" "}
+        </button>
+      </div>
     </div>
   );
 }

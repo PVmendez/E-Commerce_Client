@@ -26,20 +26,14 @@ export const Login = () => {
       const result = await axios({
         method: "POST",
         baseURL: process.env.REACT_APP_API_BASE_URL,
-        url: `/buyers/login`,
+        url: `/clients/login`,
         data: { user: user },
       });
-      result ? navigate("/") : navigate("/register");
+      console.log(result.data);
+      dispatch(login(result.data));
+      result ? navigate("/") : navigate("/registro");
     };
     getUserLogin();
-
-    dispatch(
-      login({
-        email: user.email,
-        password: user.password,
-        loggedIn: true,
-      })
-    );
   };
 
   return (
@@ -99,7 +93,7 @@ export const Login = () => {
                   </div>
                   <div className="text sign-up-text">
                     ¿Todavía no tienes cuenta?{" "}
-                    <Link to="/register">Registrate</Link>
+                    <Link to="/registro">Registrate</Link>
                   </div>
                 </div>
               </form>

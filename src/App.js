@@ -7,6 +7,8 @@ import ProductDetails from "./components/ProductDetails/ProductDetails";
 import { ErrorPage } from "./components/ErrorPage/ErrorPage";
 import { Login } from "./components/Login/Login";
 import { Register } from "./components/Register/Register";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Payment from "./components/Payment";
 
 function App() {
   return (
@@ -18,6 +20,15 @@ function App() {
       <Route path="*" element={<ErrorPage />} />
       <Route exact path="/login" element={<Login />} />
       <Route exact path="/registro" element={<Register />} />
+      <Route
+        exact
+        path="/pago"
+        element={
+          <ProtectedRoute>
+            <Payment />
+          </ProtectedRoute>
+        }
+      />
     </Routes>
   );
 }
