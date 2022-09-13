@@ -26,7 +26,7 @@ export const Login = () => {
       const result = await axios({
         method: "POST",
         baseURL: process.env.REACT_APP_API_BASE_URL,
-        url: `/clients/login`,
+        url: `/customers/login`,
         data: { user: user },
       });
       console.log(result.data);

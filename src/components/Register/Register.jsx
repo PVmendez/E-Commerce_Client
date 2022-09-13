@@ -29,7 +29,7 @@ export const Register = () => {
       const result = await axios({
         method: "POST",
         baseURL: process.env.REACT_APP_API_BASE_URL,
-        url: `/clients/register`,
+        url: `/customers/register`,
         data: { user: user },
       });
       console.log(result);
@@ -116,7 +116,7 @@ export const Register = () => {
                     />
                   </div>
                   <div className="input-box">
-                  <i class="fa-solid fa-location-dot"></i>
+                    <i class="fa-solid fa-location-dot"></i>
                     <input
                       type="address"
                       placeholder="Address"
@@ -127,7 +127,7 @@ export const Register = () => {
                     />
                   </div>
                   <div className="input-box">
-                  <i class="fa-solid fa-phone"></i>
+                    <i class="fa-solid fa-phone"></i>
                     <input
                       type="phone"
                       placeholder="Phone"

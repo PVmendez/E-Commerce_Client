@@ -13,7 +13,7 @@ export default function ProtectedRoute({ children }) {
       const result = await axios({
         method: "POST",
         baseURL: process.env.REACT_APP_API_BASE_URL,
-        url: `/clients/payment`,
+        url: `/customers/payment`,
         data: {
           token: userState.token,
         },
