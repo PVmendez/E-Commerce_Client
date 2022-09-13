@@ -4,7 +4,7 @@ import { Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 export default function ProtectedRoute({ children }) {
-  const userState = useSelector((state) => state.persist.user);
+  const userState = useSelector((state) => state.user);
   console.log(userState);
   const [data, setData] = React.useState();
   const [isLoading, setIsLoading] = React.useState(true);

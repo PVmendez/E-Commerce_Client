@@ -9,8 +9,7 @@ export const About = () => {
   return (
     <>
       <Navbar />
-      <Header />
-      <div className="container our-team mt-5">
+      <div className="container our-team">
         <div className="row justify-content-center text-center">
           <h1>NUESTRO EQUIPO</h1>
           <div className="card">
