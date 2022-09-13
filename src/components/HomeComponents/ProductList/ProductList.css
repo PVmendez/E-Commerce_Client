@@ -12,9 +12,11 @@
   font-weight: 500;
 }
 .masthead2 {
-  background-image: url("../../../../public/img/Carousel_2.jpg");
-  background-position: 50% -26px;
+  background-image: url("../../../../public/img/header-photo.jpg");
   background-color: #242424;
+  width: 100%;
+  background-size: cover;
+  background-position: 50% -400px;
 }
 
 a.social-icon {
@@ -54,15 +56,21 @@ a.social-icon:hover {
   padding: 8rem 0;
 }
 
+.section-header {
+  font-weight: 800;
+  color: #000;
+}
+
 .main-menu {
-  color: #c0aa83;
+  color: #000;
   font-size: 20px;
   font-weight: 900;
 }
 
 a.link-menu {
   text-decoration: none;
-  color: #c0aa83;
+  color: #000;
+  
 }
 
 .footer-info {

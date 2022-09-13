@@ -32,7 +32,7 @@ export default function Navbar() {
               PRODUCTOS
             </Link>
 
-            <Link to="/" className="nav-item nav-link">
+            <Link to="/about" className="nav-item nav-link">
               LA EMPRESA
             </Link>
             <Link to="/carrito" className="nav-item nav-link">

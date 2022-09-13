@@ -6,6 +6,7 @@ import "./About.css";
 import { Services } from "./Services";
 
 export const About = () => {
+
   return (
     <>
       <Navbar />
