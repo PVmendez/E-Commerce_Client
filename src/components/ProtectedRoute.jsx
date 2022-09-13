@@ -12,12 +12,13 @@ export default function ProtectedRoute({ children }) {
     const verification = async () => {
       const result = await axios({
         method: "POST",
-        url: `http://localhost:8000/clients/payment`,
+        baseURL: process.env.REACT_APP_API_BASE_URL,
+        url: `/clients/payment`,
         data: {
           token: userState.token,
         },
         headers: {
-          Authorization: `Bearer ${userState.token}`,
+          Authorization: `Bearer ${userState[0].token}`,
         },
       });
       return result.data;
@@ -32,7 +33,7 @@ export default function ProtectedRoute({ children }) {
         setIsLoading(false);
       }
     });
-  }, [userState.token]);
+  }, [userState]);
   if (isLoading) {
     return <h2>loading</h2>;
   } else {
