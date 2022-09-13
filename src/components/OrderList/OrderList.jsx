@@ -90,57 +90,60 @@ export default function OrderList() {
                 </Accordion.Body>
               </Accordion.Item>
             )}
-            {orders.map((order, index) => {
-              let orderPrice = 0;
-              return (
-                <Accordion.Item eventKey="0">
-                  <Accordion.Header>
-                    Orden {index + 1} - Estado: {order.state}
-                  </Accordion.Header>
-                  <Accordion.Body>
-                    <div className="d-flex justify-content-between bg-light item-list">
-                      <div className="col-4 d-flex justify-content-center">
-                        Nombre del Producto
-                      </div>
-                      <div className="col-4 d-flex justify-content-center">
-                        Cantidad
-                      </div>
-                      <div className="col-4 d-flex justify-content-center">
-                        Precio
-                      </div>
-                    </div>
-
-                    {order.products.map((item, index) => {
-                      orderPrice += item.quantity * item.product.price;
-                      return (
-                        <div
-                          key={index}
-                          className="d-flex justify-content-between item-list"
-                        >
-                          <div className="col-4 d-flex justify-content-center">
-                            {item.product.name}
-                          </div>
-                          <div className="col-4 d-flex justify-content-center">
-                            {item.quantity}
-                          </div>
-                          <div className="col-4 d-flex justify-content-center">
-                            {item.product.price}
-                          </div>
+            {orders
+              .slice(0)
+              .reverse()
+              .map((order, index, array) => {
+                let orderPrice = 0;
+                return (
+                  <Accordion.Item eventKey={index + 1}>
+                    <Accordion.Header>
+                      Orden {array.length - 1 * index} - Estado: {order.state}
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      <div className="d-flex justify-content-between bg-light item-list">
+                        <div className="col-4 d-flex justify-content-center">
+                          Nombre del Producto
                         </div>
-                      );
-                    })}
-                    <div className="d-flex justify-content-between bg-light item-list">
-                      <div className="col-4 d-flex justify-content-center">
-                        Total Pago
+                        <div className="col-4 d-flex justify-content-center">
+                          Cantidad
+                        </div>
+                        <div className="col-4 d-flex justify-content-center">
+                          Precio
+                        </div>
                       </div>
-                      <div className="col-4 d-flex justify-content-center">
-                        {orderPrice}
+
+                      {order.products.map((item, index) => {
+                        orderPrice += item.quantity * item.product.price;
+                        return (
+                          <div
+                            key={index}
+                            className="d-flex justify-content-between item-list"
+                          >
+                            <div className="col-4 d-flex justify-content-center">
+                              {item.product.name}
+                            </div>
+                            <div className="col-4 d-flex justify-content-center">
+                              {item.quantity}
+                            </div>
+                            <div className="col-4 d-flex justify-content-center">
+                              {item.product.price}
+                            </div>
+                          </div>
+                        );
+                      })}
+                      <div className="d-flex justify-content-between bg-light item-list">
+                        <div className="col-4 d-flex justify-content-center">
+                          Total Pago
+                        </div>
+                        <div className="col-4 d-flex justify-content-center">
+                          {orderPrice}
+                        </div>
                       </div>
-                    </div>
-                  </Accordion.Body>
-                </Accordion.Item>
-              );
-            })}
+                    </Accordion.Body>
+                  </Accordion.Item>
+                );
+              })}
           </Accordion>
         </div>
       </div>
