@@ -1,5 +1,8 @@
 .navbar-checkout {
   color: #6c4a00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .form-checkout {
   width: 300px;

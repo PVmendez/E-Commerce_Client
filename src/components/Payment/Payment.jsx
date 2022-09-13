@@ -34,14 +34,17 @@ export default function Payment() {
   };
 
   return (
-    <>
-      <div className="row navbar-checkout">
-        <h4>Finalizar compra</h4>
-        <Link to="/productos">
-          <p>Seguir comprando</p>
-        </Link>
+    <div className="container">
+      <div className="row ">
+        <div className="navbar-checkout d-flex mt-5 mb-5">
+          <h4>Finalizar compra</h4>
+
+          <Link to="/productos">
+            <p>Seguir comprando</p>
+          </Link>
+        </div>
       </div>
-      <div className="row main-checkout ms-5">
+      <div className="row main-checkout">
         <h2>1 Datos de envio</h2>
         <form
           onSubmit={(e) => {
@@ -124,6 +127,6 @@ export default function Payment() {
           </button>
         </form>
       </div>
-    </>
+    </div>
   );
 }
