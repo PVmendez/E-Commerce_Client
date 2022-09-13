@@ -14,6 +14,7 @@ export default function OrderList() {
   console.log(cartStore);
   console.log(userStore);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [orders, setOrders] = useState([]);
   useEffect(() => {
     setTotalPrice(0);
     for (let i = 0; i < cartStore.length; i++) {
@@ -22,25 +23,30 @@ export default function OrderList() {
       });
     }
   }, [cartStore]);
-  //   useEffect(() => {
-  //     const getUserOrders = async () => {
-  //       const result = await axios({
-  //         method: "GET",
-  //         baseURL: process.env.REACT_APP_API_BASE_URL,
-  //         url: `/orders/${userStore.token}`,
-  //       });
-  //       console.log(result.data);
-  //     };
-  //   }, []);
+  useEffect(() => {
+    const getUserOrders = async () => {
+      const result = await axios({
+        method: "GET",
+        baseURL: process.env.REACT_APP_API_BASE_URL,
+        url: `/orders`,
+        headers: {
+          Authorization: `Bearer ${userStore[0].token}`,
+        },
+      });
+      console.log(result.data);
+      setOrders(result.data.orders);
+    };
+    getUserOrders();
+  }, []);
   return (
     <>
       <Navbar />
       <Header />
       <div className="container my-5">
         <div className="row">
-          {cartStore.length > 0 && (
-            <Accordion defaultActiveKey="0">
-              {/* Accordion item debe ser mapeado por cada order a nombre del usuario logeado que traiga la llamada axios */}
+          <Accordion defaultActiveKey="0">
+            {/* Accordion item debe ser mapeado por cada order a nombre del usuario logeado que traiga la llamada axios */}
+            {cartStore.length > 0 && (
               <Accordion.Item eventKey="0">
                 <Accordion.Header>Pedido en Carrito</Accordion.Header>
                 <Accordion.Body>
@@ -83,8 +89,59 @@ export default function OrderList() {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-            </Accordion>
-          )}
+            )}
+            {orders.map((order, index) => {
+              let orderPrice = 0;
+              return (
+                <Accordion.Item eventKey="0">
+                  <Accordion.Header>
+                    Orden {index + 1} - Estado: {order.state}
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <div className="d-flex justify-content-between bg-light item-list">
+                      <div className="col-4 d-flex justify-content-center">
+                        Nombre del Producto
+                      </div>
+                      <div className="col-4 d-flex justify-content-center">
+                        Cantidad
+                      </div>
+                      <div className="col-4 d-flex justify-content-center">
+                        Precio
+                      </div>
+                    </div>
+
+                    {order.products.map((item, index) => {
+                      orderPrice += item.quantity * item.product.price;
+                      return (
+                        <div
+                          key={index}
+                          className="d-flex justify-content-between item-list"
+                        >
+                          <div className="col-4 d-flex justify-content-center">
+                            {item.product.name}
+                          </div>
+                          <div className="col-4 d-flex justify-content-center">
+                            {item.quantity}
+                          </div>
+                          <div className="col-4 d-flex justify-content-center">
+                            {item.product.price}
+                          </div>
+                        </div>
+                      );
+                    })}
+                    <div className="d-flex justify-content-between bg-light item-list">
+                      <div className="col-4 d-flex justify-content-center">
+                        Total Pago
+                      </div>
+                      <div className="col-4 d-flex justify-content-center">
+                        {orderPrice}
+                      </div>
+                    </div>
+                  </Accordion.Body>
+                </Accordion.Item>
+              );
+            })}
+          </Accordion>
         </div>
       </div>
       <Footer />

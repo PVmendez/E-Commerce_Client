@@ -1,9 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Payment.css";
 import axios from "axios";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { emptyCart } from "../../Redux/userSlice/cartSlice";
 
 export default function Payment() {
   const [firstname, setFirstName] = useState("");
@@ -13,10 +14,10 @@ export default function Payment() {
   const [city, setCity] = useState("");
   const [postalCode, setPostalCode] = useState("");
   const [number, setNumber] = useState("");
-
+  const navigate = useNavigate();
   const cartStore = useSelector((state) => state.cart);
   const userStore = useSelector((state) => state.user);
-
+  const dispatch = useDispatch();
   const payOrder = () => {
     const postCart = async () => {
       const result = await axios({
@@ -28,7 +29,11 @@ export default function Payment() {
           Authorization: `Bearer ${userStore[0].token}`,
         },
       });
-      console.log(result.data);
+      console.log(result.status);
+      if (result.status === 201) {
+        navigate("/");
+        dispatch(emptyCart());
+      }
     };
     postCart();
   };
