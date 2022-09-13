@@ -10,6 +10,7 @@ import { Register } from "./components/Register/Register";
 import { About } from "./components/About/About";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Payment from "./components/Payment";
+import OrderList from "./components/OrderList/OrderList";
 
 function App() {
   return (
@@ -29,6 +30,15 @@ function App() {
           <ProtectedRoute>
             <Payment />
           </ProtectedRoute>
+        }
+      />
+      <Route
+        exact
+        path="/pedidos"
+        element={
+          // <ProtectedRoute>
+          <OrderList />
+          // </ProtectedRoute>
         }
       />
     </Routes>
