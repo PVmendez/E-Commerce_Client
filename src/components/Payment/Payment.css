@@ -1,0 +1,29 @@
+.navbar-checkout {
+  color: #6c4a00;
+}
+.form-checkout {
+  width: 300px;
+  height: 50px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0px;
+  border-bottom: 1px solid #d5b375;
+}
+.form-checkout:focus {
+  border-bottom: 1px solid #b17a04;
+  box-shadow: none;
+  color: #b17a04;
+}
+.form-checkout:focus::placeholder {
+  color: #b17a04;
+}
+
+.button-checkout {
+  margin-top: 70px;
+  width: 300px;
+  background-color: #d5b375;
+  color: white;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}

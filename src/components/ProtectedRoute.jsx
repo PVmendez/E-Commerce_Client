@@ -5,18 +5,20 @@ import { useSelector } from "react-redux";
 
 export default function ProtectedRoute({ children }) {
   const userState = useSelector((state) => state.user);
+  console.log(userState);
   const [data, setData] = React.useState();
   const [isLoading, setIsLoading] = React.useState(true);
   React.useEffect(() => {
     const verification = async () => {
       const result = await axios({
         method: "POST",
-        url: `http://localhost:8000/clients/payment`,
+        baseURL: process.env.REACT_APP_API_BASE_URL,
+        url: `/customers/payment`,
         data: {
           token: userState.token,
         },
         headers: {
-          Authorization: `Bearer ${userState.token}`,
+          Authorization: `Bearer ${userState[0].token}`,
         },
       });
       return result.data;
@@ -31,7 +33,7 @@ export default function ProtectedRoute({ children }) {
         setIsLoading(false);
       }
     });
-  }, [userState.token]);
+  }, [userState]);
   if (isLoading) {
     return <h2>loading</h2>;
   } else {
