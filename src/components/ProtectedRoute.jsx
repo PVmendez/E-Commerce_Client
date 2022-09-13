@@ -5,7 +5,10 @@ import { useSelector } from "react-redux";
 
 export default function ProtectedRoute({ children }) {
   const userState = useSelector((state) => state.user);
+<<<<<<< HEAD
   console.log(userState);
+=======
+>>>>>>> b4ca60cd91747e069abf599aed5b3cf51d011e8f
   const [data, setData] = React.useState();
   const [isLoading, setIsLoading] = React.useState(true);
   React.useEffect(() => {

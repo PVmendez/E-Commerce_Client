@@ -29,8 +29,9 @@ export const Login = () => {
         url: `/clients/login`,
         data: { user: user },
       });
-      dispatch(login(result.data));
-      result ? navigate("/") : navigate("/registro");
+      console.log(result.data)
+      dispatch(login(user));
+      result ? navigate("/") : navigate("/register");
     };
     getUserLogin();
   };
