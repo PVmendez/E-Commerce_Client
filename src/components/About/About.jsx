@@ -1,18 +1,36 @@
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
-import Header from "../Header";
+
 import Navbar from "../Navbar/Navbar";
 import "./About.css";
+import AboutOffCanvas from "./AboutOffCanvas";
 import { Services } from "./Services";
 
-export const About = () => {
-
+export const About = ({ handleShow, handleClose }) => {
   return (
     <>
       <Navbar />
+
       <div className="container our-team">
-        <div className="row justify-content-center text-center">
-          <h1>NUESTRO EQUIPO</h1>
+        {["start", "end", "top", "bottom"].map((placement, idx) => (
+          <AboutOffCanvas key={idx} placement={placement} name={placement} />
+        ))}
+        <Link to="/about" className="btn-flotante" onClick={handleShow}>
+          SOBRE ESTE PROYECTO
+        </Link>
+
+        <div className="aboutRow row justify-content-center text-center">
+          <h1 className="title-filter">Sobre este proyecto</h1>
+          <p className="p-filter mb-5 mt-3">
+            SweetHack es el proyecto final del Coding Bootcamp de Hack Academy,
+            una institución educativa que se especializa en cursos de
+            programación ubicada en Montevideo, Uruguay. El Coding Bootcamp es
+            un curso intensivo de 3 meses de duración, full-time, con más de 600
+            horas de práctica. La propuesta del proyecto final: un e-commerce,
+            tres semanas, tres estudiantes, y la integración de todos los
+            conocimientos adquiridos en el curso.
+          </p>
+          <h1 className="title-filter">Nuestro equipo</h1>
           <div className="card">
             <div className="circle">
               <div className="imgBox">
