@@ -9,7 +9,7 @@ import { Login } from "./components/Login/Login";
 import { Register } from "./components/Register/Register";
 import { About } from "./components/About/About";
 import ProtectedRoute from "./components/ProtectedRoute";
-import Payment from "./components/Payment";
+import Payment from "./components/Payment/Payment";
 import OrderList from "./components/OrderList/OrderList";
 import { useState } from "react";
 import AboutOffCanvas from "./components/About/AboutOffCanvas";
