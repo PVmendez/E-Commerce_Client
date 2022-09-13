@@ -11,37 +11,50 @@ import { About } from "./components/About/About";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Payment from "./components/Payment";
 import OrderList from "./components/OrderList/OrderList";
+import { useState } from "react";
+import AboutOffCanvas from "./components/About/AboutOffCanvas";
 
 function App() {
+  const [show, setShow] = useState(false);
+
+  const handleShow = () => setShow(true);
+
   return (
-    <Routes>
-      <Route exact path="/" element={<Home />} />
-      <Route exact path="/productos" element={<ProductList />} />
-      <Route exact path="/productos/:slug" element={<ProductDetails />} />
-      <Route exact path="/carrito" element={<Cart />} />
-      <Route path="*" element={<ErrorPage />} />
-      <Route exact path="/login" element={<Login />} />
-      <Route exact path="/registro" element={<Register />} />
-      <Route exact path="/about" element={<About />} />
-      <Route
-        exact
-        path="/pago"
-        element={
-          <ProtectedRoute>
-            <Payment />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        exact
-        path="/pedidos"
-        element={
-          // <ProtectedRoute>
-          <OrderList />
-          // </ProtectedRoute>
-        }
-      />
-    </Routes>
+    <>
+      {["end"].map((placement, idx) => (
+        <AboutOffCanvas
+          key={idx}
+          placement={placement}
+          name={placement}
+          show={show}
+          setShow={setShow}
+        />
+      ))}
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/productos" element={<ProductList />} />
+        <Route exact path="/productos/:slug" element={<ProductDetails />} />
+        <Route exact path="/carrito" element={<Cart />} />
+        <Route path="*" element={<ErrorPage />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/registro" element={<Register />} />
+        <Route exact path="/pedidos" element={<OrderList />} />
+        <Route
+          exact
+          path="/about"
+          element={<About setShow={setShow} handleShow={handleShow} />}
+        />
+        <Route
+          exact
+          path="/pago"
+          element={
+            <ProtectedRoute>
+              <Payment />
+            </ProtectedRoute>
+          }
+        />
+      </Routes>
+    </>
   );
 }
 
