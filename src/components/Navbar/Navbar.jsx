@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../Redux/userSlice/userSlice";
 
 export default function Navbar() {
+  const userStore = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  // const [logged, setLogged] = useState(false)
+  useEffect(() => {
+    console.log(userStore);
+  }, [userStore]);
   return (
     <div className="navbar navbar-expand-lg navbar-light navBar">
       <div className="container-fluid container-nav">
@@ -38,9 +46,21 @@ export default function Navbar() {
             <Link to="/carrito" className="nav-item nav-link">
               <i className="fa-solid fa-cart-shopping"></i>
             </Link>
-            <Link to="/login" className="nav-item nav-link">
-              <i className="fa-solid fa-user"></i>
-            </Link>
+            {userStore.length === 0 && (
+              <Link to="/login" className="nav-item nav-link">
+                <i className="fa-solid fa-user"></i>
+              </Link>
+            )}
+            {userStore.length > 0 && (
+              <div
+                className="nav-item nav-link"
+                onClick={() => {
+                  dispatch(logout());
+                }}
+              >
+                <i className="fa-solid fa-right-from-bracket"></i>
+              </div>
+            )}
           </div>
         </div>
       </div>
