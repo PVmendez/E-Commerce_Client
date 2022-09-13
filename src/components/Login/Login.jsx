@@ -30,7 +30,7 @@ export const Login = () => {
         data: { user: user },
       });
       console.log(result.data)
-      dispatch(login(user));
+      dispatch(login(result.data));
       result ? navigate("/") : navigate("/register");
     };
     getUserLogin();
