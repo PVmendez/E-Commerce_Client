@@ -67,24 +67,24 @@ export default function Payment() {
   return (
     <div className="container" id="container-checkout">
       <div className="row ">
-        <div className="navbar-checkout d-flex mt-5 mb-5">
+        <div className="navbar-checkout d-flex mt-5 mb-5 ">
           <h4>Finalizar compra</h4>
 
           <Link to="/productos">
-            <p className="m-0">Seguir comprando</p>
+            <p className="m-0 keep-buying">Seguir comprando</p>
           </Link>
         </div>
       </div>
 
       <div className="row main-checkout">
-        <div className="col-6">
-          <h2>1 Datos de envio</h2>
+        <div className="col-xxl-6 col-lg-12 d-flex justify-content-sm-center justify-content-xxl-between mb-5">
           <form
             onSubmit={(e) => {
               e.preventDefault();
               payOrder();
             }}
           >
+            <h2>Datos de envio</h2>
             <div className="mb-4">
               <input
                 type="text"
@@ -160,7 +160,7 @@ export default function Payment() {
             </button>
           </form>
         </div>
-        <div className="col-6">
+        <div className="col-xxl-6 col-lg-12 colCartCheckout">
           <div className="box-cartCheckout">
             <div className="d-flex justify-content-between ms-3">
               <p className="summary">Resumen del pedido({quantity})</p>

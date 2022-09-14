@@ -37,6 +37,7 @@
 .box-cartCheckout {
   border: 1px solid #e1e1e1;
   padding: 20px;
+  width: 100%;
 }
 .imagenPayment {
   width: 70px;
@@ -56,4 +57,12 @@
   font-size: 30px;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 765px) {
+  .keep-buying {
+    display: none;
+  }
+  .box-cartCheckout {
+    width: min-content;
+  }
 }
