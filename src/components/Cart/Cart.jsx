@@ -52,7 +52,14 @@ export default function Cart() {
         return amounts;
       });
       setTotalPrice((prev) => {
-        return prev + cartStore[i].product.price * cartStore[i].quantity;
+        return Number(
+          (
+            prev +
+            Number(
+              (cartStore[i].product.price * cartStore[i].quantity).toFixed(12)
+            )
+          ).toFixed(12)
+        );
       });
     }
   }, [cartStore]);
@@ -159,7 +166,8 @@ export default function Cart() {
                   </div>
                   <div className="col-4 col-md-3">
                     <p className="p-filter m-0 d-md-flex justify-content-md-center pedidoText">
-                      U$D {item.product.price * item.quantity}
+                      U$D{" "}
+                      {Number((item.product.price * item.quantity).toFixed(12))}
                     </p>
                   </div>
                   <div className="footerDivider col-12 w-100"></div>

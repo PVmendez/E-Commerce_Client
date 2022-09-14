@@ -15,7 +15,7 @@ export default function Payment() {
   const [postalCode, setPostalCode] = useState("");
   const [number, setNumber] = useState("");
   const [quantity, setQuantity] = useState("");
-  const [subTotalPrice, setSubTotalPrice] = useState("");
+  const [subTotalPrice, setSubTotalPrice] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
   const navigate = useNavigate();
   const cartStore = useSelector((state) => state.cart);
@@ -47,19 +47,21 @@ export default function Payment() {
       .map((item) => item.quantity)
       .reduce((prev, curr) => prev + curr, 0);
     setQuantity(sumQuantity);
-  }, []);
-
-  useEffect(() => {
     setSubTotalPrice(0);
     for (let i = 0; i < cartStore.length; i++) {
       setSubTotalPrice((prev) => {
-        return prev + cartStore[i].product.price * cartStore[i].quantity;
+        Number(
+          (
+            prev +
+            Number(
+              (cartStore[i].product.price * cartStore[i].quantity).toFixed(12)
+            )
+          ).toFixed(12)
+        );
       });
     }
-  }, [cartStore]);
-
-  useEffect(() => {
     setTotalPrice(() => {
+      console.log(subTotalPrice);
       return subTotalPrice + (1.5 + 2.5);
     });
   }, []);
