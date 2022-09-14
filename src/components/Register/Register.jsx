@@ -116,7 +116,7 @@ export const Register = () => {
                     />
                   </div>
                   <div className="input-box">
-                    <i class="fa-solid fa-location-dot"></i>
+                    <i className="fa-solid fa-location-dot"></i>
                     <input
                       type="address"
                       placeholder="Address"
@@ -127,7 +127,7 @@ export const Register = () => {
                     />
                   </div>
                   <div className="input-box">
-                    <i class="fa-solid fa-phone"></i>
+                    <i className="fa-solid fa-phone"></i>
                     <input
                       type="phone"
                       placeholder="Phone"

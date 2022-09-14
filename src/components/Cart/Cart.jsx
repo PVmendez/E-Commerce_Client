@@ -8,20 +8,76 @@ import { addToCart, removeFromCart } from "../../Redux/userSlice/cartSlice";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function Cart() {
   const navigate = useNavigate();
   const cartStore = useSelector((state) => state.cart);
+  const userStore = useSelector((state) => state.user);
+  const [outOfStock, setOutOfStock] = useState(null);
   const dispatch = useDispatch();
   const [totalPrice, setTotalPrice] = useState(0);
+  const [productsId, setProductsId] = useState([]);
+  const [productsAmount, setProductsAmount] = useState([]);
+  useEffect(() => {
+    for (let i = 0; i < cartStore.length; i++) {
+      setProductsId((prev) => {
+        let ids = [...prev];
+        let item = cartStore[i].product.id;
+        ids[i] = item;
+        return ids;
+      });
+      setProductsAmount((prev) => {
+        let amounts = [...prev];
+        let item = cartStore[i].quantity;
+        amounts[i] = item;
+        return amounts;
+      });
+    }
+  }, []);
+
   useEffect(() => {
     setTotalPrice(0);
     for (let i = 0; i < cartStore.length; i++) {
+      setProductsId((prev) => {
+        let ids = [...prev];
+        let item = cartStore[i].product.id;
+        ids[i] = item;
+        return ids;
+      });
+      setProductsAmount((prev) => {
+        let amounts = [...prev];
+        let item = cartStore[i].quantity;
+        amounts[i] = item;
+        return amounts;
+      });
       setTotalPrice((prev) => {
         return prev + cartStore[i].product.price * cartStore[i].quantity;
       });
     }
   }, [cartStore]);
+
+  const verifyStock = async () => {
+    console.log(productsId);
+    const result = await axios({
+      method: "patch",
+      baseURL: process.env.REACT_APP_API_BASE_URL,
+      url: `/products`,
+      data: {
+        products: { productsId },
+        amount: { productsAmount },
+      },
+      headers: {
+        Authorization: `Bearer ${userStore[0].token}`,
+      },
+    });
+    console.log(result.data);
+    if (result.data.error) {
+      setOutOfStock(result.data.product);
+    } else {
+      navigate("/pago");
+    }
+  };
 
   return (
     <>
@@ -117,6 +173,19 @@ export default function Cart() {
             <p className="text-clear m-0 fs-4">U$D {totalPrice}</p>
           </div>
         </div>
+        {outOfStock && (
+          <>
+            <div className="col-12 d-flex justify-content-center">
+              <p>
+                En este momento nos hemos quedado sin stock de {outOfStock.name}
+                , por favor regresa mas tarde e intenta de nuevo
+              </p>
+            </div>
+            {setTimeout(() => {
+              setOutOfStock(null);
+            }, 5000)}
+          </>
+        )}
         <div className="col-9 col-lg-6 resumenCol mt-3">
           <h3 className="cart-title">RESUMEN DEL PEDIDO</h3>
 
@@ -140,7 +209,8 @@ export default function Cart() {
             <button
               className="button-filter button-buy px-2 py-1 fs-4"
               onClick={() => {
-                navigate("/pago");
+                console.log(productsId);
+                verifyStock();
               }}
             >
               Confirmar Pedido
