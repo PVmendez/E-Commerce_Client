@@ -1,8 +1,15 @@
 .navbar-checkout {
   color: #6c4a00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#container-checkout {
+  padding-left: 200px;
+  padding-right: 200px;
 }
 .form-checkout {
-  width: 300px;
+  width: 400px;
   height: 50px;
   border-top: none;
   border-left: none;
@@ -21,9 +28,41 @@
 
 .button-checkout {
   margin-top: 70px;
-  width: 300px;
+  width: 400px;
   background-color: #d5b375;
   color: white;
   padding-top: 0.5%;
   padding-bottom: 0.5%;
+}
+.box-cartCheckout {
+  border: 1px solid #e1e1e1;
+  padding: 20px;
+  width: 100%;
+}
+.imagenPayment {
+  width: 70px;
+  height: 70px;
+}
+.productsPayment,
+.promocion,
+.prices {
+  border-bottom: 1px solid #e1e1e1;
+}
+.summary {
+  font-size: 20px;
+  color: #6c4a00;
+  font-weight: 600;
+}
+.totalPrice {
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 765px) {
+  .keep-buying {
+    display: none;
+  }
+  .box-cartCheckout {
+    width: min-content;
+  }
 }

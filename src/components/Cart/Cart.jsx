@@ -18,9 +18,7 @@ export default function Cart() {
     setTotalPrice(0);
     for (let i = 0; i < cartStore.length; i++) {
       setTotalPrice((prev) => {
-        return (
-          prev + cartStore[i].product.price * cartStore[i].quantity
-        );
+        return prev + cartStore[i].product.price * cartStore[i].quantity;
       });
     }
   }, [cartStore]);
@@ -49,7 +47,6 @@ export default function Cart() {
             </p>
           </div>
           <div className="pedido">
-            {/* Este div despues estaria en un map */}
             {cartStore.map((item, index, array) => {
               return (
                 <div

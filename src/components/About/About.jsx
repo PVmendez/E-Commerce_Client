@@ -15,9 +15,6 @@ export const About = ({ handleShow, handleClose }) => {
         {["start", "end", "top", "bottom"].map((placement, idx) => (
           <AboutOffCanvas key={idx} placement={placement} name={placement} />
         ))}
-        <Link to="/about" className="btn-flotante" onClick={handleShow}>
-          SOBRE ESTE PROYECTO
-        </Link>
 
         <div className="aboutRow row justify-content-center text-center">
           <h1 className="title-filter">Sobre este proyecto</h1>
@@ -41,7 +38,7 @@ export const About = ({ handleShow, handleClose }) => {
               </div>
             </div>
             <div className="content">
-              <Link to="#">
+              <Link to="https://www.linkedin.com/in/pablomendezrey/">
                 <i className="fa fa-linkedin" aria-hidden="true"></i>
               </Link>
               <h3>Pablo Méndez</h3>
@@ -53,14 +50,11 @@ export const About = ({ handleShow, handleClose }) => {
           <div className="card">
             <div className="circle">
               <div className="imgBox">
-                <img
-                  src="https://images.unsplash.com/photo-1568572933382-74d440642117?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
-                  alt=""
-                />
+                <img src="/img/Sofia.jpg" alt="sofia" />
               </div>
             </div>
             <div className="content">
-              <Link to="#">
+              <Link to="https://www.linkedin.com/in/sofia-valdez-silveira/">
                 <i className="fa fa-linkedin" aria-hidden="true"></i>
               </Link>
               <h3>Sofía Valdez</h3>
@@ -90,6 +84,9 @@ export const About = ({ handleShow, handleClose }) => {
           </div>
         </div>
       </div>
+      <Link to="/about" className="btn-flotante" onClick={handleShow}>
+        SOBRE ESTE PROYECTO
+      </Link>
       <Services />
       <Footer />
     </>
