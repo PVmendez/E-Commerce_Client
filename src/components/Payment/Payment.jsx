@@ -50,7 +50,7 @@ export default function Payment() {
     setSubTotalPrice(0);
     for (let i = 0; i < cartStore.length; i++) {
       setSubTotalPrice((prev) => {
-        Number(
+       return Number(
           (
             prev +
             Number(
@@ -59,9 +59,9 @@ export default function Payment() {
           ).toFixed(12)
         );
       });
+      console.log(subTotalPrice);
     }
     setTotalPrice(() => {
-      console.log(subTotalPrice);
       return subTotalPrice + (1.5 + 2.5);
     });
   }, [cartStore, subTotalPrice]);
