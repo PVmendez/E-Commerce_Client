@@ -131,31 +131,34 @@ export default function ProductDetails() {
             </button>
           </div>
         </div>
-
-        <div className="row mt-5 justify-content-around  row-recommendedProduct">
+      </div>
+      <div className="container">
+        <div className="row mt-5  row-recommendedProduct">
           <p className="title-filter">Además te recomendamos...</p>
-          {recommendedProducts.map((recommendedProduct, index) => 
-              <div key={index} className="col-12 col-sm-6 col-xl-2 justify-content-xl-around justify-content-center recommendedUser">
-                <div
-                  onClick={() => {
-                    navigate(`/productos/${recommendedProduct.slug}`);
-                  }}
-                  className="recommended me-3 d-flex flex-column"
-                  key={recommendedProduct.id}
-                >
-                  <p className="nameRecommended align-self-center">
-                    {recommendedProduct.name}
-                  </p>
+          {recommendedProducts.map((recommendedProduct, index) => (
+            <div
+              key={index}
+              className="col-12 col-sm-6 col-xl-2 justify-content-xl-around justify-content-center recommendedUser"
+            >
+              <div
+                onClick={() => {
+                  navigate(`/productos/${recommendedProduct.slug}`);
+                }}
+                className="recommended me-3 d-flex flex-column"
+                key={recommendedProduct.id}
+              >
+                <p className="nameRecommended align-self-center">
+                  {recommendedProduct.name}
+                </p>
 
-                  <img
-                    className="img-productRecommended mt-0"
-                    src={`/img/${recommendedProduct.image}`}
-                    alt="recommendedUser"
-                  />
-                </div>
+                <img
+                  className="img-productRecommended mt-0"
+                  src={`/img/${recommendedProduct.image}`}
+                  alt="recommendedUser"
+                />
               </div>
-
-          )}
+            </div>
+          ))}
           <Link to="/productos" className="col-12 col-sm-6 col-xl-2 verMas">
             <div className="d-flex justify-content-center align-items-center">
               Ver más <i className="fas fa-chevron-right"></i>
@@ -163,6 +166,7 @@ export default function ProductDetails() {
           </Link>
         </div>
       </div>
+
       <Footer />
     </>
   );

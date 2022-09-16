@@ -6,7 +6,6 @@ export const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       if (current(state).length === 0) {
-        console.log(action);
         return void state.push(action.payload);
       }
       if (

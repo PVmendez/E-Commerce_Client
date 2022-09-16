@@ -33,7 +33,7 @@ export default function Payment() {
           Authorization: `Bearer ${userStore[0].token}`,
         },
       });
-      console.log(result.data);
+
       if (result.status === 201) {
         navigate("/");
         dispatch(emptyCart());
@@ -50,7 +50,7 @@ export default function Payment() {
     setSubTotalPrice(0);
     for (let i = 0; i < cartStore.length; i++) {
       setSubTotalPrice((prev) => {
-       return Number(
+        return Number(
           (
             prev +
             Number(
@@ -59,7 +59,6 @@ export default function Payment() {
           ).toFixed(12)
         );
       });
-      console.log(subTotalPrice);
     }
     setTotalPrice(() => {
       return subTotalPrice + (1.5 + 2.5);

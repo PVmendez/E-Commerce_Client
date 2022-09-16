@@ -12,11 +12,12 @@
   font-weight: 500;
 }
 .masthead2 {
-  background-image: url("../../../../public/img/header-photo.jpg");
+  background-image: url("../../../../public/img/Carousel_3.jpg");
   background-color: #242424;
   width: 100%;
   background-size: cover;
-  background-position: 50% -400px;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 a.social-icon {
@@ -28,7 +29,6 @@ a.social-icon:hover {
 }
 #col-card {
   border: 1px solid #fff3db;
-  width: 300px;
 }
 .social-icon {
   background-color: #ece4c3;
@@ -70,7 +70,6 @@ a.social-icon:hover {
 a.link-menu {
   text-decoration: none;
   color: #000;
-  
 }
 
 .footer-info {
@@ -192,7 +191,6 @@ a.explore-link:hover {
 }
 
 .blog-form {
-  padding: 50px;
   max-height: 500px;
 }
 

@@ -21,7 +21,7 @@ export default function Filter() {
   }, []);
 
   return (
-    <div className="row filterRow justify-content-center">
+    <div className="row filterRow">
       <div className="div-filter">
         <h2 className="title-filter">DESTACADOS</h2>
         <div>
@@ -34,8 +34,8 @@ export default function Filter() {
           <p className="p-filter">Esto es lo que hacemos.</p>
         </div>
       </div>
-      <div className="col-8 ">
-        <div className="row">
+
+      <div className="row">
         {popularProducts.map((popularProduct) => {
           return (
             <div
@@ -56,10 +56,7 @@ export default function Filter() {
             </div>
           );
         })}
-        </div>
-        
       </div>
-      
     </div>
   );
 }

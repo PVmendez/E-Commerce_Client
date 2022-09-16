@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <div className="navbar navbar-expand-lg navbar-light navBar">
-      <div className="container-fluid container-nav">
+      <div className="container container-nav">
         <Link to="/" className="navbar-brand">
           <picture>
             <img src="img/logo.png" alt="" />
@@ -50,14 +50,11 @@ export default function Navbar() {
             )}
             {userStore.length > 0 && (
               <>
-                <Link
-                  to="/pedidos"
-                  className="nav-item nav-link"
-                >
+                <Link to="/pedidos" className="nav-item nav-link">
                   <i className="fa-solid fa-address-book me-3"></i> HISTORIAL DE
                   COMPRAS
                 </Link>
-                <Link 
+                <Link
                   to="/"
                   className="nav-item nav-link"
                   onClick={() => {
