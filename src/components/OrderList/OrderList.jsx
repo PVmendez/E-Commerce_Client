@@ -37,7 +37,7 @@ export default function OrderList() {
       setOrders(result.data.orders);
     };
     getUserOrders();
-  }, []);
+  }, [userStore]);
   return (
     <>
       <Navbar />

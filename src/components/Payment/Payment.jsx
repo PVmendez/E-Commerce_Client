@@ -64,7 +64,7 @@ export default function Payment() {
       console.log(subTotalPrice);
       return subTotalPrice + (1.5 + 2.5);
     });
-  }, []);
+  }, [cartStore, subTotalPrice]);
 
   return (
     <div className="container" id="container-checkout">

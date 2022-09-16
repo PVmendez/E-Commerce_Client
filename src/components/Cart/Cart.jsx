@@ -34,7 +34,7 @@ export default function Cart() {
         return amounts;
       });
     }
-  }, []);
+  }, [cartStore]);
 
   useEffect(() => {
     setTotalPrice(0);

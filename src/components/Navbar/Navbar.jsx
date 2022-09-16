@@ -1,17 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Navbar.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../Redux/userSlice/userSlice";
 
 export default function Navbar() {
   const userStore = useSelector((state) => state.user);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-  // const [logged, setLogged] = useState(false)
-  // useEffect(() => {
-  //   console.log(userStore);
-  // }, [userStore]);
+
   return (
     <div className="navbar navbar-expand-lg navbar-light navBar">
       <div className="container-fluid container-nav">
@@ -54,23 +50,22 @@ export default function Navbar() {
             )}
             {userStore.length > 0 && (
               <>
-                <a
+                <Link
+                  to="/pedidos"
                   className="nav-item nav-link"
-                  onClick={() => {
-                    navigate("/pedidos");
-                  }}
                 >
                   <i className="fa-solid fa-address-book me-3"></i> HISTORIAL DE
                   COMPRAS
-                </a>
-                <a
+                </Link>
+                <Link 
+                  to="/"
                   className="nav-item nav-link"
                   onClick={() => {
                     dispatch(logout());
                   }}
                 >
                   <i className="fa-solid fa-right-from-bracket"></i>
-                </a>
+                </Link>
               </>
             )}
           </div>
