@@ -3,6 +3,7 @@
 .filterRow {
   width: 100%;
   margin: 0;
+  justify-content: space-between;
 }
 
 .div-filter {

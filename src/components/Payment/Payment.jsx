@@ -5,6 +5,7 @@ import "./Payment.css";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { emptyCart } from "../../Redux/userSlice/cartSlice";
+import { MercadoPago } from "../MercadoPago/MercadoPago";
 
 export default function Payment() {
   const [firstname, setFirstName] = useState("");
@@ -17,6 +18,15 @@ export default function Payment() {
   const [quantity, setQuantity] = useState("");
   const [subTotalPrice, setSubTotalPrice] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [user] = useState({
+    firstname: firstname,
+    lastname: lastname,
+    email: email,
+    address: address,
+    city: city,
+    postalCode: postalCode,
+  })
+  const [pagar, setPagar] = useState(true);
   const navigate = useNavigate();
   const cartStore = useSelector((state) => state.cart);
   const userStore = useSelector((state) => state.user);
@@ -33,13 +43,12 @@ export default function Payment() {
           Authorization: `Bearer ${userStore[0].token}`,
         },
       });
-      console.log(result.data);
       if (result.status === 201) {
-        navigate("/");
         dispatch(emptyCart());
       }
     };
     postCart();
+    setPagar(false);
   };
 
   useEffect(() => {
@@ -50,7 +59,7 @@ export default function Payment() {
     setSubTotalPrice(0);
     for (let i = 0; i < cartStore.length; i++) {
       setSubTotalPrice((prev) => {
-        Number(
+        return Number(
           (
             prev +
             Number(
@@ -61,10 +70,9 @@ export default function Payment() {
       });
     }
     setTotalPrice(() => {
-      console.log(subTotalPrice);
       return subTotalPrice + (1.5 + 2.5);
     });
-  }, []);
+  }, [cartStore, subTotalPrice]);
 
   return (
     <div className="container" id="container-checkout">
@@ -160,6 +168,7 @@ export default function Payment() {
             <button type="submit" className="button-filter button-checkout">
               Confirmar pedido
             </button>
+            {(pagar) ? null : <MercadoPago items={cartStore} totalPrice={totalPrice} user={user} />}
           </form>
         </div>
         <div className="col-xxl-6 col-lg-12 colCartCheckout">

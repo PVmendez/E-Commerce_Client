@@ -34,7 +34,7 @@ export default function Cart() {
         return amounts;
       });
     }
-  }, []);
+  }, [cartStore]);
 
   useEffect(() => {
     setTotalPrice(0);
@@ -65,7 +65,6 @@ export default function Cart() {
   }, [cartStore]);
 
   const verifyStock = async () => {
-    console.log(productsId);
     const result = await axios({
       method: "patch",
       baseURL: process.env.REACT_APP_API_BASE_URL,
@@ -219,7 +218,6 @@ export default function Cart() {
             <button
               className="button-filter button-buy px-2 py-1 fs-4"
               onClick={() => {
-                console.log(productsId);
                 verifyStock();
               }}
             >

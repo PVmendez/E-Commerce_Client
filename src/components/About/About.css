@@ -132,7 +132,7 @@
   font-size: 22px;
   text-decoration: none;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-right: 30px;
 }
 /* .p-verMas:hover {

@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 
 export default function ProtectedRoute({ children }) {
   const userState = useSelector((state) => state.user);
-  console.log(userState);
   const [data, setData] = React.useState();
   const [isLoading, setIsLoading] = React.useState(true);
   React.useEffect(() => {
@@ -24,7 +23,6 @@ export default function ProtectedRoute({ children }) {
       return result.data;
     };
     verification().then((verify) => {
-      console.log(verify);
       if (verify.error) {
         setData(false);
         setIsLoading(false);
@@ -37,7 +35,6 @@ export default function ProtectedRoute({ children }) {
   if (isLoading) {
     return <h2>loading</h2>;
   } else {
-    console.log(data);
     return data ? children : <Navigate to="/login" replace />;
   }
 }

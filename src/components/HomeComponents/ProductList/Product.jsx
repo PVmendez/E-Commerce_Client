@@ -5,7 +5,7 @@ import { addToCart } from "../../../Redux/userSlice/cartSlice";
 export const Product = ({ producto }) => {
   const dispatch = useDispatch();
   return (
-    <div id="col-card" className="col-12 col-md-5 col-xl-3  my-3">
+    <div id="col-card" className="col-12 col-md-5 col-xxl-3 mx-xxl-3 my-3">
       <div className="card-body">
         <img
           src={`../img/${producto.image}`}
@@ -26,7 +26,7 @@ export const Product = ({ producto }) => {
             <i className="fa-solid fa-plus" aria-hidden="true"></i> Ver mas
           </Link>
         </div>
-        
+
         <div
           // to="/productos"
           // target="_blank"

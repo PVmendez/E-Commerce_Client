@@ -11,8 +11,6 @@ import Navbar from "../Navbar/Navbar";
 export default function OrderList() {
   const cartStore = useSelector((state) => state.cart);
   const userStore = useSelector((state) => state.user);
-  console.log(cartStore);
-  console.log(userStore);
   const [totalPrice, setTotalPrice] = useState(0);
   const [orders, setOrders] = useState([]);
   useEffect(() => {
@@ -33,11 +31,10 @@ export default function OrderList() {
           Authorization: `Bearer ${userStore[0].token}`,
         },
       });
-      console.log(result.data);
       setOrders(result.data.orders);
     };
     getUserOrders();
-  }, []);
+  }, [userStore]);
   return (
     <>
       <Navbar />
@@ -45,7 +42,6 @@ export default function OrderList() {
       <div className="container my-5">
         <div className="row">
           <Accordion defaultActiveKey="0">
-            {/* Accordion item debe ser mapeado por cada order a nombre del usuario logeado que traiga la llamada axios */}
             {cartStore.length > 0 && (
               <Accordion.Item eventKey="0">
                 <Accordion.Header>Pedido en Carrito</Accordion.Header>
@@ -96,7 +92,7 @@ export default function OrderList() {
               .map((order, index, array) => {
                 let orderPrice = 0;
                 return (
-                  <Accordion.Item eventKey={index + 1}>
+                  <Accordion.Item key={index} eventKey={index + 1}>
                     <Accordion.Header>
                       Orden {array.length - 1 * index} - Estado: {order.state}
                     </Accordion.Header>
