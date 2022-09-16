@@ -15,7 +15,9 @@ export default function Header({ product }) {
   return (
     <header id="header" className="page-section masthead2">
       <div className="container h-50 paths">
-        <h1 className="mt-5 section-header font-weight-bold">{showPath.split('/')[0]}</h1>
+        <h1 className="mt-5 section-header font-weight-bold text-white">
+          {showPath.split("/")[0]}
+        </h1>
         <p className="link-menu main-menu font-weight-light mb-5">
           <span
             onClick={() => {
@@ -31,7 +33,7 @@ export default function Header({ product }) {
                   navigate(`/${location.pathname}`);
                 }}
               >
-                {">"} {showPath.split('/')[0]}{" "}
+                {">"} {showPath.split("/")[0]}{" "}
               </span>
               <span
                 onClick={() => {

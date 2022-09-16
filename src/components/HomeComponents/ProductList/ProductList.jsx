@@ -69,7 +69,7 @@ export const ProductList = () => {
             </div>
 
             <div className="col-lg-9">
-              <div className="row justify-content-center justify-content-xxl-between justify-content-md-around  ">
+              <div className="row justify-content-center justify-content-md-between">
                 <div className="col-12 text-center">
                   {productos && productos.length} resultados
                 </div>

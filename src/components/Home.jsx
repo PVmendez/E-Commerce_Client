@@ -10,8 +10,10 @@ export default function Home() {
     <div className="Home">
       <Navbar />
       <CarouselComponent />
-      <Filter />
-      <About />
+      <div className="container">
+        <Filter />
+        <About />
+      </div>
       <Footer />
     </div>
   );

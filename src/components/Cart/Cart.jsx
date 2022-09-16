@@ -78,10 +78,9 @@ export default function Cart() {
       },
     });
     if (result.data.error) {
-      setOutOfStock(result.data.product);
-    } else {
-      navigate("/pago");
-    }
+      return setOutOfStock(result.data.product);
+    } 
+    navigate("/pago");
   };
 
   return (
