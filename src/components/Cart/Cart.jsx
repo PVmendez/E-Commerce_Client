@@ -79,7 +79,9 @@ export default function Cart() {
       },
     });
     console.log(result.data);
-    if (result.data.error) {
+    if (result.data.error === "token invalid") {
+      navigate("/login");
+    } else if (result.data.error) {
       setOutOfStock(result.data.product);
     } else {
       navigate("/pago");
