@@ -32,7 +32,6 @@ export const Register = () => {
         url: `/customers/register`,
         data: { user: user },
       });
-      console.log(result);
       if (result.status === 201) {
         navigate("/login");
       } else {

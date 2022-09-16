@@ -65,7 +65,6 @@ export default function Cart() {
   }, [cartStore]);
 
   const verifyStock = async () => {
-    console.log(productsId);
     const result = await axios({
       method: "patch",
       baseURL: process.env.REACT_APP_API_BASE_URL,
@@ -78,7 +77,6 @@ export default function Cart() {
         Authorization: `Bearer ${userStore[0].token}`,
       },
     });
-    console.log(result.data);
     if (result.data.error) {
       setOutOfStock(result.data.product);
     } else {
@@ -217,7 +215,6 @@ export default function Cart() {
             <button
               className="button-filter button-buy px-2 py-1 fs-4"
               onClick={() => {
-                console.log(productsId);
                 verifyStock();
               }}
             >

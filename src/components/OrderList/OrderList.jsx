@@ -11,8 +11,6 @@ import Navbar from "../Navbar/Navbar";
 export default function OrderList() {
   const cartStore = useSelector((state) => state.cart);
   const userStore = useSelector((state) => state.user);
-  console.log(cartStore);
-  console.log(userStore);
   const [totalPrice, setTotalPrice] = useState(0);
   const [orders, setOrders] = useState([]);
   useEffect(() => {
@@ -33,7 +31,6 @@ export default function OrderList() {
           Authorization: `Bearer ${userStore[0].token}`,
         },
       });
-      console.log(result.data);
       setOrders(result.data.orders);
     };
     getUserOrders();
