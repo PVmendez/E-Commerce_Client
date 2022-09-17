@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       <div className="col-8 d-flex justify-content-center flex-column align-items-center aboutRow">
-        <h2 className="title-filter mt-5">SOBRE EL PROYECTO</h2>
+        <h2 className="title-filter mt-5">sobre el proyecto</h2>
         <div>
           <i
             style={{ color: "#6c4a00" }}
@@ -27,7 +27,7 @@ export default function About() {
         </p>
       </div>
       <div className="d-flex justify-content-center">
-        <Link to="/about" className="button-filter">
+        <Link to="/about" className="button-filter" id="a-about">
           Ver mas
         </Link>
       </div>

@@ -5,10 +5,9 @@ export default function Footer() {
     <div className="footerRow">
       <div className="container">
         <div className="row">
-          <div className="footerDiv d-flex flex-column flex-md-row justify-content-between mt-5">
+          <div className="footerDiv d-flex flex-md-row justify-content-between mt-5">
             <div className="col-12 col-md-3 col-xl-2 d-flex flex-column align-items-center my-md-5">
-              <h5 className="footerTitle ">Horarios</h5>
-              <p>Estamos abiertos las 24 hs, los 7 días de la semana.</p>
+              <img src="../img/Captura.PNG" alt="" />
             </div>
             <div className="col-12 col-md-3 col-xl-2 d-flex flex-column align-items-center my-md-5">
               <h5 className="footerTitle">Síguenos</h5>
@@ -26,9 +25,6 @@ export default function Footer() {
             </div>
           </div>
           <div className="footerDivider col-12"></div>
-          <div className="logo d-flex justify-content-center mt-5">
-            <img src="../img/logo.png" alt="" />
-          </div>
         </div>
       </div>
     </div>

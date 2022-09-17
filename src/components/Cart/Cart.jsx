@@ -77,7 +77,7 @@ export default function Cart() {
         Authorization: `Bearer ${userStore[0].token}`,
       },
     });
-    console.log(result.data);
+
     if (result.data.error === "token invalid") {
       navigate("/login");
     } else if (result.data.error) {

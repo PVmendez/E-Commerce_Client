@@ -11,3 +11,11 @@
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
 }
+#a-about {
+  text-decoration: none;
+  color: var(--brown-color);
+}
+#a-about:hover {
+  background-color: var(--brown-color);
+  color: #ffffff;
+}

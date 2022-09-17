@@ -23,7 +23,7 @@ export default function Filter() {
   return (
     <div className="row filterRow">
       <div className="div-filter">
-        <h2 className="title-filter">DESTACADOS</h2>
+        <h2 className="title-filter">destacados</h2>
         <div>
           <i
             style={{ color: "#6c4a00" }}
@@ -31,7 +31,9 @@ export default function Filter() {
           ></i>
         </div>
         <div>
-          <p className="p-filter">Esto es lo que hacemos.</p>
+          <p className="p-filter mt-4">
+            descubrí nuestros bombones más destacados
+          </p>
         </div>
       </div>
 

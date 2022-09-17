@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url(//db.onlinewebfonts.com/c/16efa2896f117dae2debeb23ab4715dd?family=DidoteTextW01-Italic);
 
 .filterRow {
   width: 100%;
@@ -20,20 +21,22 @@
 .box-name {
   z-index: 3;
   position: absolute;
-  top: 70px;
-  left: 0px;
-  font-size: 20px;
-  color: #b17a04;
-  border: 1px solid #b17a04;
-  padding: 5%;
+  bottom: -35px;
+  right: -20px;
+  font-size: 25px;
+  padding: 6%;
   display: none;
   cursor: pointer;
+  color: var(--brown-color);
+  font-weight: 500;
+  font-family: didot-w01-italic;
+  font-style: italic;
 }
 
 .div-filter:hover .img-filter {
   transform: scale(1.5);
   cursor: pointer;
-  filter: opacity(0.3);
+  border: 1px solid var(--brown-color);
 }
 
 .div-filter:hover .box-name {
@@ -41,29 +44,28 @@
 }
 
 .title-filter {
-  color: #b17a04;
-  font-weight: 700;
-  font-size: 2.5em;
+  color: var(--brown-color);
+  font-family: didot-w01-italic;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 3.5em;
 }
 .p-filter {
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
-  font-size: 20px;
+  font-size: 17px;
+  color: #242323;
+  text-transform: uppercase;
 }
 .button-filter {
-  border: 2px solid #d5b375;
+  border: 2px solid var(--brown-color);
   margin-left: 5px;
   font-size: 20px;
   padding-left: 1%;
   padding-right: 1%;
   padding-top: 0.2%;
   padding-bottom: 0.2%;
-  color: #d5b375;
+  color: var(--brown-color);
   background-color: white;
   text-decoration: none;
-}
-
-.button-filter:hover {
-  background-color: #d5b375;
-  color: white;
 }
