@@ -15,11 +15,12 @@ export default function Header({ product }) {
   return (
     <header id="header" className="page-section masthead2">
       <div className="container h-50 paths">
-        <h1 className="mt-5 section-header font-weight-bold text-white">
+        <p className="mt-5 section-header title-header">
           {showPath.split("/")[0]}
-        </h1>
-        <p className="link-menu main-menu font-weight-light mb-5">
+        </p>
+        <p className="link-menu main-menu  mb-5">
           <span
+            className="path-header"
             onClick={() => {
               navigate("/");
             }}
@@ -29,6 +30,7 @@ export default function Header({ product }) {
           {product ? (
             <>
               <span
+                className="path-header"
                 onClick={() => {
                   navigate(`/${location.pathname}`);
                 }}

@@ -23,41 +23,37 @@ export default function Filter() {
   return (
     <div className="row filterRow">
       <div className="div-filter">
-        <h2 className="title-filter">destacados</h2>
+        <p className="p-filter">no te los pierdas</p>
+
         <div>
-          <i
-            style={{ color: "#6c4a00" }}
-            className="fas fa-window-minimize fa-xl pb-4"
-          ></i>
-        </div>
-        <div>
-          <p className="p-filter mt-4">
-            descubrí nuestros bombones más destacados
-          </p>
+          <h2 className="title-filter">los más solicitados</h2>
         </div>
       </div>
 
-      <div className="row">
-        {popularProducts.map((popularProduct) => {
-          return (
-            <div
-              key={popularProduct.id}
-              className="col-12 col-md-4 col-xl-3 d-flex justify-content-center p-0 flex-column flex-lg-row align-items-center"
-              onClick={() => {
-                navigate(`/productos/${popularProduct.slug}#header`);
-              }}
-            >
-              <div className=" div-filter col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 d-flex justify-content-center">
-                <img
-                  className="img-filter"
-                  src={`img/${popularProduct.image}`}
-                  alt="bombon1"
-                />
-                <span className="box-name">{popularProduct.name}</span>
-              </div>
-            </div>
-          );
-        })}
+      <div id="black-row">
+        <div className="container">
+          <div className="row">
+            {popularProducts.map((popularProduct) => {
+              return (
+                <div
+                  key={popularProduct.id}
+                  className="col-12 col-md-4 col-xl-3 d-flex justify-content-center p-0 flex-column flex-lg-row align-items-center"
+                  onClick={() => {
+                    navigate(`/productos/${popularProduct.slug}#header`);
+                  }}
+                >
+                  <div className=" div-filter col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 d-flex justify-content-center">
+                    <img
+                      className="img-filter"
+                      src={`img/${popularProduct.image}`}
+                      alt="bombon1"
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );

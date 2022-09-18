@@ -11,4 +11,9 @@
 .footerTitle {
   color: #ffffff;
   font-family: didot-w01-italic, serif;
+  font-style: italic;
+  font-size: 22px;
+}
+.p-footer {
+  font-size: 14px;
 }

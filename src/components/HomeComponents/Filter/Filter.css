@@ -3,8 +3,11 @@
 
 .filterRow {
   width: 100%;
-  margin: 0;
+  margin-top: 10em;
   justify-content: space-between;
+  background-color: var(--black-color);
+  padding-bottom: 4em;
+  padding-top: 1em;
 }
 
 .div-filter {
@@ -36,7 +39,6 @@
 .div-filter:hover .img-filter {
   transform: scale(1.5);
   cursor: pointer;
-  border: 1px solid var(--brown-color);
 }
 
 .div-filter:hover .box-name {
@@ -54,8 +56,9 @@
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
   font-size: 17px;
-  color: #242323;
+  color: #ffffff;
   text-transform: uppercase;
+  margin-bottom: 0;
 }
 .button-filter {
   border: 2px solid var(--brown-color);

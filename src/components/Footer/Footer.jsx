@@ -6,25 +6,38 @@ export default function Footer() {
       <div className="container">
         <div className="row">
           <div className="footerDiv d-flex flex-md-row justify-content-between mt-5">
-            <div className="col-12 col-md-3 col-xl-2 d-flex flex-column align-items-center my-md-5">
+            <div className="col-12 col-md-4 col-xl-3 d-flex flex-column align-items-start my-md-5">
               <img src="../img/Captura.PNG" alt="" />
             </div>
-            <div className="col-12 col-md-3 col-xl-2 d-flex flex-column align-items-center my-md-5">
-              <h5 className="footerTitle">Síguenos</h5>
+            <div className="col-12 col-md-3 col-xl-3 d-flex flex-column align-items-start my-md-5">
+              <h5 className="footerTitle">nuestra boutique</h5>
+              <p className="p-footer">Osorio 1120</p>
+              <p className="p-footer">Pocitos | Montevideo</p>
+              <p className="p-footer">Lunes a Viernes de 14 a 19hs.</p>
+              <p className="p-footer">Sábados de 10 a 14hs.</p>
+            </div>
+            <div className="col-12 col-md-3 col-xl-3 d-flex flex-column align-items-start my-md-5">
+              <h5 className="footerTitle ">políticas</h5>
+              <p className="p-footer">Política de envíos</p>
+              <p className="p-footer">Cómo comprar</p>
+              <p className="p-footer">Preguntas frecuentes</p>
+            </div>
+            <div className="col-12 col-md-3 col-xl-3 d-flex flex-column align-items-start my-md-5">
+              <h5 className="footerTitle ">atención al cliente</h5>
+              <p className="p-footer">WhatsApp: 099 668315</p>
+              <p className="p-footer">Email: fabianfestochocolates@gmail.com</p>
               <p>
-                <i className="fa-brands fa-twitter mx-2 fa-xl footerIcon"></i>
-                <i className="fa-brands fa-pinterest mx-2 fa-xl footerIcon"></i>
-                <i className="fa-brands fa-facebook mx-2 fa-xl footerIcon"></i>
-                <i className="fa-brands fa-square-instagram mx-2 fa-xl footerIcon"></i>
+                <img
+                  src="https://static.wixstatic.com/media/81af6121f84c41a5b4391d7d37fce12a.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/81af6121f84c41a5b4391d7d37fce12a.png"
+                  alt="instagram"
+                />
+                <img
+                  src="https://static.wixstatic.com/media/23fd2a2be53141ed810f4d3dcdcd01fa.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/23fd2a2be53141ed810f4d3dcdcd01fa.png"
+                  alt="facebook"
+                />
               </p>
             </div>
-            <div className="col-12 col-md-3 col-xl-2 d-flex flex-column align-items-center my-md-5">
-              <h5 className="footerTitle ">Contáctanos</h5>
-              <p>Email: hackshop@ha.com</p>
-              <p>Teléfono: xxx-xxxx</p>
-            </div>
           </div>
-          <div className="footerDivider col-12"></div>
         </div>
       </div>
     </div>
