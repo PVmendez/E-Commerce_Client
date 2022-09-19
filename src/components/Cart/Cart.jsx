@@ -4,7 +4,11 @@ import "./Cart.css";
 import Navbar from "../Navbar/Navbar";
 import Header from "../Header";
 import { useSelector, useDispatch } from "react-redux";
-import { addToCart, removeFromCart, removeAllFromCart } from "../../Redux/userSlice/cartSlice";
+import {
+  addToCart,
+  removeFromCart,
+  removeAllFromCart,
+} from "../../Redux/userSlice/cartSlice";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -77,17 +81,9 @@ export default function Cart() {
         Authorization: `Bearer ${userStore[0].token}`,
       },
     });
-<<<<<<< HEAD
-
-=======
->>>>>>> e90fbca29a024e0015a9f725cfbc5c9ca7217756
-    if (result.data.error === "token invalid") {
-      navigate("/login");
-    } else if (result.data.error) {
-      setOutOfStock(result.data.product);
-    } else {
-      navigate("/pago");
-    }
+    if (result.data.error === "token invalid") navigate("/login");
+    if (result.data.error) setOutOfStock(result.data.product);
+    navigate("/pago");
   };
 
   return (
@@ -115,15 +111,14 @@ export default function Cart() {
           </div>
           <div className="pedido">
             {cartStore.map((item, index, array) => {
+              console.log(item);
               return (
                 <div
                   key={item.id}
                   className="item-pedido d-flex align-items-center flex-wrap"
                 >
                   <div className="productoPedido col-12 d-flex justify-content-around align-items-center flex-md-column justify-content-md-center col-md-3">
-                    <p className="p-filter productoNombre">
-                      {item.product.name}
-                    </p>
+                    <p className="p-cart productoNombre">{item.product.name}</p>
                     <img
                       src={`./img/${item.product.image}`}
                       className="imagenPedido"
@@ -131,7 +126,7 @@ export default function Cart() {
                     />
                   </div>
                   <div className="col-4 col-md-3">
-                    <p className="p-filter m-0 d-md-flex justify-content-md-center pedidoText">
+                    <p className="p-cart m-0 d-md-flex justify-content-md-center pedidoText">
                       U$D {item.product.price}
                     </p>
                   </div>
@@ -165,7 +160,7 @@ export default function Cart() {
                       >
                         -
                       </button>
-                      <p className="p-filter fs-5">{item.quantity}</p>
+                      <p className="p-cart fs-5">{item.quantity}</p>
                       <button
                         className="button-filter-cuadrado"
                         onClick={() => {
@@ -183,7 +178,7 @@ export default function Cart() {
                     </div>
                   </div>
                   <div className="col-4 col-md-3">
-                    <p className="p-filter m-0 d-md-flex justify-content-md-center pedidoText">
+                    <p className="p-cart m-0 d-md-flex justify-content-md-center pedidoText">
                       U$D{" "}
                       {Number((item.product.price * item.quantity).toFixed(12))}
                     </p>
@@ -216,20 +211,20 @@ export default function Cart() {
           <h3 className="cart-title">RESUMEN DEL PEDIDO</h3>
 
           <div className="d-flex justify-content-between">
-            <p className="p-filter">Total Parcial:</p>
-            <p className="p-filter">U$D 28.90</p>
+            <p className="p-cart">Total Parcial:</p>
+            <p className="p-cart">U$D 28.90</p>
           </div>
           <div className="d-flex justify-content-between">
-            <p className="p-filter">Envio:</p>
-            <p className="p-filter">U$D 1.50</p>
+            <p className="p-cart">Envio:</p>
+            <p className="p-cart">U$D 1.50</p>
           </div>
           <div className="d-flex justify-content-between">
-            <p className="p-filter">Impuestos:</p>
-            <p className="p-filter">U$D 2.50</p>
+            <p className="p-cart">Impuestos:</p>
+            <p className="p-cart">U$D 2.50</p>
           </div>
           <div className="d-flex justify-content-between">
-            <p className="p-filter">Total:</p>
-            <p className="p-filter">U$D 32.90</p>
+            <p className="p-cart">Total:</p>
+            <p className="p-cart">U$D 32.90</p>
           </div>
           <div className="mb-3 w-100 d-flex justify-content-center">
             <button

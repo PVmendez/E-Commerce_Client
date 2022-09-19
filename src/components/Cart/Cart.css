@@ -4,7 +4,13 @@
   justify-content: center;
   padding-top: 150px;
 }
-
+.p-cart {
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  color: var(--brown-color);
+  margin-bottom: 0;
+}
 .resumenCol {
   border: 1px solid #6c4a00;
   display: flex;

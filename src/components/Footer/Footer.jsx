@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container">
         <div className="row">
           <div className="footerDiv d-flex flex-column flex-md-row justify-content-between mt-5">
-            <div className="col-12 col-md-4 col-xl-3 d-flex flex-column align-items-start my-md-5">
+            <div className="col-12 col-md-3 col-xl-3 d-flex flex-column align-items-start my-md-5">
               <img src="../img/Captura.PNG" alt="" />
             </div>
             <div className="col-12 col-md-3 col-xl-3 d-flex flex-column align-items-start my-md-5">

@@ -25,7 +25,7 @@ export default function NavBar() {
 
   return (
     <>
-      <Navbar variant="dark" bg="dark" expand="md" className="mb-3 nav-1">
+      <Navbar variant="dark" bg="dark" expand="md" className=" nav-1">
         <Container>
           <Navbar.Brand id="navbar-brand" href="/">
             Navbar Offcanvas
@@ -52,14 +52,13 @@ export default function NavBar() {
                 <Nav.Link href="/carrito">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 144.54 17.34"
-                    // preserveAspectRatio="none"
-                    fill="#8a7357"
                     version="1.1"
-                    width="100%"
-                    height="100%"
+                    width="30px"
+                    height="30px"
+                    viewBox="5.7 0 105.5 126.1"
                     preserveAspectRatio="xMinYMax meet"
                     data-hook="svg-icon-1"
+                    fill="#8a7357"
                   >
                     <path d="M99.8 28.4c0-1.2-0.9-2-2.1-2h-15c0 3.2 0 7.6 0 8.2 0 1.5-1.2 2.6-2.6 2.9 -1.5 0.3-2.9-0.9-3.2-2.3 0-0.3 0-0.3 0-0.6 0-0.9 0-4.7 0-8.2H40.1c0 3.2 0 7.3 0 8.2 0 1.5-1.2 2.9-2.6 2.9 -1.5 0-2.9-0.9-3.2-2.3 0-0.3 0-0.3 0-0.6 0-0.6 0-5 0-8.2h-15c-1.2 0-2 0.9-2 2L8.3 124c0 1.2 0.9 2.1 2.1 2.1h96.3c1.2 0 2.1-0.9 2.1-2.1L99.8 28.4z"></path>
                     <path d="M59.1 5.9c-2.9 0-2 0-2.9 0 -2 0-4.4 0.6-6.4 1.5 -3.2 1.5-5.9 4.1-7.6 7.3 -0.9 1.8-1.5 3.5-1.8 5.6 0 0.9-0.3 1.5-0.3 2.3 0 1.2 0 2.1 0 3.2 0 1.5-1.2 2.9-2.6 2.9 -1.5 0-2.9-0.9-3.2-2.3 0-0.3 0-0.3 0-0.6 0-1.2 0-2.3 0-3.5 0-3.2 0.9-6.4 2-9.4 1.2-2.3 2.6-4.7 4.7-6.4 3.2-2.9 6.7-5 11.1-5.9C53.5 0.3 55 0 56.7 0c1.5 0 2.9 0 4.4 0 2.9 0 5.6 0.6 7.9 1.8 2.6 1.2 5 2.6 6.7 4.4 3.2 3.2 5.3 6.7 6.4 11.1 0.3 1.5 0.6 3.2 0.6 4.7 0 1.2 0 2.3 0 3.2 0 1.5-1.2 2.6-2.6 2.9s-2.9-0.9-3.2-2.3c0-0.3 0-0.3 0-0.6 0-1.2 0-2.6 0-3.8 0-2.3-0.6-4.4-1.8-6.4 -1.5-3.2-4.1-5.9-7.3-7.3 -1.8-0.9-3.5-1.8-5.9-1.8C61.1 5.9 59.1 5.9 59.1 5.9L59.1 5.9z"></path>
@@ -68,68 +67,66 @@ export default function NavBar() {
                       y="77"
                       dy=".35em"
                       text-anchor="middle"
-                      data-hook="items-count"
                       class="bGBBgJ"
+                      data-hook="items-count"
+                      fill="white"
+                      style={{ fontSize: "45px" }}
                     >
-                      1
+                      {cartElements && cartElements}
                     </text>
                   </svg>
                 </Nav.Link>
 
                 {userStore.length === 0 && (
-                  <Nav.Link to="/login" className="nav-item nav-link">
+                  <Nav.Link href="/login" className="nav-item nav-link">
                     <i className="fa-solid fa-user"></i>
                   </Nav.Link>
                 )}
-                <Nav.Link to="/pedidos" className="nav-item nav-link">
-                  <i className="fa-solid fa-address-book me-3"></i> HISTORIAL DE
-                  COMPRAS
-                </Nav.Link>
-                <Nav.Link
-                  to="/"
-                  className="nav-item nav-link"
-                  onClick={() => {
-                    dispatch(logout());
-                  }}
-                >
-                  <i className="fa-solid fa-right-from-bracket"></i>
-                </Nav.Link>
+                {/* <Nav.Link href="/carrito" className="nav-item nav-link">
+                  <i className="fa-solid fa-cart-shopping carrito"></i>
+                  {cartStore ? (
+                    <svg
+                      className="products-cart"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      viewBox="0 0 120 120"
+                    >
+                      {cartElements ? (
+                        <>
+                          <circle cx="30" cy="55" r="30" fill="orange"></circle>
+                          <text
+                            x="25%"
+                            y="50%"
+                            alignmentBaseline="middle"
+                            textAnchor="middle"
+                            fill="black"
+                            stroke="none"
+                            className="cart-number"
+                          >
+                            {cartElements}
+                          </text>
+                        </>
+                      ) : null}
+                    </svg>
+                  ) : null}
+                </Nav.Link> */}
                 {userStore.length > 0 && (
                   <>
-                    <Nav.Link to="/carrito" className="nav-item nav-link">
-                      <i className="fa-solid fa-cart-shopping carrito"></i>
-                      {cartStore ? (
-                        <svg
-                          className="products-cart"
-                          version="1.1"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="40"
-                          height="40"
-                          viewBox="0 0 120 120"
-                        >
-                          {cartElements ? (
-                            <>
-                              <circle
-                                cx="30"
-                                cy="55"
-                                r="30"
-                                fill="orange"
-                              ></circle>
-                              <text
-                                x="25%"
-                                y="50%"
-                                alignmentBaseline="middle"
-                                textAnchor="middle"
-                                fill="black"
-                                stroke="none"
-                                className="cart-number"
-                              >
-                                {cartElements}
-                              </text>
-                            </>
-                          ) : null}
-                        </svg>
-                      ) : null}
+                    <Nav.Link href="/pedidos" className="nav-item nav-link">
+                      <i className="fa-solid fa-address-book me-3"></i>{" "}
+                      HISTORIAL DE COMPRAS
+                    </Nav.Link>
+
+                    <Nav.Link
+                      href="/"
+                      className="nav-item nav-link"
+                      onClick={() => {
+                        dispatch(logout());
+                      }}
+                    >
+                      <i className="fa-solid fa-right-from-bracket"></i>
                     </Nav.Link>
                   </>
                 )}

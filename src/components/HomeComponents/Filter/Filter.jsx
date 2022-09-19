@@ -21,7 +21,7 @@ export default function Filter() {
   }, []);
 
   return (
-    <div className="row filterRow">
+    <div className="row filterRow mx-0">
       <div className="div-filter">
         <p className="p-filter">no te los pierdas</p>
 
@@ -42,7 +42,7 @@ export default function Filter() {
                     navigate(`/productos/${popularProduct.slug}#header`);
                   }}
                 >
-                  <div className=" div-filter col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 d-flex justify-content-center">
+                  <div className=" div-filter col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 d-flex justify-content-center my-3">
                     <img
                       className="img-filter"
                       src={`img/${popularProduct.image}`}
