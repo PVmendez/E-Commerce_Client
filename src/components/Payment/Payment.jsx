@@ -48,6 +48,7 @@ export default function Payment() {
       }
     };
     postCart();
+    navigate("/login");
     setPagar(false);
     navigate("/");
   };

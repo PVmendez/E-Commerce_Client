@@ -4,7 +4,7 @@ import "./Cart.css";
 import Navbar from "../Navbar/Navbar";
 import Header from "../Header";
 import { useSelector, useDispatch } from "react-redux";
-import { addToCart, removeFromCart } from "../../Redux/userSlice/cartSlice";
+import { addToCart, removeFromCart, removeAllFromCart } from "../../Redux/userSlice/cartSlice";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -77,7 +77,10 @@ export default function Cart() {
         Authorization: `Bearer ${userStore[0].token}`,
       },
     });
+<<<<<<< HEAD
 
+=======
+>>>>>>> e90fbca29a024e0015a9f725cfbc5c9ca7217756
     if (result.data.error === "token invalid") {
       navigate("/login");
     } else if (result.data.error) {
@@ -134,6 +137,20 @@ export default function Cart() {
                   </div>
                   <div className="col-4 col-md-3">
                     <div className=" d-flex justify-content-around">
+                      <button
+                        className="button-filter-cuadrado-borrar"
+                        onClick={() => {
+                          dispatch(
+                            removeAllFromCart({
+                              id: item.product.id,
+                              product: item.product,
+                              quantity: -1,
+                            })
+                          );
+                        }}
+                      >
+                        Borrar todo
+                      </button>
                       <button
                         className="button-filter-cuadrado"
                         onClick={() => {

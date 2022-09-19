@@ -13,7 +13,15 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 
 export default function NavBar() {
   const userStore = useSelector((state) => state.user);
+  const cartStore = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+
+  let cartElements = 0;
+  for (let i = 0; i < cartStore.length; i++) {
+    cartElements = cartElements + cartStore[i].quantity;
+  }
+
+  if (cartElements > 99) cartElements = "+99";
 
   return (
     <>
@@ -72,6 +80,58 @@ export default function NavBar() {
                   <Nav.Link to="/login" className="nav-item nav-link">
                     <i className="fa-solid fa-user"></i>
                   </Nav.Link>
+                )}
+                <Nav.Link to="/pedidos" className="nav-item nav-link">
+                  <i className="fa-solid fa-address-book me-3"></i> HISTORIAL DE
+                  COMPRAS
+                </Nav.Link>
+                <Nav.Link
+                  to="/"
+                  className="nav-item nav-link"
+                  onClick={() => {
+                    dispatch(logout());
+                  }}
+                >
+                  <i className="fa-solid fa-right-from-bracket"></i>
+                </Nav.Link>
+                {userStore.length > 0 && (
+                  <>
+                    <Nav.Link to="/carrito" className="nav-item nav-link">
+                      <i className="fa-solid fa-cart-shopping carrito"></i>
+                      {cartStore ? (
+                        <svg
+                          className="products-cart"
+                          version="1.1"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 120 120"
+                        >
+                          {cartElements ? (
+                            <>
+                              <circle
+                                cx="30"
+                                cy="55"
+                                r="30"
+                                fill="orange"
+                              ></circle>
+                              <text
+                                x="25%"
+                                y="50%"
+                                alignmentBaseline="middle"
+                                textAnchor="middle"
+                                fill="black"
+                                stroke="none"
+                                className="cart-number"
+                              >
+                                {cartElements}
+                              </text>
+                            </>
+                          ) : null}
+                        </svg>
+                      ) : null}
+                    </Nav.Link>
+                  </>
                 )}
               </Nav>
             </Offcanvas.Body>
