@@ -69,6 +69,23 @@
   background-color: white;
 }
 
+.button-filter-cuadrado-borrar {
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  margin-left: 5px;
+  font-size: small;
+  font-weight: 200;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 0.2%;
+  padding-bottom: 0.2%;
+  color: red;
+  background-color: white;
+}
+
 .pedidoCantidadImput {
   width: 5vw;
   border: 1px solid #6c4a00;

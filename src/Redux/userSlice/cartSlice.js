@@ -28,12 +28,20 @@ export const cartSlice = createSlice({
         }
       }
     },
+    removeAllFromCart: (state, action) => {
+      for (let i = 0; i < current(state).length; i++) {
+        if (current(state)[i].id === action.payload.id) {
+          state[i].quantity = 0;
+          state.splice(i, 1);
+        }
+      }
+    },
     emptyCart: (state) => {
       return (state = []);
     },
   },
 });
 
-export const { addToCart, removeFromCart, emptyCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, removeAllFromCart, emptyCart } = cartSlice.actions;
 
 export default cartSlice.reducer;
