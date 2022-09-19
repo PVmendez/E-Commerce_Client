@@ -120,3 +120,17 @@ a:focus {
     box-shadow: none;
   }
 }
+
+.carrito {
+  position: absolute;
+  font-size: 25px;
+}
+
+.cart-number {
+  font-size: 40px;
+  font-weight: 1000;
+}
+
+.products-cart {
+  position: relative;
+}

@@ -6,6 +6,7 @@ import { logout } from "../../Redux/userSlice/userSlice";
 
 export default function Navbar() {
   const userStore = useSelector((state) => state.user);
+  const cartStore = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
   return (
@@ -40,9 +41,6 @@ export default function Navbar() {
             <Link to="/about" className="nav-item nav-link">
               LA EMPRESA
             </Link>
-            <Link to="/carrito" className="nav-item nav-link">
-              <i className="fa-solid fa-cart-shopping"></i>
-            </Link>
             {userStore.length === 0 && (
               <Link to="/login" className="nav-item nav-link">
                 <i className="fa-solid fa-user"></i>
@@ -62,6 +60,21 @@ export default function Navbar() {
                   }}
                 >
                   <i className="fa-solid fa-right-from-bracket"></i>
+                </Link>
+                <Link to="/carrito" className="nav-item nav-link">
+                  <i className="fa-solid fa-cart-shopping carrito"></i>
+                  {cartStore ? <svg
+                    className="products-cart"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 100 100"
+                  > 
+                    <circle cx="30" cy="50" r="30" fill="orange"></circle>
+                    <text x="23" y="65" className="cart-number">1</text>
+                  </svg> : null}
+                  
                 </Link>
               </>
             )}
