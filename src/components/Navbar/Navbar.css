@@ -9,6 +9,8 @@
   --brown-color: #8a7357;
   --hover-text-color: #b0aaa9;
   --font-montserrat: "Montserrat", sans-serif;
+  --grey-color: #f6f6f6;
+  box-sizing: border-box;
 }
 
 * {
@@ -24,11 +26,11 @@ a {
 /*********** Nav Bar CSS **********/
 /**********************************/
 .navbar {
-  position: fixed;
+  /* position: fixed; */
   transition: 0.5s;
-  z-index: 999;
+  /* z-index: 999; */
   margin: 0;
-  width: 100%;
+  /* width: 100%;  */
   background: var(--black-color) !important;
   font-family: Arial, Helvetica, sans-serif;
 }

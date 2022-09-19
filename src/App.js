@@ -13,6 +13,7 @@ import Payment from "./components/Payment/Payment";
 import OrderList from "./components/OrderList/OrderList";
 import { useState } from "react";
 import AboutOffCanvas from "./components/About/AboutOffCanvas";
+import "../src/components/About/About.css";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -31,14 +32,33 @@ function App() {
         />
       ))}
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/productos" element={<ProductList />} />
+        <Route
+          exact
+          path="/"
+          element={<Home setShow={setShow} handleShow={handleShow} />}
+        />
+        <Route
+          exact
+          path="/productos"
+          element={<ProductList setShow={setShow} handleShow={handleShow} />}
+        />
         <Route exact path="/productos/:slug" element={<ProductDetails />} />
-        <Route exact path="/carrito" element={<Cart />} />
-        <Route path="*" element={<ErrorPage />} />
+        <Route
+          exact
+          path="/carrito"
+          element={<Cart setShow={setShow} handleShow={handleShow} />}
+        />
+        <Route
+          path="*"
+          element={<ErrorPage setShow={setShow} handleShow={handleShow} />}
+        />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/registro" element={<Register />} />
-        <Route exact path="/pedidos" element={<OrderList />} />
+        <Route
+          exact
+          path="/pedidos"
+          element={<OrderList setShow={setShow} handleShow={handleShow} />}
+        />
         <Route
           exact
           path="/about"

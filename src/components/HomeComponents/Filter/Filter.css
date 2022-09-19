@@ -72,3 +72,8 @@
   background-color: white;
   text-decoration: none;
 }
+.button-filter:hover {
+  background-color: var(--brown-color);
+  color: white;
+  transition: 0.5s;
+}

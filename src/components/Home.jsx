@@ -4,8 +4,9 @@ import Footer from "./Footer/Footer";
 import Navbar from "./Navbar/Navbar";
 import CarouselComponent from "./HomeComponents/Carousel/Carousel";
 import "./HomeComponents/Home.css";
+import { Button } from "react-bootstrap";
 
-export default function Home() {
+export default function Home({ handleShow }) {
   return (
     <div className="Home">
       <Navbar />
@@ -15,6 +16,9 @@ export default function Home() {
         <About />
       </div>
       <Footer />
+      <Button className="btn-flotante" onClick={handleShow}>
+        SOBRE ESTE PROYECTO
+      </Button>
     </div>
   );
 }

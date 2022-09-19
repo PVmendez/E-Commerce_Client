@@ -99,7 +99,7 @@
   color: white;
   border-radius: 5px;
   letter-spacing: 2px;
-  background-color: #d5b375;
+  background-color: var(--brown-color);
   padding: 18px 30px;
   position: fixed;
   bottom: 200px;
@@ -111,13 +111,15 @@
   text-decoration: none;
   transform: rotate(-90deg);
   width: 300px;
+  border-color: var(--brown-color);
 }
 .btn-flotante:hover {
-  background-color: #ffffff;
-  color: #6c4a00;
+  background-color: var(--grey-color);
+  color: var(--brown-color);
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
   transform: translateY(-7px);
   transform: rotate(-90deg);
+  border-color: #ffffff;
 }
 #title-canvas {
   font-size: 20px;

@@ -62,14 +62,12 @@ export default function ProductDetails() {
           className="col-sm-6 col-12 d-flex justify-content-center flex-column "
         >
           <span className="title-productDetails">{product.name}</span>
-          <p className="p-filter" id="p-productDetails">
-            {product.description}
-          </p>
+          <p id="p-productDetails">{product.description}</p>
           <div className="tags"> USD {product.price}</div>
           <div className="d-flex mt-4 align-items-center">
             <div
               style={{ fontSize: 35, fontWeight: 400 }}
-              className="circle-counter  d-flex align-items-center justify-content-center"
+              className="circle-counter d-flex align-items-center justify-content-center"
               onClick={() => {
                 setQuantity((prev) => {
                   if (quantity === 1) {
@@ -83,11 +81,11 @@ export default function ProductDetails() {
               -
             </div>
 
-            <div className="mx-4" style={{ fontSize: 35, fontWeight: 600 }}>
+            <div className="mx-4" style={{ fontSize: 30, fontWeight: 400 }}>
               {quantity}
             </div>
             <div
-              style={{ fontSize: 35, fontWeight: 400 }}
+              style={{ fontSize: 35, fontWeight: 300 }}
               className="circle-counter d-flex align-items-center justify-content-center"
               onClick={() => {
                 setQuantity((prev) => {
@@ -132,9 +130,10 @@ export default function ProductDetails() {
           </div>
         </div>
       </div>
-      <div className="container">
-        <div className="row mt-5  row-recommendedProduct">
-          <p className="title-filter">Además te recomendamos...</p>
+
+      <div className="container container-recommended">
+        <div className="row mt-5 row-recommendedProduct">
+          <p id="title-recommended">Además te recomendamos...</p>
           {recommendedProducts.map((recommendedProduct, index) => (
             <div
               key={index}
@@ -161,7 +160,7 @@ export default function ProductDetails() {
           ))}
           <Link to="/productos" className="col-12 col-sm-6 col-xl-2 verMas">
             <div className="d-flex justify-content-center align-items-center">
-              Ver más <i className="fas fa-chevron-right"></i>
+              Ver más <i className="fas fa-chevron-right fa-sm"></i>
             </div>
           </Link>
         </div>

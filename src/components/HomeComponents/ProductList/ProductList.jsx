@@ -39,7 +39,7 @@ export const ProductList = () => {
           <div className="row">
             <div className="col-lg-3 blog-form">
               <h2 className="blog-sidebar-title">
-                <b id="categories">CATEGORIAS</b>
+                <p id="categories">categorías</p>
               </h2>
               <hr />
               <p
