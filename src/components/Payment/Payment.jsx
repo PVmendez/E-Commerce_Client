@@ -25,7 +25,7 @@ export default function Payment() {
     address: address,
     city: city,
     postalCode: postalCode,
-  })
+  });
   const [pagar, setPagar] = useState(true);
   const navigate = useNavigate();
   const cartStore = useSelector((state) => state.cart);
@@ -50,6 +50,7 @@ export default function Payment() {
     postCart();
     navigate("/login");
     setPagar(false);
+    navigate("/");
   };
 
   useEffect(() => {
@@ -169,7 +170,13 @@ export default function Payment() {
             <button type="submit" className="button-filter button-checkout">
               Confirmar pedido
             </button>
-            {(pagar) ? null : <MercadoPago items={cartStore} totalPrice={totalPrice} user={user} />}
+            {pagar ? null : (
+              <MercadoPago
+                items={cartStore}
+                totalPrice={totalPrice}
+                user={user}
+              />
+            )}
           </form>
         </div>
         <div className="col-xxl-6 col-lg-12 colCartCheckout">
