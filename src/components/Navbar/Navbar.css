@@ -78,7 +78,7 @@ a:hover {
   }
 }
 
-.offcanvas-body {
+#offcanvas-navbar {
   background-color: var(--black-color);
 }
 

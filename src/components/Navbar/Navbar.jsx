@@ -50,7 +50,7 @@ export default function NavBar() {
                 id={`offcanvasNavbarLabel-expand-md`}
               ></Offcanvas.Title>
             </Offcanvas.Header>
-            <Offcanvas.Body>
+            <Offcanvas.Body id="offcanvas-navbar">
               <Nav className="justify-content-between flex-grow-1 pe-3">
                 <div className="container-navlink flex-column flex-md-row">
                   <Nav.Link href="/">Home</Nav.Link>
