@@ -8,7 +8,6 @@
   font-size: 20px;
   color: white;
   margin-top: 50px;
-  margin-bottom: 300px;
 }
 .button-pageNotFound:hover {
   color: white;
@@ -17,7 +16,8 @@
   margin-bottom: 20px;
 }
 .errorRow {
-  height: 600px;
+  margin-top: 200px;
+  height: 500px;
 }
 
 @media (max-width: 766px) {

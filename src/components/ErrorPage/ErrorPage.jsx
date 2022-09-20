@@ -8,7 +8,7 @@ export const ErrorPage = () => {
     <>
       <Navbar />
       <div className="errorRow">
-        <div className="main_body text-center mt-5">
+        <div className="main_body text-center">
           <div className="center_body">
             <h1>404</h1>
             <h2>Página no encontrada </h2>
