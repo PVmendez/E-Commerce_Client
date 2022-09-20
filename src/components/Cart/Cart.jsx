@@ -9,9 +9,8 @@ import {
   removeFromCart,
   removeAllFromCart,
 } from "../../Redux/userSlice/cartSlice";
-import { useState } from "react";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 export default function Cart() {
@@ -90,179 +89,188 @@ export default function Cart() {
     <>
       <Navbar />
       <Header />
-      <div className="row cartRow mb-3">
-        <div className="col-9 p-0">
-          <div className="d-md-none d-flex align-items-center titulosPedido">
-            <p className="my-0 mx-auto">Lista de productos</p>
-          </div>
-          <div className="d-none d-md-flex titulosPedido align-items-center">
-            <p className="col-3 d-flex justify-content-center text-clear">
-              Producto
-            </p>
-            <p className="col-3 d-flex justify-content-center text-clear">
-              Precio por unidad
-            </p>
-            <p className="col-3 d-flex justify-content-center text-clear">
-              Cantidad
-            </p>
-            <p className="col-3 d-flex justify-content-center text-clear">
-              Total
-            </p>
-          </div>
-          <div className="pedido">
-            {cartStore.map((item, index, array) => {
-              console.log(item);
-              return (
-                <div
-                  key={item.id}
-                  className="item-pedido d-flex align-items-center flex-wrap"
-                >
-                  <div className="productoPedido col-12 d-flex justify-content-around align-items-center flex-md-column justify-content-md-center col-md-3">
-                    <p className="p-cart productoNombre">{item.product.name}</p>
-                    <img
-                      src={`./img/${item.product.image}`}
-                      className="imagenPedido"
-                      alt=""
-                    />
-                  </div>
-                  <div className="col-4 col-md-3">
-                    <p className="p-cart m-0 d-md-flex justify-content-md-center pedidoText">
-                      U$D {item.product.price}
-                    </p>
-                  </div>
-                  <div className="col-4 col-md-3">
-                    <div className=" d-flex">
-                      <button
-                        className="button-filter-cuadrado-borrar mx-2"
-                        onClick={() => {
-                          dispatch(
-                            removeAllFromCart({
-                              id: item.product.id,
-                              product: item.product,
-                              quantity: -1,
-                            })
-                          );
-                        }}
-                      >
-                        Borrar todo
-                      </button>
-                      <button
-                        className="button-filter-cuadrado-10"
-                        onClick={() => {
-                          dispatch(
-                            addToCart({
-                              id: item.product.id,
-                              product: item.product,
-                              quantity: 10,
-                            })
-                          );
-                        }}
-                      >
-                        -10
-                      </button>
-                      <button
-                        className="button-filter-cuadrado mx-1"
-                        onClick={() => {
-                          dispatch(
-                            removeFromCart({
-                              id: item.product.id,
-                              product: item.product,
-                              quantity: -1,
-                            })
-                          );
-                        }}
-                      >
-                        -
-                      </button>
-                      <p className="p-cart fs-5">{item.quantity}</p>
-                      <button
-                        className="button-filter-cuadrado"
-                        onClick={() => {
-                          dispatch(
-                            addToCart({
-                              id: item.product.id,
-                              product: item.product,
-                              quantity: 1,
-                            })
-                          );
-                        }}
-                      >
-                        +
-                      </button>
-                      <button
-                        className="button-filter-cuadrado-10 mx-2"
-                        onClick={() => {
-                          dispatch(
-                            addToCart({
-                              id: item.product.id,
-                              product: item.product,
-                              quantity: 10,
-                            })
-                          );
-                        }}
-                      >
-                        +10
-                      </button>
-                    </div>
-                  </div>
-                  <div className="col-4 col-md-3">
-                    <p className="p-cart m-0 d-md-flex justify-content-md-center pedidoText">
-                      U$D{" "}
-                      {Number((item.product.price * item.quantity).toFixed(12))}
-                    </p>
-                  </div>
-                  <div className="footerDivider col-12 w-100"></div>
-                  <br />
-                </div>
-              );
-            })}
-          </div>
-          <div className="precioPedido d-flex justify-content-between px-5 align-items-center">
-            <p className="text-clear m-0 fs-4">Total:</p>
-            <p className="text-clear m-0 fs-4">U$D {totalPrice}</p>
-          </div>
-        </div>
-        {outOfStock && (
-          <>
-            <div className="col-12 d-flex justify-content-center">
+      <div className="container">
+        <div className="row cartRow">
+          <div className="col-7 p-0 productsCol">
+            <Link
+              className="d-none d-md-flex titulosPedido justify-content-end"
+              to="/"
+            >
               <p>
-                En este momento nos hemos quedado sin stock de {outOfStock.name}
-                , por favor regresa mas tarde e intenta de nuevo
+                Seguir comprando <i class="fa-solid fa-angle-right fa-xs"></i>
+              </p>
+            </Link>
+
+            <div className="pedido">
+              {cartStore.map((item, index, array) => {
+                console.log(item);
+                return (
+                  <div
+                    key={item.id}
+                    className="item-pedido d-flex align-items-center flex-wrap"
+                  >
+                    <img
+                      className="close"
+                      width={"20px"}
+                      src="./img/close.png"
+                      alt="close"
+                      onClick={() => {
+                        dispatch(
+                          removeAllFromCart({
+                            id: item.product.id,
+                            product: item.product,
+                            quantity: -1,
+                          })
+                        );
+                      }}
+                    />
+                    <div className="productoPedido col-12 d-flex justify-content-around align-items-center flex-md-column justify-content-md-center col-md-3">
+                      <img
+                        src={`./img/${item.product.image}`}
+                        className="imagenPedido"
+                        alt=""
+                      />
+                    </div>
+                    <div className="col-4 col-md-3">
+                      <p className="p-cart productoNombre">
+                        {item.product.name}
+                      </p>
+                      <p className="p-cart m-0 d-md-flex">
+                        U$D {item.product.price}
+                      </p>
+                    </div>
+                    <div className="col-4 col-md-3">
+                      <div className=" d-flex">
+                        <button
+                          className="button-filter-cuadrado-10"
+                          onClick={() => {
+                            dispatch(
+                              addToCart({
+                                id: item.product.id,
+                                product: item.product,
+                                quantity: 10,
+                              })
+                            );
+                          }}
+                        >
+                          -10
+                        </button>
+                        <button
+                          className="button-filter-cuadrado mx-1"
+                          onClick={() => {
+                            dispatch(
+                              removeFromCart({
+                                id: item.product.id,
+                                product: item.product,
+                                quantity: -1,
+                              })
+                            );
+                          }}
+                        >
+                          -
+                        </button>
+                        <p className="p-cart fs-5">{item.quantity}</p>
+                        <button
+                          className="button-filter-cuadrado"
+                          onClick={() => {
+                            dispatch(
+                              addToCart({
+                                id: item.product.id,
+                                product: item.product,
+                                quantity: 1,
+                              })
+                            );
+                          }}
+                        >
+                          +
+                        </button>
+                        <button
+                          className="button-filter-cuadrado-10 mx-2"
+                          onClick={() => {
+                            dispatch(
+                              addToCart({
+                                id: item.product.id,
+                                product: item.product,
+                                quantity: 10,
+                              })
+                            );
+                          }}
+                        >
+                          +10
+                        </button>
+                      </div>
+                    </div>
+                    <div className="col-4 col-md-2">
+                      <p className="p-cart m-0 d-md-flex justify-content-md-center pedidoText">
+                        U$D{" "}
+                        {Number(
+                          (item.product.price * item.quantity).toFixed(12)
+                        )}
+                      </p>
+                    </div>
+                    <div className="footerDivider col-12 w-100"></div>
+                    <br />
+                  </div>
+                );
+              })}
+              <div className="mt-5">
+                <p className="p-promotion">
+                  <i className="fa-solid fa-tag"></i> Ingresar código
+                  promocional
+                </p>
+                <p>
+                  <p className="p-promotion">
+                    <i className="fa-solid fa-envelope"></i> Agregar una tarjeta
+                    de saludo
+                  </p>
+                </p>
+              </div>
+            </div>
+          </div>
+          {outOfStock && (
+            <>
+              <div className="col-5">
+                <p>
+                  En este momento nos hemos quedado sin stock de{" "}
+                  {outOfStock.name}, por favor regresa mas tarde e intenta de
+                  nuevo
+                </p>
+              </div>
+              {setTimeout(() => {
+                setOutOfStock(null);
+              }, 5000)}
+            </>
+          )}
+
+          <div className="col-5 col-lg-5 resumenCol d-flex align-items-start">
+            <div className="summaryCart">
+              <div className="title-summary">
+                <p className="p-summary">Resumen del pedido</p>
+              </div>
+              <div className="prices mt-3">
+                <p>Subtotal: U$D {totalPrice} </p>
+                <p>Envío: U$D 1.50</p>
+                <p>Montevideo, Uruguay</p>
+              </div>
+              <div className="totalPricemt-3 d-flex">
+                <div>
+                  <p className="mb-0 fs-4 mt-3">Total</p>
+                  <p>Impuesto incluido</p>
+                </div>
+                <p className="m-0 fs-4 mt-3">U$D {totalPrice + 4}</p>
+              </div>
+              <button
+                className="button-cart px-3 py-2"
+                onClick={() => {
+                  verifyStock();
+                }}
+              >
+                Finalizar el pedido
+              </button>
+              <p className="text-center mt-3">
+                <i class="fa-solid fa-lock"></i> Pago seguro
               </p>
             </div>
-            {setTimeout(() => {
-              setOutOfStock(null);
-            }, 5000)}
-          </>
-        )}
-        <div className="col-9 col-lg-6 resumenCol mt-3">
-          <h3 className="cart-title">RESUMEN DEL PEDIDO</h3>
-
-          <div className="d-flex justify-content-between">
-            <p className="p-cart">Total Parcial:</p>
-            <p className="p-cart">U$D 28.90</p>
-          </div>
-          <div className="d-flex justify-content-between">
-            <p className="p-cart">Envio:</p>
-            <p className="p-cart">U$D 1.50</p>
-          </div>
-          <div className="d-flex justify-content-between">
-            <p className="p-cart">Impuestos:</p>
-            <p className="p-cart">U$D 2.50</p>
-          </div>
-          <div className="d-flex justify-content-between">
-            <p className="p-cart">Total:</p>
-            <p className="p-cart">U$D 32.90</p>
-          </div>
-          <div className="mb-3 w-100 d-flex justify-content-center">
-            <button
-              className="button-filter button-buy px-2 py-1 fs-4"
-              onClick={() => {
-                verifyStock();
-              }}
-            >
-              Confirmar Pedido
-            </button>
           </div>
         </div>
       </div>

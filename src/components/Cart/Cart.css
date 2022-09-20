@@ -2,7 +2,8 @@
 
 .cartRow {
   justify-content: center;
-  padding-top: 150px;
+  padding-top: 100px;
+  flex-wrap: nowrap;
 }
 .p-cart {
   font-weight: 500;
@@ -11,32 +12,48 @@
   color: var(--brown-color);
   margin-bottom: 0;
 }
+.sumary-cart {
+  border-bottom: 1px solid var(--grey-color);
+  height: 7vh;
+}
 .resumenCol {
-  border: 1px solid #6c4a00;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  margin-bottom: 400px;
 }
-
+.title-summary {
+  font-size: 20px;
+  color: var(--brown-color);
+  margin: 0;
+  border-bottom: 1px solid var(--grey-color);
+}
+.p-summary {
+  line-height: 120%;
+}
 .titulosPedido {
-  background-color: #d5b375;
-  height: 7vh;
+  border-bottom: 1px solid var(--grey-color);
+
+  margin-right: 50px;
+  color: rgb(172, 172, 172);
+  text-decoration: none;
+}
+.titulosPedido:hover {
+  color: rgb(172, 172, 172);
 }
 
 .precioPedido {
-  background-color: #d5b375;
-  height: 7vh;
+  border-bottom: 1px solid var(--grey-color);
 }
 .cart-title {
   font-size: 2em;
-  color: #b17a04;
-  font-weight: 700;
+  color: var(--brown-color);
+  font-weight: 300;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 .text-clear {
-  color: white;
+  color: var(--brown-color);
 
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
@@ -48,13 +65,17 @@
 }
 
 .imagenPedido {
-  height: 70%;
+  height: 120px;
+  width: 120px;
 }
 
 .productoNombre {
   height: 20%;
   margin: 0;
   z-index: 1;
+}
+.close {
+  cursor: pointer;
 }
 
 .button-filter-cuadrado {
@@ -110,8 +131,39 @@
   width: 5vw;
   border: 1px solid #6c4a00;
 }
-
+.item-pedido {
+  align-items: center;
+  margin-top: 50px;
+  border-bottom: 1px solid var(--grey-color);
+  margin-right: 50px;
+}
 .pedidoText {
   display: flex;
   justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.productsCol {
+  margin-bottom: 400px;
+}
+.button-cart {
+  border: none;
+  background-color: var(--brown-color);
+  color: white;
+  font-size: 15px;
+  width: 100%;
+}
+.p-promotion {
+  color: rgb(172, 172, 172);
+  font-size: 13px;
+}
+.p-promotion:hover {
+  color: rgb(206, 202, 202);
+  text-decoration: underline;
+  cursor: pointer;
+}
+@media (max-width: 769px) {
+  .resumenCol {
+    margin-bottom: 700px;
+  }
 }
