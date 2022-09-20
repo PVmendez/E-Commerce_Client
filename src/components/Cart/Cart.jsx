@@ -150,10 +150,10 @@ export default function Cart() {
                         className="button-filter-cuadrado-10"
                         onClick={() => {
                           dispatch(
-                            addToCart({
+                            removeFromCart({
                               id: item.product.id,
                               product: item.product,
-                              quantity: 10,
+                              quantity: -10,
                             })
                           );
                         }}

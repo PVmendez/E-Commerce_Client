@@ -3,7 +3,7 @@
 
 .carousel-item {
   object-fit: cover;
-  height: 100vh;
+  height: 45vh;
   position: relative;
 }
 

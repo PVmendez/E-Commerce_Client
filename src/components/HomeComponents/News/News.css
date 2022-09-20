@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+.newsRow {
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 350px;
+}
+
+.title {
+  color: rgb(47, 46, 46);
+  font-size: 48px;
+  line-height: 1.1em;
+  text-align: center;
+  font-family: didot-w01-italic, serif;
+  letter-spacing: normal;
+  height: auto;
+  width: 510px;
+  font-weight: 500;
+  font-family: didot-w01-italic;
+  font-style: italic;
+}
+
+.input {
+  height: 45px;
+  font: normal normal normal 14px/1.4em helvetica-w01-light, helvetica-w02-light,
+    sans-serif;
+  text-overflow: ellipsis;
+  text-align: left;
+  direction: ltr;
+  padding: 5px;
+  display: flex;
+  border: 1px solid;
+}
+
+.inputName {
+  width: 200px;
+}
+
+.inputEmail {
+  width: 300px;
+}
+
+.buttonForm {
+  height: 45px;
+  width: 100px;
+  font: normal normal normal 14px/1.4em helvetica-w01-light, helvetica-w02-light, sans-serif;;
+  background-color: #fff;
+  border: 2px solid var(--brown-color)
+}
+
+@media (max-width: 768px) {
+  .aboutRow {
+    margin-bottom: 600px;
+  }
+}
