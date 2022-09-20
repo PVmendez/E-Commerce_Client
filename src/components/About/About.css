@@ -95,7 +95,7 @@
 .btn-flotante {
   font-size: 16px;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 500;
   color: white;
   border-radius: 5px;
   letter-spacing: 2px;
@@ -112,6 +112,7 @@
   transform: rotate(-90deg);
   width: 300px;
   border-color: var(--brown-color);
+  font-family: var(--font-montserrat);
 }
 .btn-flotante:hover {
   background-color: var(--grey-color);
@@ -122,32 +123,33 @@
   border-color: #ffffff;
 }
 #title-canvas {
-  font-size: 20px;
+  font-size: 30px;
   letter-spacing: 2px;
 }
 #title2-canvas {
-  font-size: 20px;
+  font-size: 30px;
   letter-spacing: 2px;
   margin-top: 20px;
 }
 .p-verMas {
-  font-size: 22px;
+  font-size: 18px;
   text-decoration: none;
   display: flex;
   justify-content: flex-end;
   margin-right: 30px;
+  text-transform: uppercase;
+  font-family: var(--font-montserrat);
+  color: var(--brown-color);
 }
-/* .p-verMas:hover {
- 
-} */
+
 .avatarCanvas {
-  height: 160px;
-  width: 155px;
+  height: 120px;
+  width: 120px;
   border-radius: 50%;
   object-fit: fill;
   box-shadow: 4px 1px 9px rgba(0, 0, 0, 0.44);
 }
 .p-canvas {
-  font-weight: bold;
-  color: #3e3735;
+  color: var(--black-color);
+  font-family: var(--font-montserrat);
 }

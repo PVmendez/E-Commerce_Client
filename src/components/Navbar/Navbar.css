@@ -19,7 +19,12 @@
 }
 
 a {
+  text-decoration: none;
   transition: 0.3s;
+  color: rgb(148, 147, 147);
+}
+a:hover {
+  color: rgb(148, 147, 147);
 }
 
 /**********************************/
@@ -73,7 +78,7 @@ a {
   }
 }
 
-.offcanvas-body {
+#offcanvas-navbar {
   background-color: var(--black-color);
 }
 

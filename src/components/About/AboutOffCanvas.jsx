@@ -10,22 +10,22 @@ export default function AboutOffCanvas({ name, ...props }) {
     <>
       <Offcanvas show={props.show} onHide={handleClose} {...props}>
         <Offcanvas.Header closeButton></Offcanvas.Header>
-        <Offcanvas.Body>
+        <Offcanvas.Body id->
           <p id="title-canvas" className="title-filter">
-            SOBRE ESTE PROYECTO
+            sobre este proyecto
           </p>
           <p>
-            SweetHack es el proyecto final del Coding Bootcamp de Hack Academy.
-            El Coding Bootcamp es un curso intensivo de 3 meses de duración,
-            full-time, con más de 600 horas de práctica. La propuesta del
-            proyecto final: un e-commerce, tres semanas, tres estudiantes, y la
-            integración de todos los conocimientos adquiridos en el curso.
+            Este proyecto es el proyecto final del Coding Bootcamp de Hack
+            Academy. El Coding Bootcamp es un curso intensivo de 3 meses de
+            duración, full-time, con más de 600 horas de práctica. La propuesta
+            del proyecto final: un e-commerce, tres semanas, tres estudiantes, y
+            la integración de todos los conocimientos adquiridos en el curso.
           </p>
           <Link to="/about" className="p-verMas d-flex align-items-center">
             Ver más <i className="fas fa-chevron-right fa-xs ps-1"></i>
           </Link>
           <p id="title2-canvas" className="title-filter mb-3 mt-0">
-            AUTORES
+            autores
           </p>
           <div className="d-flex ">
             <img className="avatarCanvas" src="../img/Sofia.jpg" alt="avatar" />

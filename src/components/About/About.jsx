@@ -18,7 +18,7 @@ export const About = ({ handleShow, handleClose }) => {
 
         <div className="aboutRow row justify-content-center text-center">
           <h1 className="title-filter">Sobre este proyecto</h1>
-          <p className="p-filter mb-5 mt-3">
+          <p className="p-about mb-5 mt-3">
             SweetHack es el proyecto final del Coding Bootcamp de Hack Academy,
             una institución educativa que se especializa en cursos de
             programación ubicada en Montevideo, Uruguay. El Coding Bootcamp es
