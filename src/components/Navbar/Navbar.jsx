@@ -21,7 +21,13 @@ export default function NavBar() {
 
   return (
     <>
-      <Navbar variant="dark" bg="dark" expand="md" className=" nav-1">
+      <Navbar
+        variant="dark"
+        bg="dark"
+        expand="md"
+        fixed="top"
+        className=" nav-1"
+      >
         <Container className="container-navbar">
           <Navbar.Brand id="navbar-brand" href="/">
             <img src="./img/LogoNav.PNG" alt="" />
@@ -35,26 +41,22 @@ export default function NavBar() {
             aria-labelledby={`offcanvasNavbarLabel-expand-md`}
             placement="end"
           >
-            <Offcanvas.Header closeButton>
+            <Offcanvas.Header
+              className="bg-dark"
+              closeVariant="white"
+              closeButton
+            >
               <Offcanvas.Title
                 id={`offcanvasNavbarLabel-expand-md`}
               ></Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-between flex-grow-1 pe-3">
-                <div className="container-navlink">
+                <div className="container-navlink flex-column flex-md-row">
                   <Nav.Link href="/">Home</Nav.Link>
                   <Nav.Link href="/productos">Productos</Nav.Link>
                   <Nav.Link href="/about">Sobre este proyecto</Nav.Link>
 
-                  {userStore.length === 0 && (
-                    <Nav.Link href="/login" className="nav-item nav-link">
-                      <i className="fa-solid fa-user"></i>
-                    </Nav.Link>
-                  )}
-                </div>
-
-                <div className="container-cart">
                   <Nav.Link href="/carrito">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -82,26 +84,32 @@ export default function NavBar() {
                       </text>
                     </svg>
                   </Nav.Link>
+                  {userStore.length === 0 && (
+                    <Nav.Link href="/login" className="nav-item nav-link">
+                      <i className="fa-solid fa-user"></i>
+                    </Nav.Link>
+                  )}
+                  {userStore.length > 0 && (
+                    <>
+                      <Nav.Link href="/pedidos" className="nav-item nav-link">
+                        <i className="fa-solid fa-address-book me-3"></i>{" "}
+                        HISTORIAL DE COMPRAS
+                      </Nav.Link>
+
+                      <Nav.Link
+                        href="/"
+                        className="nav-item nav-link"
+                        onClick={() => {
+                          dispatch(logout());
+                        }}
+                      >
+                        <i className="fa-solid fa-right-from-bracket"></i>
+                      </Nav.Link>
+                    </>
+                  )}
                 </div>
 
-                {userStore.length > 0 && (
-                  <>
-                    <Nav.Link href="/pedidos" className="nav-item nav-link">
-                      <i className="fa-solid fa-address-book me-3"></i>{" "}
-                      HISTORIAL DE COMPRAS
-                    </Nav.Link>
-
-                    <Nav.Link
-                      href="/"
-                      className="nav-item nav-link"
-                      onClick={() => {
-                        dispatch(logout());
-                      }}
-                    >
-                      <i className="fa-solid fa-right-from-bracket"></i>
-                    </Nav.Link>
-                  </>
-                )}
+                <div className="container-cart"></div>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
