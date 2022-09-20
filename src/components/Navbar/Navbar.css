@@ -26,11 +26,8 @@ a {
 /*********** Nav Bar CSS **********/
 /**********************************/
 .navbar {
-  /* position: fixed; */
   transition: 0.5s;
-  /* z-index: 999; */
   margin: 0;
-  /* width: 100%;  */
   background: var(--black-color) !important;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -39,13 +36,16 @@ a {
   cursor: pointer;
   color: #ffffff;
   font-family: var(--font-montserrat);
+  margin-right: 15px;
+  margin-top: 10px;
+  align-self: center;
 }
 .nav-link:hover {
   color: var(--hover-text-color);
 }
 
 #navbar-brand {
-  color: #ffffff;
+  align-self: center;
 }
 .navbar .dropdown-menu {
   margin-top: 0;
@@ -64,12 +64,6 @@ a {
   background-image: url("/public/img/ShoppingBag.svg");
 }
 @media (min-width: 992px) {
-  .navbar {
-    width: 100%;
-    padding: 30px 60px;
-    z-index: 9;
-  }
-
   \ .navbar-light .navbar-nav .nav-link,
   .navbar-light .navbar-nav .nav-link:focus {
     padding: 10px 10px 8px 10px;
@@ -113,4 +107,12 @@ a {
 
 .products-cart {
   position: relative;
+}
+.container-navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-navlink {
+  display: flex;
 }

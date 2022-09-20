@@ -68,7 +68,7 @@ export const ProductList = () => {
               </p>
             </div>
 
-            <div className="col-lg-9">
+            <div className="col-lg-9" id="div-list">
               <div className="row justify-content-center justify-content-md-between">
                 <div className="col-12 text-center">
                   {productos && productos.length} resultados

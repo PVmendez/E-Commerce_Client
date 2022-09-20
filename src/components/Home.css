@@ -1,0 +1,21 @@
+.img-paralax {
+  background-image: url("../assets/Carousel_1.jpg");
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-device-width: 500px) {
+  .img-parallax {
+    background-attachment: scroll;
+  }
+}
+.btn-flotante:focus {
+  color: white;
+  background-color: var(--brown-color);
+  box-shadow: none;
+  border-color: var(--brown-color);
+}

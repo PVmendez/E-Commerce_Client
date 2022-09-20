@@ -143,7 +143,7 @@ export default function ProductDetails() {
                 onClick={() => {
                   navigate(`/productos/${recommendedProduct.slug}`);
                 }}
-                className="recommended me-3 d-flex flex-column"
+                className="recommended me-3 my-3 d-flex flex-column"
                 key={recommendedProduct.id}
               >
                 <p className="nameRecommended align-self-center">
@@ -159,7 +159,7 @@ export default function ProductDetails() {
             </div>
           ))}
           <Link to="/productos" className="col-12 col-sm-6 col-xl-2 verMas">
-            <div className="d-flex justify-content-center align-items-center">
+            <div className="d-flex justify-content-center align-items-center mt-5">
               Ver más <i className="fas fa-chevron-right fa-sm"></i>
             </div>
           </Link>

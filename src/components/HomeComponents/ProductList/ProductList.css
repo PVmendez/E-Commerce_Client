@@ -271,7 +271,9 @@ a.explore-link:hover {
 .addBtn {
   cursor: pointer;
 }
-
+#div-list {
+  margin-bottom: 300px;
+}
 @media (max-width: 1200px) {
   .product-image {
     width: 150px;
@@ -283,5 +285,10 @@ a.explore-link:hover {
   .product-image {
     width: 100px;
     height: 100px;
+  }
+}
+@media (max-width: 672px) {
+  #div-list {
+    margin-bottom: 600px;
   }
 }
