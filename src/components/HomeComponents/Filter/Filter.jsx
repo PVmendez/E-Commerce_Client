@@ -33,6 +33,7 @@ export default function Filter() {
       <div id="black-row">
         <div className="container">
           <div className="row">
+            {console.log(popularProducts)}
             {popularProducts.map((popularProduct) => {
               return (
                 <div

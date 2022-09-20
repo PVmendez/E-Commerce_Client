@@ -75,6 +75,20 @@
   background-color: white;
 }
 
+.button-filter-cuadrado-10 {
+  height: 25px;
+  align-items: center;
+  border: 1px solid #6c4a00;
+  font-size: small;
+  font-weight: 200;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 0.2%;
+  padding-bottom: 0.2%;
+  color: #6c4a00;
+  background-color: white;
+}
+
 .button-filter-cuadrado-borrar {
   height: 25px;
   display: flex;

@@ -48,7 +48,6 @@ export default function Payment() {
       }
     };
     postCart();
-    navigate("/login");
     setPagar(false);
     navigate("/");
   };
@@ -170,14 +169,14 @@ export default function Payment() {
             <button type="submit" className="button-filter button-checkout">
               Confirmar pedido
             </button>
-            {pagar ? null : (
+          </form>
+          {pagar ? null : (
               <MercadoPago
                 items={cartStore}
                 totalPrice={totalPrice}
                 user={user}
               />
             )}
-          </form>
         </div>
         <div className="col-xxl-6 col-lg-12 colCartCheckout">
           <div className="box-cartCheckout">

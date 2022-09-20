@@ -131,9 +131,9 @@ export default function Cart() {
                     </p>
                   </div>
                   <div className="col-4 col-md-3">
-                    <div className=" d-flex justify-content-around">
+                    <div className=" d-flex">
                       <button
-                        className="button-filter-cuadrado-borrar"
+                        className="button-filter-cuadrado-borrar mx-2"
                         onClick={() => {
                           dispatch(
                             removeAllFromCart({
@@ -147,7 +147,21 @@ export default function Cart() {
                         Borrar todo
                       </button>
                       <button
-                        className="button-filter-cuadrado"
+                        className="button-filter-cuadrado-10"
+                        onClick={() => {
+                          dispatch(
+                            addToCart({
+                              id: item.product.id,
+                              product: item.product,
+                              quantity: 10,
+                            })
+                          );
+                        }}
+                      >
+                        -10
+                      </button>
+                      <button
+                        className="button-filter-cuadrado mx-1"
                         onClick={() => {
                           dispatch(
                             removeFromCart({
@@ -174,6 +188,20 @@ export default function Cart() {
                         }}
                       >
                         +
+                      </button>
+                      <button
+                        className="button-filter-cuadrado-10 mx-2"
+                        onClick={() => {
+                          dispatch(
+                            addToCart({
+                              id: item.product.id,
+                              product: item.product,
+                              quantity: 10,
+                            })
+                          );
+                        }}
+                      >
+                        +10
                       </button>
                     </div>
                   </div>
