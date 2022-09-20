@@ -21,7 +21,13 @@ export default function NavBar() {
 
   return (
     <>
-      <Navbar variant="dark" bg="dark" expand="md" className=" nav-1">
+      <Navbar
+        variant="dark"
+        bg="dark"
+        expand="md"
+        fixed="top"
+        className=" nav-1"
+      >
         <Container className="container-navbar">
           <Navbar.Brand id="navbar-brand" href="/">
             <img src="./img/LogoNav.PNG" alt="" />
