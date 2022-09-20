@@ -15,7 +15,7 @@
   border-left: none;
   border-right: none;
   border-radius: 0px;
-  border-bottom: 1px solid #d5b375;
+  border-bottom: 1px solid var(--brown-color);
 }
 .form-checkout:focus {
   border-bottom: 1px solid #b17a04;
@@ -29,7 +29,7 @@
 .button-checkout {
   margin-top: 70px;
   width: 400px;
-  background-color: #d5b375;
+  background-color: var(--brown-color);
   color: white;
   padding-top: 0.5%;
   padding-bottom: 0.5%;
@@ -50,14 +50,18 @@
 }
 .summary {
   font-size: 20px;
-  color: #6c4a00;
-  font-weight: 600;
+  color: var(--brown-color);
+  font-weight: 500;
 }
 .totalPrice {
   font-size: 30px;
   display: flex;
   justify-content: space-between;
 }
+.keep-buying {
+  color: black;
+}
+
 @media (max-width: 765px) {
   .keep-buying {
     display: none;
