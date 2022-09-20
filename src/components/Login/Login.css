@@ -135,16 +135,16 @@
   padding: 0 30px;
   font-size: 16px;
   font-weight: 500;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid var(--brown-color);
   transition: all 0.3s ease;
 }
 .form-content .input-box input:focus,
 .form-content .input-box input:valid {
-  border-color: var(--black-color);
+  border-color: var(--brown-color);
 }
 .form-content .input-box i {
   position: absolute;
-  color: var(--black-color);
+  color: var(--brown-color);
   font-size: 17px;
 }
 .forms .form-content .text {
@@ -184,6 +184,10 @@
 .forms .form-content .sign-up-text {
   text-align: center;
   margin-top: 25px;
+}
+.forms .form-content .text a,
+.forms .form-content .sign-up-text a {
+  color: #000;
 }
 .container-login #flip {
   display: none;

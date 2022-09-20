@@ -47,7 +47,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background: #b17a04;
+  background: var(--brown-color);
   opacity: 0.5;
   z-index: 12;
 }
@@ -111,7 +111,7 @@
   bottom: 0;
   height: 3px;
   width: 25px;
-  background: #b17a04;
+  background: var(--brown-color);
 }
 .forms .signup-form .title:before {
   width: 20px;
@@ -144,7 +144,7 @@
 }
 .form-content .input-box i {
   position: absolute;
-  color: #b17a04;
+  color: var(--brown-color);
   font-size: 17px;
 }
 .forms .form-content .text {
