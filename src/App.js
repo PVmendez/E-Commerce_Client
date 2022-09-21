@@ -14,6 +14,7 @@ import OrderList from "./components/OrderList/OrderList";
 import { useState } from "react";
 import AboutOffCanvas from "./components/About/AboutOffCanvas";
 import "../src/components/About/About.css";
+import { Settings } from "./components/Settings/Settings";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -59,6 +60,7 @@ function App() {
           path="/pedidos"
           element={<OrderList setShow={setShow} handleShow={handleShow} />}
         />
+        <Route exact path="/settings" element={<Settings />} />
         <Route
           exact
           path="/about"
