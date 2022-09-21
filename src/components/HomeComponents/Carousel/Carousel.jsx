@@ -14,12 +14,6 @@ export default function CarouselComponent() {
               alt="First slide"
             />
           </div>
-          { <Carousel.Caption>
-            <div className="carouselText">
-              <h3 className="carouselImgTitle">ARTE SUIZO</h3>
-              <p className="carouselImgSub">en chocolate</p>
-            </div>
-          </Carousel.Caption> }
         </Carousel.Item>
         <Carousel.Item>
           <div className="carouselImgDiv">
@@ -29,13 +23,6 @@ export default function CarouselComponent() {
               alt="Second slide"
             />
           </div>
-
-          { <Carousel.Caption>
-            <div className="carouselText">
-              <h3 className="carouselImgTitle">PASIÓN</h3>
-              <p className="carouselImgSub">por lo que hacemos</p>
-            </div>
-          </Carousel.Caption> }
         </Carousel.Item>
         <Carousel.Item>
           <div className="carouselImgDiv filterScreen">
@@ -45,13 +32,6 @@ export default function CarouselComponent() {
               alt="Third slide"
             />
           </div>
-
-          { <Carousel.Caption>
-            <div className="carouselText">
-              <h3 className="carouselImgTitle">PERSONALIDAD</h3>
-              <p className="carouselImgSub">y carácter</p>
-            </div>
-          </Carousel.Caption> }
         </Carousel.Item>
       </Carousel>
     </div>

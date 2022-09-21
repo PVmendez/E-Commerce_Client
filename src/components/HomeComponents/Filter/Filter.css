@@ -3,7 +3,6 @@
 
 .filterRow {
   width: 100%;
-  margin-top: 5em;
   justify-content: space-between;
   background-color: var(--black-color);
   padding-bottom: 1em;

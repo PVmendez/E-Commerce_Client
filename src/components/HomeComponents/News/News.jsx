@@ -6,7 +6,7 @@ export default function News() {
   return (
     <>
       <div className="col-8 d-flex justify-content-center flex-column align-items-center newsRow mt-5">
-        <span className="title">no te pierdas nuestras novedades</span>
+        <span className="title-news">no te pierdas nuestras novedades</span>
         <div className="row mt-5">
           <div className="col p-0">
             <input type="text" name="nombre" className="input inputName has-custom-focus" value="" placeholder="Nombre" aria-required="false" maxlength="100" aria-label="Nombre" aria-invalid="true" />
