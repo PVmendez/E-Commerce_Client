@@ -7,8 +7,9 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import Header from "../../Header";
+import { Button } from "react-bootstrap";
 
-export const ProductList = () => {
+export const ProductList = ({ handleShow }) => {
   const [productos, setProductos] = useState(null);
   const [category, setCategory] = useState(0);
   useEffect(() => {
@@ -80,6 +81,9 @@ export const ProductList = () => {
               </div>
             </div>
           </div>
+          <Button className="btn-flotante" onClick={handleShow}>
+            SOBRE ESTE PROYECTO
+          </Button>
         </div>
       </section>
       <Footer />

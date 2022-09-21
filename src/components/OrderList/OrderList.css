@@ -5,3 +5,11 @@
 .item-list {
   padding: 2rem;
 }
+#acordionRow {
+  margin-bottom: 500px;
+}
+@media (max-width: 984px) {
+  #acordionRow {
+    margin-bottom: 600;
+  }
+}

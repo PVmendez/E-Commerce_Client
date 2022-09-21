@@ -12,8 +12,9 @@ import {
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import { Button } from "react-bootstrap";
 
-export default function Cart() {
+export default function Cart({ handleShow }) {
   const navigate = useNavigate();
   const cartStore = useSelector((state) => state.cart);
   const userStore = useSelector((state) => state.user);
@@ -273,6 +274,9 @@ export default function Cart() {
             </div>
           </div>
         </div>
+        <Button className="btn-flotante" onClick={handleShow}>
+          SOBRE ESTE PROYECTO
+        </Button>
       </div>
       <Footer />
     </>

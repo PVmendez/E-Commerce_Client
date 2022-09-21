@@ -21,7 +21,7 @@ export default function Categories() {
             </p>
             <div>
               <img
-                src="./img/Bombon_4.png"
+                src="./img/Bombon_2.png"
                 alt="bombon"
                 className="img-categories"
               />
