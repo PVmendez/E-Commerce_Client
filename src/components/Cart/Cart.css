@@ -143,9 +143,7 @@
   margin: 0;
   padding: 0;
 }
-.productsCol {
-  margin-bottom: 400px;
-}
+
 .button-cart {
   border: none;
   background-color: var(--brown-color);
@@ -162,8 +160,18 @@
   text-decoration: underline;
   cursor: pointer;
 }
-@media (max-width: 769px) {
+@media (max-width: 992px) {
+  .container-Cart {
+    margin-bottom: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .container-Cart {
+    margin-bottom: 300px;
+  }
+}
+@media (max-width: 768px) {
   .resumenCol {
-    margin-bottom: 700px;
+    justify-content: start;
   }
 }

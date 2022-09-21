@@ -90,9 +90,9 @@ export default function Cart({ handleShow }) {
     <>
       <Navbar />
       <Header />
-      <div className="container">
-        <div className="row cartRow">
-          <div className="col-7 p-0 productsCol">
+      <div className="container container-Cart">
+        <div className="row cartRow flex-column flex-md-row">
+          <div className="col-12 col-md-9 col-lg-7 productsCol">
             <Link
               className="d-none d-md-flex titulosPedido justify-content-end"
               to="/"
@@ -243,7 +243,7 @@ export default function Cart({ handleShow }) {
             </>
           )}
 
-          <div className="col-5 col-lg-5 resumenCol d-flex align-items-start">
+          <div className="col-12 col-md-3 col-lg-5 resumenCol d-flex align-items-start">
             <div className="summaryCart">
               <div className="title-summary">
                 <p className="p-summary">Resumen del pedido</p>

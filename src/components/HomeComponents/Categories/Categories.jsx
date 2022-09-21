@@ -13,7 +13,7 @@ export default function Categories() {
       </div>
       <div className="container">
         <div className="row text-center">
-          <div className="col-6">
+          <div className="col-md-6">
             <p className="title-colsCategories">clásicos</p>
             <p className="p-colsCategories">
               A través de nuestros bombones, sentí la emoción del chocolate en
@@ -30,7 +30,7 @@ export default function Categories() {
               descubrí
             </Link>
           </div>
-          <div className="col-6">
+          <div className="col-md-6">
             <p className="title-colsCategories">premium</p>
             <p className="p-colsCategories">
               Descubrí nuestra selección de dulces completamente adictivos

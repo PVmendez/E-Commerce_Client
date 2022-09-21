@@ -18,8 +18,20 @@
   background-color: var(--brown-color);
   color: #ffffff;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 1312px) {
   .aboutRow {
-    margin-bottom: 600px;
+    margin-bottom: 300px;
+  }
+}
+
+@media (max-width: 928px) {
+  .aboutRow {
+    margin-bottom: 1000px;
+  }
+}
+@media (max-width: 758px) {
+  .aboutRow {
+    margin-bottom: 700px;
   }
 }
