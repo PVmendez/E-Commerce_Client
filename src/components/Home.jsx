@@ -12,11 +12,9 @@ export default function Home({ handleShow }) {
   return (
     <div className="Home">
       <Navbar />
-      <Carousel />
+      <div className="img-paralax"></div>
       <Categories />
-
       <Filter />
-      {/* <div className="img-paralax"></div> */}
       <div className="container">
         <News />
       </div>
