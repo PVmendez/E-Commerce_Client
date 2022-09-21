@@ -7,8 +7,9 @@ import Footer from "../Footer/Footer";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../Navbar/Navbar";
+import { Button } from "react-bootstrap";
 
-export default function OrderList() {
+export default function OrderList({ handleShow }) {
   const cartStore = useSelector((state) => state.cart);
   const userStore = useSelector((state) => state.user);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -39,9 +40,9 @@ export default function OrderList() {
     <>
       <Navbar />
       <Header />
-      <div className="container my-5">
+      <div className="container mt-5">
         <div className="row">
-          <Accordion defaultActiveKey="0">
+          <Accordion defaultActiveKey="0" id="acordionRow">
             {cartStore.length > 0 && (
               <Accordion.Item eventKey="0">
                 <Accordion.Header>Pedido en Carrito</Accordion.Header>
@@ -142,6 +143,9 @@ export default function OrderList() {
               })}
           </Accordion>
         </div>
+        <Button className="btn-flotante" onClick={handleShow}>
+          SOBRE ESTE PROYECTO
+        </Button>
       </div>
       <Footer />
     </>

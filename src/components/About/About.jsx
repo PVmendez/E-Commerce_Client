@@ -11,23 +11,26 @@ export const About = ({ handleShow, handleClose }) => {
     <>
       <Navbar />
 
+      <div className="img-paralaxAbout"></div>
       <div className="container our-team">
         {["start", "end", "top", "bottom"].map((placement, idx) => (
           <AboutOffCanvas key={idx} placement={placement} name={placement} />
         ))}
 
         <div className="aboutRow row justify-content-center text-center">
-          <h1 className="title-filter">Sobre este proyecto</h1>
+          <h1 className="title-filter">sobre este proyecto</h1>
           <p className="p-about mb-5 mt-3">
             SweetHack es el proyecto final del Coding Bootcamp de Hack Academy,
             una institución educativa que se especializa en cursos de
             programación ubicada en Montevideo, Uruguay. El Coding Bootcamp es
             un curso intensivo de 3 meses de duración, full-time, con más de 600
-            horas de práctica. La propuesta del proyecto final: un e-commerce,
-            tres semanas, tres estudiantes, y la integración de todos los
-            conocimientos adquiridos en el curso.
+            horas de práctica, el cual nos prepara como Full Stack Jr.
+            Developers. La propuesta del proyecto final: un e-commerce, tres
+            semanas, tres estudiantes y la integración de todos los
+            conocimientos adquiridos en el curso. Te contamos más sobre la
+            organizacion en las siguientes secciones.
           </p>
-          <h1 className="title-filter">Nuestro equipo</h1>
+          <h1 className="title-filter">nuestro equipo</h1>
           <div className="card">
             <div className="circle">
               <div className="imgBox">
@@ -43,7 +46,7 @@ export const About = ({ handleShow, handleClose }) => {
               </Link>
               <h3>Pablo Méndez</h3>
               <div className="textIcon">
-                <h4>Developer</h4>
+                <p>Developer</p>
               </div>
             </div>
           </div>
@@ -59,7 +62,7 @@ export const About = ({ handleShow, handleClose }) => {
               </Link>
               <h3>Sofía Valdez</h3>
               <div className="textIcon">
-                <h4>Developer</h4>
+                <p>Developer</p>
               </div>
             </div>
           </div>
@@ -78,7 +81,7 @@ export const About = ({ handleShow, handleClose }) => {
               </Link>
               <h3>Felipe Arzuaga</h3>
               <div className="textIcon">
-                <h4>Developer</h4>
+                <p>Developer</p>
               </div>
             </div>
           </div>

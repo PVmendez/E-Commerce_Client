@@ -21,7 +21,13 @@ export default function AboutOffCanvas({ name, ...props }) {
             del proyecto final: un e-commerce, tres semanas, tres estudiantes, y
             la integración de todos los conocimientos adquiridos en el curso.
           </p>
-          <Link to="/about" className="p-verMas d-flex align-items-center">
+          <Link
+            to="/about"
+            className="p-verMas d-flex align-items-center"
+            onClick={() => {
+              handleClose();
+            }}
+          >
             Ver más <i className="fas fa-chevron-right fa-xs ps-1"></i>
           </Link>
           <p id="title2-canvas" className="title-filter mb-3 mt-0">
