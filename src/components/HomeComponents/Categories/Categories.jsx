@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 export default function Categories() {
   return (
     <div>
-      <div className="row categoriesRow">
+      <div className="row categoriesRow ">
         <p className="title-categories">colecciones</p>
         <p className="p-categories">
           descubrí nuestras colecciones en todas sus formas
         </p>
       </div>
-      <div className="container">
+      <div className="container pb-5">
         <div className="row text-center">
           <div className="col-md-6">
             <p className="title-colsCategories">clásicos</p>

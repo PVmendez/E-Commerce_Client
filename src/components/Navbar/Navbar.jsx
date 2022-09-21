@@ -91,8 +91,8 @@ export default function NavBar() {
                   )}
                   {userStore.length > 0 && (
                     <>
-                      <Nav.Link href="/pedidos" className="nav-item nav-link">
-                      <i class="fa-sharp fa-solid fa-gear"></i>{" "}
+                      <Nav.Link href="/settings" className="nav-item nav-link">
+                      <i className="fa-sharp fa-solid fa-gear"></i>{" "}
                       </Nav.Link>
 
                       <Nav.Link
