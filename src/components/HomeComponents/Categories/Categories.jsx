@@ -11,7 +11,7 @@ export default function Categories() {
           descubrí nuestras colecciones en todas sus formas
         </p>
       </div>
-      <div className="container">
+      <div className="container mb-5">
         <div className="row text-center">
           <div className="col-md-6">
             <p className="title-colsCategories">clásicos</p>
@@ -36,19 +36,19 @@ export default function Categories() {
               Descubrí nuestra selección de dulces completamente adictivos
             </p>
 
-              <div>
-                <img
-                  src="./img/Bombon_14.png"
-                  alt="bombon"
-                  className="img-categories"
-                />
-              </div>
-              <Link to="/productos" className="categories-link">
-                descubrí
-              </Link>
+            <div>
+              <img
+                src="./img/Bombon_14.png"
+                alt="bombon"
+                className="img-categories"
+              />
             </div>
+            <Link to="/productos" className="categories-link">
+              descubrí
+            </Link>
           </div>
         </div>
+      </div>
     </div>
   );
 }

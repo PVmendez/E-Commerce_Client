@@ -43,13 +43,24 @@
 .buttonForm {
   height: 45px;
   width: 100px;
-  font: normal normal normal 14px/1.4em helvetica-w01-light, helvetica-w02-light, sans-serif;;
+  font: normal normal normal 14px/1.4em helvetica-w01-light, helvetica-w02-light,
+    sans-serif;
   background-color: #fff;
-  border: 2px solid var(--brown-color)
+  border: 2px solid var(--brown-color);
 }
 
 @media (max-width: 768px) {
   .aboutRow {
+    margin-bottom: 600px;
+  }
+}
+@media (max-width: 996px) {
+  .newsRow {
+    margin-bottom: 1000px;
+  }
+}
+@media (max-width: 758px) {
+  .newsRow {
     margin-bottom: 600px;
   }
 }
