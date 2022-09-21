@@ -24,6 +24,11 @@
     margin-bottom: 300px;
   }
 }
+@media (max-width: 962px) {
+  .aboutRow {
+    margin-bottom: 900px;
+  }
+}
 
 @media (max-width: 928px) {
   .aboutRow {
