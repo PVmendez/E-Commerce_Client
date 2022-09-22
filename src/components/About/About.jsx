@@ -39,7 +39,11 @@ export const About = ({ handleShow, handleClose }) => {
             respectivos seeders y levantar la base de datos; crear vistas en el
             Front-End del cliente y conectarlas a la base de datos.
           </p>
-          <img src="/img/MVC.png" alt="mvc" style={{ width: 600 }} />
+          <img
+            src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/MVC.png"
+            alt="mvc"
+            style={{ width: 600 }}
+          />
 
           <p>
             Creamos el{" "}
@@ -78,7 +82,7 @@ export const About = ({ handleShow, handleClose }) => {
           <div className="card">
             <div className="circle">
               <div className="imgBox">
-                <img src="/img/Sofia.jpg" alt="sofia" />
+                <img src="" alt="sofia" />
               </div>
             </div>
             <div className="content">

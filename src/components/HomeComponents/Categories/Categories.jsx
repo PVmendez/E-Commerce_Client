@@ -21,7 +21,7 @@ export default function Categories() {
             </p>
             <div>
               <img
-                src="./img/Bombon_2.png"
+                src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Bombon_2.png"
                 alt="bombon"
                 className="img-categories"
               />
@@ -38,7 +38,7 @@ export default function Categories() {
 
             <div>
               <img
-                src="./img/Bombon_14.png"
+                src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Bombon_14.png"
                 alt="bombon"
                 className="img-categories"
               />

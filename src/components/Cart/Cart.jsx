@@ -113,7 +113,7 @@ export default function Cart({ handleShow }) {
                     <img
                       className="close"
                       width={"20px"}
-                      src="./img/close.png"
+                      src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/close.png"
                       alt="close"
                       onClick={() => {
                         dispatch(
@@ -127,7 +127,9 @@ export default function Cart({ handleShow }) {
                     />
                     <div className="productoPedido col-12 d-flex justify-content-around align-items-center flex-md-column justify-content-md-center col-md-3">
                       <img
-                        src={`./img/${item.product.image}`}
+                        src={
+                          process.env.BASE_URL_IMAGE + `${item.product.image}`
+                        }
                         className="imagenPedido"
                         alt=""
                       />

@@ -171,12 +171,12 @@ export default function Payment() {
             </button>
           </form>
           {pagar ? null : (
-              <MercadoPago
-                items={cartStore}
-                totalPrice={totalPrice}
-                user={user}
-              />
-            )}
+            <MercadoPago
+              items={cartStore}
+              totalPrice={totalPrice}
+              user={user}
+            />
+          )}
         </div>
         <div className="col-xxl-6 col-lg-12 colCartCheckout">
           <div className="box-cartCheckout">
@@ -192,7 +192,9 @@ export default function Payment() {
                     <div className="d-flex align-items-center">
                       <img
                         className="imagenPayment"
-                        src={`./img/${item.product.image}`}
+                        src={
+                          process.env.BASE_URL_IMAGE + `${item.product.image}`
+                        }
                         alt="imagenProducto"
                       />
                       <div>

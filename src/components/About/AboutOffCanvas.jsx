@@ -34,7 +34,11 @@ export default function AboutOffCanvas({ name, ...props }) {
             autores
           </p>
           <div className="d-flex ">
-            <img className="avatarCanvas" src="../img/Sofia.jpg" alt="avatar" />
+            <img
+              className="avatarCanvas"
+              src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Sofia.jpg"
+              alt="avatar"
+            />
             <div className="me-2 ms-2 d-flex flex-column justify-content-center ms-3">
               <div className="p-canvas mb-2">SOFÍA VALDEZ</div>
               <div>

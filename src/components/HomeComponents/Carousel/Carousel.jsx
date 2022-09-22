@@ -10,7 +10,7 @@ export default function CarouselComponent() {
           <div className="carouselImgDiv">
             <img
               className="carousel-img img-fluid d-block w-100"
-              src="./img/Carousel_1.jpg"
+              src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Carousel_1.jpg"
               alt="First slide"
             />
           </div>
@@ -19,7 +19,7 @@ export default function CarouselComponent() {
           <div className="carouselImgDiv">
             <img
               className="carousel-img img-fluid d-block w-100"
-              src="./img/Carousel_2.jpg"
+              src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Carousel_2.jpg"
               alt="Second slide"
             />
           </div>
@@ -28,7 +28,7 @@ export default function CarouselComponent() {
           <div className="carouselImgDiv filterScreen">
             <img
               className="carousel-img img-fluid d-block w-100"
-              src="./img/Carousel_3.jpg"
+              src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Carousel_3.jpg"
               alt="Third slide"
             />
           </div>
