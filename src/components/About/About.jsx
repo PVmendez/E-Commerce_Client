@@ -133,7 +133,7 @@ export const About = ({ handleShow, handleClose }) => (
           <div className="flip-card-inner">
             <div className="flip-card-front imgBox">
               <img
-                src="https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
+                src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Felipe.jpeg"
                 alt=""
               />
               <div className="content">
