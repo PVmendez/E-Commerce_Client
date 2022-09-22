@@ -133,7 +133,7 @@
   font-family: var(--font-montserrat);
 }
 .img-paralaxAbout {
-  background-image: url(`${process.env.BASE_URL_IMAGE}Carousel_2.jpg`);
+  background-image: url("https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Carousel_2.jpg");
   height: 500px;
   width: 100%;
   margin-top: 140px;
