@@ -17,25 +17,47 @@ export const About = ({ handleShow, handleClose }) => (
       ))}
 
       <div className="aboutRow row justify-content-center text-center">
-        <h1 className="title-filter">sobre este proyecto</h1>
+        <h1 className="title-filter">Sobre este proyecto</h1>
         <p className="p-about mb-5 mt-3">
-          SweetHack es el proyecto final del Coding Bootcamp de Hack Academy,
-          una institución educativa que se especializa en cursos de programación
-          ubicada en Montevideo, Uruguay. El Coding Bootcamp es un curso
-          intensivo de 3 meses de duración, full-time, con más de 600 horas de
-          práctica, el cual nos prepara como Full Stack Jr. Developers. La
+          Este proyecto es el proyecto final del Coding Bootcamp de Hack
+          Academy, una institución educativa que se especializa en cursos de
+          programación ubicada en Montevideo, Uruguay. El Coding Bootcamp es un
+          curso intensivo de 3 meses de duración, full-time, con más de 600
+          horas de práctica, el cual nos prepara como Full Stack Developers. La
           propuesta del proyecto final: un e-commerce, tres semanas, tres
           estudiantes y la integración de todos los conocimientos adquiridos en
-          el curso. Te contamos más sobre la organizacion en las siguientes
-          secciones.
+          el curso. Te contamos en las siguientes secciones más sobre nosotros y
+          sobre la organización que llevamos adelante.
         </p>
+        <h1 className="title-filter">Organización</h1>
+        <p className="p-about mb-5 mt-3">
+          Iniciamos el proyecto dedicando un día para organizar y definir los
+          objetivos del proyecto y los pasos a seguir para cumplirlos. La
+          primera etapa del proyecto consistió en: reconocer las entidades y sus
+          relaciones; crear los modelos de las entidades con sus respectivos
+          seeders y levantar la base de datos; crear vistas en el Front-End del
+          cliente y conectarlas a la base de datos.
+        </p>
+        <img src="/img/MVC.png" alt="mvc" style={{ width: 600 }} />
+
+        <p>
+          Creamos el{" "}
+          <span style={{ fontWeight: 700 }}>Modelo Vista Controlador</span> en
+          Figma, el cual nos permite reconocer las relaciones entre cada
+          entidad: Usuarios, Administradores, Órdenes, Productos y Categorías.
+        </p>
+        <p>
+          Añadimos react-redux para store del carrito. Añadimos login y registro
+          de un usuario. Añadimos JWT a autenticacion de usuario. Creamos vistas
+          para usuario administrador. Añadimos CRUD de las entidades las cuales
+          solo podian ser realizadas por un usuario con token de administrador.
+        </p>
+        <p>Arreglos de diseño y código. Deployment.</p>
+        <h1 className="title-filter">quiénes somos</h1>
         <div className="card flip-card">
           <div className="flip-card-inner">
             <div className="flip-card-front imgBox">
-              <img
-                src="/img/Sofia.jpg"
-                alt=""
-              />
+              <img src="/img/Sofia.jpg" alt="" />
               <div className="content">
                 <Link to="https://www.linkedin.com/in/sofia-valdez-silveira/">
                   <i className="fa fa-linkedin" aria-hidden="true"></i>
@@ -63,8 +85,7 @@ export const About = ({ handleShow, handleClose }) => (
                     <span className="variable">const </span>
                     <span className="function">aboutMe </span>
                     <span className="operator">=</span>
-                    <span> {"{"}
-                  </span>
+                    <span> {"{"}</span>
                     <div className="indent">
                       <span className="property">name</span>
                       <span className="operator">:</span>
@@ -86,9 +107,7 @@ export const About = ({ handleShow, handleClose }) => (
                         <div className="indent">
                           <span className="property">email</span>
                           <span className="operator">:</span>
-                          <span className="string">
-                            "svaldez@gmail.com"
-                          </span>
+                          <span className="string">"svaldez@gmail.com"</span>
                           <span>,</span>
                         </div>
                         <div className="indent">
@@ -140,8 +159,7 @@ export const About = ({ handleShow, handleClose }) => (
                     <span className="variable">const </span>
                     <span className="function">aboutMe </span>
                     <span className="operator">=</span>
-                    <span> {"{"}
-                  </span>
+                    <span> {"{"}</span>
                     <div className="indent">
                       <span className="property">name</span>
                       <span className="operator">:</span>
@@ -163,9 +181,7 @@ export const About = ({ handleShow, handleClose }) => (
                         <div className="indent">
                           <span className="property">email</span>
                           <span className="operator">:</span>
-                          <span className="string">
-                            "farzuaga@gmail.com"
-                          </span>
+                          <span className="string">"farzuaga@gmail.com"</span>
                           <span>,</span>
                         </div>
                         <div className="indent">
@@ -186,10 +202,7 @@ export const About = ({ handleShow, handleClose }) => (
         <div className="card flip-card">
           <div className="flip-card-inner">
             <div className="flip-card-front imgBox">
-              <img
-                src="/img/Pablo.jpeg"
-                alt=""
-              />
+              <img src="/img/Pablo.jpeg" alt="" />
               <div className="content">
                 <Link to="#">
                   <i className="fa fa-linkedin" aria-hidden="true"></i>
@@ -217,8 +230,7 @@ export const About = ({ handleShow, handleClose }) => (
                     <span className="variable">const </span>
                     <span className="function">aboutMe </span>
                     <span className="operator">=</span>
-                    <span> {"{"}
-                  </span>
+                    <span> {"{"}</span>
                     <div className="indent">
                       <span className="property">name</span>
                       <span className="operator">:</span>
@@ -240,9 +252,7 @@ export const About = ({ handleShow, handleClose }) => (
                         <div className="indent">
                           <span className="property">email</span>
                           <span className="operator">:</span>
-                          <span className="string">
-                            "pmendez@gmail.com"
-                          </span>
+                          <span className="string">"pmendez@gmail.com"</span>
                           <span>,</span>
                         </div>
                         <div className="indent">

@@ -36,19 +36,19 @@ export default function Categories() {
               Descubrí nuestra selección de dulces completamente adictivos
             </p>
 
-              <div>
-                <img
-                  src="./img/Bombon_14.png"
-                  alt="bombon"
-                  className="img-categories"
-                />
-              </div>
-              <Link to="/productos" className="categories-link">
-                descubrí
-              </Link>
+            <div>
+              <img
+                src="./img/Bombon_14.png"
+                alt="bombon"
+                className="img-categories"
+              />
             </div>
+            <Link to="/productos" className="categories-link">
+              descubrí
+            </Link>
           </div>
         </div>
+      </div>
     </div>
   );
 }
