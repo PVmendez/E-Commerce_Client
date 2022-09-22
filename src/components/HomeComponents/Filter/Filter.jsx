@@ -45,7 +45,9 @@ export default function Filter() {
                   <div className=" div-filter col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 d-flex justify-content-center my-3">
                     <img
                       className="img-filter"
-                      src={`img/${popularProduct.image}`}
+                      src={
+                        process.env.BASE_URL_IMAGE + `${popularProduct.image}`
+                      }
                       alt="bombon1"
                     />
                   </div>

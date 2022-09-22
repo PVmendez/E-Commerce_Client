@@ -53,7 +53,7 @@ export default function ProductDetails() {
         >
           <img
             className="img-productDetails"
-            src={`/img/${product.image}`}
+            src={process.env.BASE_URL_IMAGE + `${product.image}`}
             alt="Product"
           />
         </div>
@@ -152,7 +152,9 @@ export default function ProductDetails() {
 
                 <img
                   className="img-productRecommended mt-0"
-                  src={`/img/${recommendedProduct.image}`}
+                  src={
+                    process.env.BASE_URL_IMAGE + `${recommendedProduct.image}`
+                  }
                   alt="recommendedUser"
                 />
               </div>

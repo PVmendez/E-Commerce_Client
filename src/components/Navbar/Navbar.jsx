@@ -30,7 +30,10 @@ export default function NavBar() {
       >
         <Container className="container-navbar">
           <Navbar.Brand id="navbar-brand" href="/">
-            <img src="./img/LogoNav.PNG" alt="" />
+            <img
+              src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/LogoNav.PNG"
+              alt=""
+            />
           </Navbar.Brand>
           <Navbar.Toggle
             id="navbar-toggle"
@@ -92,7 +95,7 @@ export default function NavBar() {
                   {userStore.length > 0 && (
                     <>
                       <Nav.Link href="/settings" className="nav-item nav-link">
-                      <i className="fa-sharp fa-solid fa-gear"></i>{" "}
+                        <i className="fa-sharp fa-solid fa-gear"></i>{" "}
                       </Nav.Link>
 
                       <Nav.Link
