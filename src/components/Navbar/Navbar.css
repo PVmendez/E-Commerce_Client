@@ -51,7 +51,7 @@ a:hover {
 
 #navbar-brand {
   align-self: center;
-  
+
 }
 .navbar .dropdown-menu {
   margin-top: 0;
@@ -67,7 +67,7 @@ a:hover {
 }
 
 .svg {
-  background-image: url("/public/img/ShoppingBag.svg");
+  background-image: url("https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/ShoppingBag.svg");
 }
 @media (min-width: 992px) {
   \ .navbar-light .navbar-nav .nav-link,
