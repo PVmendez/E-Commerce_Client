@@ -15,7 +15,7 @@ export const Settings = () => {
     address: "",
     oldPassword: "",
     newPassword: "",
-    confirmPassoword: "",
+    confirmPassword: "",
   });
   const userStore = useSelector((state) => state.user[0]);
   const navigate = useNavigate();
