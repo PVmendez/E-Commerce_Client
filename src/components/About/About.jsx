@@ -61,7 +61,7 @@ export const About = ({ handleShow, handleClose }) => (
         <div className="card flip-card">
           <div className="flip-card-inner">
             <div className="flip-card-front imgBox">
-              <img src="/img/Sofia.jpg" alt="" />
+              <img src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Sofia.jpg" alt="" />
               <div className="content">
                 <Link to="https://www.linkedin.com/in/sofia-valdez-silveira/">
                   <i className="fa fa-linkedin" aria-hidden="true"></i>
@@ -206,7 +206,7 @@ export const About = ({ handleShow, handleClose }) => (
         <div className="card flip-card">
           <div className="flip-card-inner">
             <div className="flip-card-front imgBox">
-              <img src="/img/Pablo.jpeg" alt="" />
+              <img src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Pablo.jpeg" alt="" />
               <div className="content">
                 <Link to="#">
                   <i className="fa fa-linkedin" aria-hidden="true"></i>
