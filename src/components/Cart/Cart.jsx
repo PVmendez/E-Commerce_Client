@@ -146,7 +146,7 @@ export default function Cart({ handleShow }) {
                     <div className="productoPedido col-12 d-flex justify-content-around align-items-center flex-md-column justify-content-md-center col-md-3">
                       <img
                         src={
-                          process.env.BASE_URL_IMAGE + `${item.product.image}`
+                          process.env.REACT_APP_BASE_URL_IMAGE + `${item.product.image}`
                         }
                         className="imagenPedido"
                         alt=""

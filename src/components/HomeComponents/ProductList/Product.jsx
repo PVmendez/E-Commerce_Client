@@ -9,7 +9,7 @@ export const Product = ({ producto }) => {
       <div className="card-body">
         <Link to={`/productos/${producto.slug}`}>
           <img
-            src={process.env.BASE_URL_IMAGE + `${producto.image}`}
+            src={process.env.REACT_APP_BASE_URL_IMAGE + `${producto.image}`}
             className="product-image"
             alt="productImage"
           />

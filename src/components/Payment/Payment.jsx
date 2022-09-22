@@ -193,7 +193,7 @@ export default function Payment() {
                       <img
                         className="imagenPayment"
                         src={
-                          process.env.BASE_URL_IMAGE + `${item.product.image}`
+                          process.env.REACT_APP_BASE_URL_IMAGE + `${item.product.image}`
                         }
                         alt="imagenProducto"
                       />
