@@ -167,7 +167,7 @@ export default function Cart({ handleShow }) {
                               addToCart({
                                 id: item.product.id,
                                 product: item.product,
-                                quantity: 10,
+                                quantity: -10,
                               })
                             );
                           }}
