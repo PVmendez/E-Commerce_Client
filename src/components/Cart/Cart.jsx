@@ -73,7 +73,6 @@ export default function Cart({ handleShow }) {
   const verifyStock = async () => {
     console.log("noif", userStore)
     if(!userStore[0]) {
-      console.log("if")
       return navigate("/login");
     }   
       const result = await axios({
