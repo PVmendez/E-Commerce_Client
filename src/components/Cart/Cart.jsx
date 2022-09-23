@@ -114,9 +114,7 @@ export default function Cart({ handleShow }) {
               className="d-none d-md-flex titulosPedido justify-content-end"
               to="/"
             >
-              <p>
-                Seguir comprando <i class="fa-solid fa-angle-right fa-xs"></i>
-              </p>
+              Seguir comprando <i class="fa-solid fa-angle-right fa-xs"></i>
             </Link>
 
             <div className="pedido">
