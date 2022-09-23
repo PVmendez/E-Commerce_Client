@@ -11,10 +11,14 @@
   font-size: 17px;
   color: var(--brown-color);
   margin-bottom: 0;
+  width: 30px;
 }
 .sumary-cart {
   border-bottom: 1px solid var(--grey-color);
   height: 7vh;
+}
+.summaryCart {
+  min-width: 240px;
 }
 .resumenCol {
   display: flex;
@@ -33,7 +37,7 @@
 }
 .titulosPedido {
   border-bottom: 1px solid var(--grey-color);
-
+  align-items: center;
   margin-right: 50px;
   color: rgb(172, 172, 172);
   text-decoration: none;
