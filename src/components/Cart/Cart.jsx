@@ -71,10 +71,11 @@ export default function Cart({ handleShow }) {
   }, [cartStore]);
 
   const verifyStock = async () => {
+    console.log("noif", userStore[0].token)
     if(!userStore[0].token) {
+      console.log("if", userStore[0].token)
       return navigate("/login");
     }   
-    else {
       const result = await axios({
         method: "patch",
         baseURL: process.env.REACT_APP_API_BASE_URL,
@@ -90,7 +91,7 @@ export default function Cart({ handleShow }) {
       setOutOfStock(result.data.product);
       toastifyError(result.data.error);
       navigate("/pago");
-    }
+    
   };
 
   const toastifyError = (error) =>
