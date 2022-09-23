@@ -54,7 +54,7 @@ export default function AboutOffCanvas({ name, ...props }) {
           <div className="d-flex mt-4">
             <img
               className="avatarCanvas"
-              src="../img/Pablo-1.jpeg"
+              src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Pablo-1.jpeg"
               alt="avatar"
             />
             <div className="me-2 ms-2 d-flex flex-column justify-content-center ms-3">
@@ -72,7 +72,7 @@ export default function AboutOffCanvas({ name, ...props }) {
           <div className="d-flex mt-4">
             <img
               className="avatarCanvas"
-              src="https://us.123rf.com/450wm/metelsky/metelsky1809/metelsky180900220/109815466-perfil-de-avatar-de-hombre-silueta-de-rostro-masculino-o-icono-aislado-sobre-fondo-blanco-ilustraci%C3%B3.jpg?ver=6"
+              src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Felipe.jpeg"
               alt="avatar"
             />
             <div className="me-2 ms-2 d-flex flex-column justify-content-center ms-3">
