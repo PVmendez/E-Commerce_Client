@@ -157,7 +157,10 @@ export const About = ({ handleShow, handleClose }) => (
           <div className="card flip-card">
             <div className="flip-card-inner">
               <div className="flip-card-front imgBox">
-                <img src="/img/Sofia.jpg" alt="" />
+                <img
+                  src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Sofia.jpg"
+                  alt=""
+                />
                 <div className="content">
                   <h3>Sofía Valdéz</h3>
                   <div className="textIcon">
@@ -269,8 +272,8 @@ export const About = ({ handleShow, handleClose }) => (
             <div className="flip-card-inner">
               <div className="flip-card-front imgBox">
                 <img
-                  src="https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
-                  alt=""
+                  src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Felipe.jpeg"
+                  alt="Felipe"
                 />
                 <div className="content">
                   <h3>Felipe Arzuaga</h3>
@@ -382,7 +385,10 @@ export const About = ({ handleShow, handleClose }) => (
           <div className="card flip-card">
             <div className="flip-card-inner">
               <div className="flip-card-front imgBox">
-                <img src="/img/Pablo.jpeg" alt="" />
+                <img
+                  src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Pablo.jpeg"
+                  alt="Pablo"
+                />
                 <div className="content">
                   <h3>Pablo Méndez</h3>
                   <div className="textIcon">

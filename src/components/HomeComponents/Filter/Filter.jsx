@@ -46,7 +46,7 @@ export default function Filter() {
                     <img
                       className="img-filter"
                       src={
-                        process.env.BASE_URL_IMAGE + `${popularProduct.image}`
+                        process.env.REACT_APP_BASE_URL_IMAGE + `${popularProduct.image}`
                       }
                       alt="bombon1"
                     />

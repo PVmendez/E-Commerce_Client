@@ -13,6 +13,8 @@ import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import { Button } from "react-bootstrap";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Cart({ handleShow }) {
   const navigate = useNavigate();
@@ -81,10 +83,25 @@ export default function Cart({ handleShow }) {
         Authorization: `Bearer ${userStore[0].token}`,
       },
     });
-    if (result.data.error === "token invalid") navigate("/login");
-    if (result.data.error) setOutOfStock(result.data.product);
+    if (result.data.error === "token invalid") {
+      navigate("/login");
+    } else if (result.data.error) {
+      setOutOfStock(result.data.product);
+      toastifyError(result.data.error);
+    }
     navigate("/pago");
   };
+
+  const toastifyError = (error) =>
+    toast.error(error, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
 
   return (
     <>
@@ -128,7 +145,8 @@ export default function Cart({ handleShow }) {
                     <div className="productoPedido col-12 d-flex justify-content-around align-items-center flex-md-column justify-content-md-center col-md-3">
                       <img
                         src={
-                          process.env.BASE_URL_IMAGE + `${item.product.image}`
+                          process.env.REACT_APP_BASE_URL_IMAGE +
+                          `${item.product.image}`
                         }
                         className="imagenPedido"
                         alt=""
