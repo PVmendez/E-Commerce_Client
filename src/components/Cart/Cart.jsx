@@ -71,8 +71,8 @@ export default function Cart({ handleShow }) {
   }, [cartStore]);
 
   const verifyStock = async () => {
-    console.log("noif")
-    if(!(userStore[0].token)) {
+    console.log("noif", userStore[0])
+    if(!userStore[0]) {
       console.log("if")
       return navigate("/login");
     }   
