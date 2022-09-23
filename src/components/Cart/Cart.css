@@ -11,7 +11,6 @@
   font-size: 17px;
   color: var(--brown-color);
   margin-bottom: 0;
-  width: 30px;
 }
 .sumary-cart {
   border-bottom: 1px solid var(--grey-color);
@@ -102,6 +101,7 @@
 
 .button-filter-cuadrado-10 {
   height: 25px;
+  width: 40px;
   align-items: center;
   border: 1px solid #6c4a00;
   font-size: small;

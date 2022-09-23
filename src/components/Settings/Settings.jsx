@@ -7,6 +7,9 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import Swal from "sweetalert2";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Settings = () => {
   const [user, setUser] = useState({
@@ -17,10 +20,8 @@ export const Settings = () => {
     newPassword: "",
     confirmPassword: "",
   });
-  const userStore = useSelector((state) => state.user[0]);
+  const userStore = useSelector((state) => state.user);
   const navigate = useNavigate();
-  
-  console.log(userStore)
   
   useEffect(() => {
     const getCustomer = async () => {
@@ -29,15 +30,13 @@ export const Settings = () => {
         baseURL: process.env.REACT_APP_API_BASE_URL,
         url: `/customers/one`,
         headers: {
-          Authorization: `Bearer ${userStore.token}`,
+          Authorization: `Bearer ${userStore[0].token}`,
         },
-        data: "",
       });
       setUser(result.data);
-      navigate("/settings");
     };
     getCustomer();
-  }, [userStore.token, navigate]);
+  }, [userStore]);
   
   const inputHandle = (e) => {
     let { name, value } = e.target;
@@ -54,20 +53,42 @@ export const Settings = () => {
         url: `/customers/update`,
         data: user,
         headers: {
-          Authorization: `Bearer ${userStore.token}`,
+          Authorization: `Bearer ${userStore[0].token}`,
         },
       });
-      console.log(result)
+      toastifyError(result.data.error);
       navigate("/settings");
     };
     updateAdmin();
   }; 
+
+  const toastifyError = (error) =>
+    toast.error(error, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+
+    const showAlert = () => {
+      Swal.fire({
+        title: "Lo sentimos",
+        text: "Esta funcionalidad quedó fuera del alcance del proyecyo",
+        icon: "warning",
+        showCancelButton: true,
+        cancelButtonColor: "#d33",
+      })
+    };
 
   return (
     <>
       <NavBar />
       <Header />
       <section className="settings pt-5">
+        <ToastContainer />
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-lg-10 col-xl-8 mx-auto">
@@ -125,7 +146,6 @@ export const Settings = () => {
                           name="oldPassword"
                           value={user.oldPassword}
                           onChange={inputHandle}
-                          required
                         />
                       </div>
                       <div className="form-group">
@@ -137,7 +157,6 @@ export const Settings = () => {
                           name="newPassword"
                           value={user.newPassword}
                           onChange={inputHandle}
-                          required
                         />
                       </div>
                       <div className="form-group">
@@ -151,7 +170,6 @@ export const Settings = () => {
                           name="confirmPassword"
                           value={user.confirmPassword}
                           onChange={inputHandle}
-                          required
                         />
                       </div>
                     </div>
@@ -171,7 +189,7 @@ export const Settings = () => {
                       </ul>
                     </div>
                   </div>
-                  <button type="submit" className="btn btn-primary">
+                  <button type="submit" className="btn btn-primary" onClick={() => showAlert()}>
                     Cambiar
                   </button>
                 </form>

@@ -109,6 +109,13 @@ export default function NavBar() {
                       </Nav.Link>
                     </>
                   )}
+                  {userStore.length > 0 && (
+                    <>
+                      <Nav.Link href="/pedidos" className="nav-item nav-link">
+                      <i className="fa-regular fa-book"></i>{" "}
+                      </Nav.Link>
+                    </>
+                  )}
                 </div>
 
                 <div className="container-cart"></div>

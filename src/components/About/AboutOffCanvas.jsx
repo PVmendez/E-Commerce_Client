@@ -42,12 +42,12 @@ export default function AboutOffCanvas({ name, ...props }) {
             <div className="me-2 ms-2 d-flex flex-column justify-content-center ms-3">
               <div className="p-canvas mb-2">SOFÍA VALDEZ</div>
               <div>
-                <a href="https://www.linkedin.com/in/sofia-valdez-silveira/">
+                <Link to="https://www.linkedin.com/in/sofia-valdez-silveira/">
                   <i className="fa-brands fa-linkedin fa-xl me-2"></i>
-                </a>
-                <a href="https://github.com/sofivaldez">
+                </Link>
+                <Link to="https://github.com/sofivaldez">
                   <i className="fa-brands fa-github fa-xl "></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -60,12 +60,12 @@ export default function AboutOffCanvas({ name, ...props }) {
             <div className="me-2 ms-2 d-flex flex-column justify-content-center ms-3">
               <div className="p-canvas mb-2">PABLO MÉNDEZ</div>
               <div>
-                <a href="https://www.linkedin.com/in/pablomendezrey/">
+                <Link to="https://www.linkedin.com/in/pablomendezrey/">
                   <i className="fa-brands fa-linkedin fa-xl me-2"></i>
-                </a>
-                <a href="https://github.com/PVmendez">
+                </Link>
+                <Link to="https://github.com/PVmendez">
                   <i className="fa-brands fa-github fa-xl "></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -78,12 +78,12 @@ export default function AboutOffCanvas({ name, ...props }) {
             <div className="me-2 ms-2 d-flex flex-column justify-content-center ms-3">
               <div className="p-canvas mb-2">FELIPE ARZUAGA</div>
               <div>
-                <a href="https://www.linkedin.com/in/felipe-arzuaga-1b8b3b20a/">
+                <Link to="https://www.linkedin.com/in/felipe-arzuaga-1b8b3b20a/">
                   <i className="fa-brands fa-linkedin fa-xl me-2"></i>
-                </a>
-                <a to="https://github.com/F-Arzuaga">
+                </Link>
+                <Link to="https://github.com/F-Arzuaga">
                   <i className="fa-brands fa-github fa-xl "></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

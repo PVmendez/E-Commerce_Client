@@ -2,8 +2,6 @@ import News from "./HomeComponents/News/News";
 import Filter from "./HomeComponents/Filter/Filter";
 import Footer from "./Footer/Footer";
 import Navbar from "./Navbar/Navbar";
-import Carousel from "./HomeComponents/Carousel/Carousel";
-
 import { Button } from "react-bootstrap";
 import Categories from "./HomeComponents/Categories/Categories";
 import "./Home.css";

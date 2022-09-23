@@ -11,7 +11,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
-export const About = ({ handleShow, handleClose }) => (
+export const About = ({ handleShow }) => (
   <>
     <Navbar />
 
@@ -58,13 +58,13 @@ export const About = ({ handleShow, handleClose }) => (
           <h4 className="vertical-timeline-element-subtitle"></h4>
           <p>
             Iniciamos el proyecto dedicando un día para organizar, definir los
-            objetivos, y los pasos a seguir para cumplirlos. La primera etapa
+            objetivos, y los pasos Link seguir para cumplirlos. La primera etapa
             del proyecto consistió en: reconocer las entidades y sus relaciones;
             crear los modelos de las entidades con sus respectivos seeders
             utilizando <span style={{ fontWeight: 700 }}>MySQL</span> y{" "}
             <span style={{ fontWeight: 700 }}>Sequelize</span> para levantar la
             base de datos; crear vistas en el Front-End del cliente utilizando{" "}
-            <span style={{ fontWeight: 700 }}>React</span> y conectarlas a la
+            <span style={{ fontWeight: 700 }}>React</span> y conectarlas Link la
             base de datos.
           </p>
           <div className="w-100">
@@ -101,7 +101,7 @@ export const About = ({ handleShow, handleClose }) => (
           <h4 className="vertical-timeline-element-subtitle"></h4>
           <p>
             Durante la segunda etapa del proyecto, nos concentramos en darle
-            mayor funcionalidad a la aplicación. Para esto implementamos:{" "}
+            mayor funcionalidad Link la aplicación. Para esto implementamos:{" "}
             <span style={{ fontWeight: 700 }}>React Redux</span>, para guardar
             información temporal de lo que se encuentra en la lista de compra;{" "}
             <span style={{ fontWeight: 700 }}>JSON Web Token</span>, como método
@@ -110,9 +110,9 @@ export const About = ({ handleShow, handleClose }) => (
             productos, editar productos existentes, modificar el estado de los
             pedidos (pago, enviado, recibido), crear, modificar y eliminar
             usuarios administradores, todas estas funciones también requieren un
-            token válido de administrador para ejecutarse. A la página de
-            administrador y a todas sus funciones se le accede por{" "}
-            <a href="#">aquí</a>.
+            token válido de administrador para ejecutarse. Link la página de
+            administrador y Link todas sus funciones se le accede por{" "}
+            <Link to="#">aquí</Link>.
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -134,13 +134,13 @@ export const About = ({ handleShow, handleClose }) => (
           <h4 className="vertical-timeline-element-subtitle"></h4>
           <p>
             La tercera etapa fue en su mayoría utilizada en arreglos generales
-            de diseño (como enseñarle a las cartas de presentación a dar una
+            de diseño (como enseñarle Link las cartas de presentación Link dar una
             voltereta), implementación de funciones nuevas y más eficientes (que
             generaron nuevos y mejores errores), legibilidad del código (para
             ocultar mejor esos errores); y finalmente deployment, utilizando{" "}
             <span style={{ fontWeight: 700 }}>Vercel</span> y{" "}
             <span style={{ fontWeight: 700 }}>Supabase</span> lo cuál nos
-            permite a nosotros presentar esta página y a usted accederla.
+            permite Link nosotros presentar esta página y Link usted accederla.
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
@@ -257,14 +257,14 @@ export const About = ({ handleShow, handleClose }) => (
             </div>
           </div>
 
-          <a
+          <Link
             className="mt-3"
-            href="https://www.linkedin.com/in/sofia-valdez-silveira/"
+            to="https://www.linkedin.com/in/sofia-valdez-silveira/"
             target="_blank"
           >
             Contáctame:{" "}
             <i className="fa-brands fa-linkedin fa-xl" aria-hidden="true"></i>
-          </a>
+          </Link>
         </div>
         {/*---------------CARD FELIPE-----------------*/}
         <div className="col-12 col-xl-4 mb-3">
@@ -372,13 +372,13 @@ export const About = ({ handleShow, handleClose }) => (
               </div>
             </div>
           </div>
-          <a
+          <Link
             className="pt-3"
-            href="https://www.linkedin.com/in/felipe-arzuaga-1b8b3b20a/"
+            to="https://www.linkedin.com/in/felipe-arzuaga-1b8b3b20a/"
             target="_blank"
           >
             Contáctame: <i class="fa-brands fa-linkedin fa-xl"></i>
-          </a>
+          </Link>
         </div>
         {/*---------------CARD PABLO-----------------*/}
         <div className="col-12 col-xl-4 mb-3">
@@ -478,13 +478,13 @@ export const About = ({ handleShow, handleClose }) => (
               </div>
             </div>
           </div>
-          <a
+          <Link
             className="mt-3"
-            href="https://www.linkedin.com/in/pablomendezrey/"
+            to="https://www.linkedin.com/in/pablomendezrey/"
             target="_blank"
           >
             Contáctame: <i class="fa-brands fa-linkedin fa-xl"></i>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
