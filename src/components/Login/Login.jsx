@@ -71,9 +71,8 @@ export const Login = () => {
                       type="email"
                       placeholder="Email"
                       name="email"
-                      // value={user.email}
+                      value={user.email}
                       onChange={inputHandle}
-                      defaultValue={"carlos.fernandez@gmail.com"}
                       required
                     />
                   </div>
@@ -83,10 +82,9 @@ export const Login = () => {
                       type="password"
                       placeholder="Password"
                       name="password"
-                      // value={user.password}
+                      value={user.password}
                       onChange={inputHandle}
                       required
-                      defaultValue={"1234"}
                     />
                   </div>
                   <div className="text">
