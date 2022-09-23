@@ -131,7 +131,7 @@ export default function ProductDetails() {
         </div>
       </div>
 
-      <div className="container container-recommended">
+      <div className="container container-recommended footerMargin">
         <div className="row mt-5 row-recommendedProduct">
           <p id="title-recommended">Además te recomendamos...</p>
           {recommendedProducts.map((recommendedProduct, index) => (

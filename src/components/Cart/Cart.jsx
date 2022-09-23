@@ -106,17 +106,14 @@ export default function Cart({ handleShow }) {
     <>
       <Navbar />
       <Header />
-      <ToastContainer />
-      <div className="container container-Cart">
+      <div className="container container-Cart footerMargin">
         <div className="row cartRow flex-column flex-md-row">
           <div className="col-12 col-md-9 col-lg-7 productsCol">
             <Link
               className="d-none d-md-flex titulosPedido justify-content-end"
               to="/"
             >
-              <p>
-                Seguir comprando <i class="fa-solid fa-angle-right fa-xs"></i>
-              </p>
+              Seguir comprando <i class="fa-solid fa-angle-right fa-xs"></i>
             </Link>
 
             <div className="pedido">
@@ -145,7 +142,8 @@ export default function Cart({ handleShow }) {
                     <div className="productoPedido col-12 d-flex justify-content-around align-items-center flex-md-column justify-content-md-center col-md-3">
                       <img
                         src={
-                          process.env.REACT_APP_BASE_URL_IMAGE + `${item.product.image}`
+                          process.env.REACT_APP_BASE_URL_IMAGE +
+                          `${item.product.image}`
                         }
                         className="imagenPedido"
                         alt=""
@@ -168,7 +166,7 @@ export default function Cart({ handleShow }) {
                               addToCart({
                                 id: item.product.id,
                                 product: item.product,
-                                quantity: 10,
+                                quantity: -10,
                               })
                             );
                           }}

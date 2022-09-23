@@ -49,18 +49,18 @@
   border: 2px solid var(--brown-color);
 }
 
-@media (max-width: 768px) {
-  .aboutRow {
-    margin-bottom: 600px;
+@media (min-width: 992px) {
+  .footerMargin {
+    margin-bottom: 350px;
   }
 }
-@media (max-width: 996px) {
-  .newsRow {
+@media (max-width: 992px) {
+  .footerMargin {
     margin-bottom: 1000px;
   }
 }
-@media (max-width: 758px) {
-  .newsRow {
+@media (max-width: 768px) {
+  .footerMargin {
     margin-bottom: 600px;
   }
 }

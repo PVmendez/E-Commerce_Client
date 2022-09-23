@@ -15,7 +15,7 @@ export default function Home({ handleShow }) {
       <div className="img-paralax"></div>
       <Categories />
       <Filter />
-      <div className="container">
+      <div className="container footerMargin">
         <News />
       </div>
       <Footer />

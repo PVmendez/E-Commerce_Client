@@ -43,11 +43,11 @@
 }
 
 .title-filter {
-  color: var(--brown-color);
-  font-family: didot-w01-italic;
-  font-style: italic;
-  font-weight: 500;
-  font-size: 3.5em;
+  color: var(--brown-color) !important;
+  font-family: didot-w01-italic !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+  font-size: 3.5em !important;
 }
 .p-filter {
   font-weight: 500;

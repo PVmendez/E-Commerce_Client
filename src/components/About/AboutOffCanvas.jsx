@@ -42,40 +42,48 @@ export default function AboutOffCanvas({ name, ...props }) {
             <div className="me-2 ms-2 d-flex flex-column justify-content-center ms-3">
               <div className="p-canvas mb-2">SOFÍA VALDEZ</div>
               <div>
-                <Link to="https://www.linkedin.com/in/sofia-valdez-silveira/">
+                <a href="https://www.linkedin.com/in/sofia-valdez-silveira/">
                   <i className="fa-brands fa-linkedin fa-xl me-2"></i>
-                </Link>
-                <Link to="https://github.com/sofivaldez">
+                </a>
+                <a href="https://github.com/sofivaldez">
                   <i className="fa-brands fa-github fa-xl "></i>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
           <div className="d-flex mt-4">
-            <img className="avatarCanvas" src="../img/Pablo-1.jpeg" alt="avatar"/>
+            <img
+              className="avatarCanvas"
+              src="../img/Pablo-1.jpeg"
+              alt="avatar"
+            />
             <div className="me-2 ms-2 d-flex flex-column justify-content-center ms-3">
               <div className="p-canvas mb-2">PABLO MÉNDEZ</div>
               <div>
-                <Link to="https://www.linkedin.com/in/pablomendezrey/">
+                <a href="https://www.linkedin.com/in/pablomendezrey/">
                   <i className="fa-brands fa-linkedin fa-xl me-2"></i>
-                </Link>
-                <Link to="#">
+                </a>
+                <a href="https://github.com/PVmendez">
                   <i className="fa-brands fa-github fa-xl "></i>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
           <div className="d-flex mt-4">
-            <img className="avatarCanvas" src="https://us.123rf.com/450wm/metelsky/metelsky1809/metelsky180900220/109815466-perfil-de-avatar-de-hombre-silueta-de-rostro-masculino-o-icono-aislado-sobre-fondo-blanco-ilustraci%C3%B3.jpg?ver=6" alt="avatar" />
+            <img
+              className="avatarCanvas"
+              src="https://us.123rf.com/450wm/metelsky/metelsky1809/metelsky180900220/109815466-perfil-de-avatar-de-hombre-silueta-de-rostro-masculino-o-icono-aislado-sobre-fondo-blanco-ilustraci%C3%B3.jpg?ver=6"
+              alt="avatar"
+            />
             <div className="me-2 ms-2 d-flex flex-column justify-content-center ms-3">
               <div className="p-canvas mb-2">FELIPE ARZUAGA</div>
               <div>
-                <Link to="#">
+                <a href="https://www.linkedin.com/in/felipe-arzuaga-1b8b3b20a/">
                   <i className="fa-brands fa-linkedin fa-xl me-2"></i>
-                </Link>
-                <Link to="#">
+                </a>
+                <a to="https://github.com/F-Arzuaga">
                   <i className="fa-brands fa-github fa-xl "></i>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
