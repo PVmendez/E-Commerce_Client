@@ -35,7 +35,7 @@ export const ProductList = ({ handleShow }) => {
     <>
       <Navbar />
       <Header />
-      <section className="page-section">
+      <section className="page-section footerMargin">
         <div className="container">
           <div className="row">
             <div className="col-lg-3 blog-form">

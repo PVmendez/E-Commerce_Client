@@ -2,7 +2,7 @@ import "./Services.css";
 
 export const Services = () => {
   return (
-    <div className="services">
+    <div className="services footerMargin">
       <p className="title-filter">tecnologías</p>
       <div className="cen">
         <div className="service">
@@ -19,17 +19,17 @@ export const Services = () => {
 
         <div className="service">
           <i className="fa-solid fa-database"></i>
-          <h2>SQL</h2>
+          <h2>SQL & Sequelize</h2>
         </div>
         <div className="service">
-          <i className="fa-solid fa-database"></i>
-          <h2>SQL</h2>
+          <i className="fa-brands fa-node-js"></i>
+          <h2>Node.js</h2>
         </div>
         <div className="service">
           <svg
             width="40"
             height="40"
-            className="mb-1"
+            className="mb-4"
             viewBox="0 0 256 244"
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid"
@@ -40,6 +40,42 @@ export const Services = () => {
             />
           </svg>
           <h2>redux</h2>
+        </div>
+        <div className="service">
+          <i className="fa-brands fa-bootstrap"></i>
+          <h2>Bootstrap</h2>
+        </div>
+        <div className="service">
+          <i className="fa-brands fa-npm"></i>
+          <h2>NPM</h2>
+        </div>
+        <div className="service">
+          <svg
+            className="mb-4"
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.0"
+            width="35px"
+            height="35px"
+            viewBox="0 0 1280.000000 1130.000000"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <g
+              transform="translate(0.000000,1130.000000) scale(0.100000,-0.100000)"
+              fill="#8a7357"
+              stroke="none"
+            >
+              <path d="M6223 11238 c-13 -6 -36 -32 -52 -57 -16 -25 -510 -878 -1099 -1896 -1218 -2107 -2695 -4661 -4078 -7050 -766 -1325 -949 -1648 -952 -1681 -3 -35 1 -47 26 -75 l30 -34 6172 0 6172 0 29 33 c52 58 46 78 -104 337 -74 127 -492 849 -929 1605 -2253 3896 -5066 8758 -5078 8776 -29 47 -90 65 -137 42z" />
+            </g>
+          </svg>
+          <h2>Vercel</h2>
+        </div>
+        <div className="service">
+          <i className="fa-solid fa-bolt"></i>
+          <h2>SUPABASE</h2>
+        </div>
+        <div className="service">
+          <i className="fa-brands fa-github"></i>
+          <h2>GITHUB</h2>
         </div>
       </div>
     </div>

@@ -40,7 +40,7 @@ export default function OrderList({ handleShow }) {
     <>
       <Navbar />
       <Header />
-      <div className="container mt-5">
+      <div className="container mt-5 footerMargin">
         <div className="row">
           <Accordion defaultActiveKey="0" id="acordionRow">
             {cartStore.length > 0 && (
