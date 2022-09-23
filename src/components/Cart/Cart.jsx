@@ -107,6 +107,7 @@ export default function Cart({ handleShow }) {
       <Navbar />
       <Header />
       <div className="container container-Cart footerMargin">
+        <ToastContainer />
         <div className="row cartRow flex-column flex-md-row">
           <div className="col-12 col-md-9 col-lg-7 productsCol">
             <Link
