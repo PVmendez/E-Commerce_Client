@@ -74,21 +74,23 @@ export default function Cart({ handleShow }) {
     if(!userStore[0].token) {
       return navigate("/login");
     }   
-    const result = await axios({
-      method: "patch",
-      baseURL: process.env.REACT_APP_API_BASE_URL,
-      url: `/products`,
-      data: {
-        products: { productsId },
-        amount: { productsAmount },
-      },
-      headers: {
-        Authorization: `Bearer ${userStore[0].token}`,
-      },
-    });
-    setOutOfStock(result.data.product);
-    toastifyError(result.data.error);
-    navigate("/pago");
+    else {
+      const result = await axios({
+        method: "patch",
+        baseURL: process.env.REACT_APP_API_BASE_URL,
+        url: `/products`,
+        data: {
+          products: { productsId },
+          amount: { productsAmount },
+        },
+        headers: {
+          Authorization: `Bearer ${userStore[0].token}`,
+        },
+      });
+      setOutOfStock(result.data.product);
+      toastifyError(result.data.error);
+      navigate("/pago");
+    }
   };
 
   const toastifyError = (error) =>
