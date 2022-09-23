@@ -44,7 +44,10 @@ export const Login = () => {
               <span className="text-1">
                 Ingresa y descubre toda clase <br /> de nuevas combinaciones
               </span>
-              <span className="text-2">Entra, compra y disfruta!!!</span>
+              <br />
+              <span className="text-2">Usuario invitado: </span>
+              <span className="text-2">Email: carlos.fernandez@gmail.com</span>
+              <span className="text-2">Contraseña: 1234</span>
             </div>
           </div>
           <div className="back">
@@ -68,8 +71,9 @@ export const Login = () => {
                       type="email"
                       placeholder="Email"
                       name="email"
-                      value={user.email}
+                      // value={user.email}
                       onChange={inputHandle}
+                      defaultValue={"carlos.fernandez@gmail.com"}
                       required
                     />
                   </div>
@@ -79,9 +83,10 @@ export const Login = () => {
                       type="password"
                       placeholder="Password"
                       name="password"
-                      value={user.password}
+                      // value={user.password}
                       onChange={inputHandle}
                       required
+                      defaultValue={"1234"}
                     />
                   </div>
                   <div className="text">
