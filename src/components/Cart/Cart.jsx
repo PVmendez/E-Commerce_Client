@@ -71,6 +71,9 @@ export default function Cart({ handleShow }) {
   }, [cartStore]);
 
   const verifyStock = async () => {
+    if(!userStore[0].token) {
+      return navigate("/login");
+    }   
     const result = await axios({
       method: "patch",
       baseURL: process.env.REACT_APP_API_BASE_URL,
@@ -83,12 +86,8 @@ export default function Cart({ handleShow }) {
         Authorization: `Bearer ${userStore[0].token}`,
       },
     });
-    if (result.data.error === "token invalid") {
-      navigate("/login");
-    } else if (result.data.error) {
-      setOutOfStock(result.data.product);
-      toastifyError(result.data.error);
-    }
+    setOutOfStock(result.data.product);
+    toastifyError(result.data.error);
     navigate("/pago");
   };
 
