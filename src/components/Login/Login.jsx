@@ -73,7 +73,7 @@ export const Login = () => {
                       name="email"
                       // value={user.email}
                       onChange={inputHandle}
-                      defaultValue={"carlos.fernandez@gmail.com"}
+                      value={"carlos.fernandez@gmail.com"}
                       required
                     />
                   </div>
@@ -86,7 +86,7 @@ export const Login = () => {
                       // value={user.password}
                       onChange={inputHandle}
                       required
-                      defaultValue={"1234"}
+                      value={"1234"}
                     />
                   </div>
                   <div className="text">
