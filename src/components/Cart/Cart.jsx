@@ -284,6 +284,7 @@ export default function Cart({ handleShow }) {
               <button
                 className="button-cart px-3 py-2"
                 onClick={() => {
+                  console.log("entra")
                   verifyStock();
                 }}
               >
