@@ -71,25 +71,27 @@ export default function Cart({ handleShow }) {
   }, [cartStore]);
 
   const verifyStock = async () => {
-    const result = await axios({
-      method: "patch",
-      baseURL: process.env.REACT_APP_API_BASE_URL,
-      url: `/products`,
-      data: {
-        products: { productsId },
-        amount: { productsAmount },
-      },
-      headers: {
-        Authorization: `Bearer ${userStore[0].token}`,
-      },
-    });
-    if (result.data.error === "token invalid") {
-      navigate("/login");
-    } else if (result.data.error) {
+    console.log("noif", userStore[0].token)
+    if(!userStore[0].token) {
+      console.log("if", userStore[0].token)
+      return navigate("/login");
+    }   
+      const result = await axios({
+        method: "patch",
+        baseURL: process.env.REACT_APP_API_BASE_URL,
+        url: `/products`,
+        data: {
+          products: { productsId },
+          amount: { productsAmount },
+        },
+        headers: {
+          Authorization: `Bearer ${userStore[0].token}`,
+        },
+      });
       setOutOfStock(result.data.product);
       toastifyError(result.data.error);
-    }
-    navigate("/pago");
+      navigate("/pago");
+    
   };
 
   const toastifyError = (error) =>
@@ -108,6 +110,7 @@ export default function Cart({ handleShow }) {
       <Navbar />
       <Header />
       <div className="container container-Cart footerMargin">
+        <ToastContainer />
         <div className="row cartRow flex-column flex-md-row">
           <div className="col-12 col-md-9 col-lg-7 productsCol">
             <Link
@@ -281,6 +284,7 @@ export default function Cart({ handleShow }) {
               <button
                 className="button-cart px-3 py-2"
                 onClick={() => {
+                  console.log("entra")
                   verifyStock();
                 }}
               >
