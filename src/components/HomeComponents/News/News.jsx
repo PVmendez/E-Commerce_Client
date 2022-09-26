@@ -40,49 +40,50 @@ export default function News() {
     <>
       <div className="col-8 d-flex justify-content-center flex-column align-items-center newsRow mt-5">
         <span className="title-news">no te pierdas nuestras novedades</span>
-        <form onSubmit={(e) => handleSubmit(e)}>
-          <div className="row mt-5">
-            <div className="col p-0">
-              <input
-                type="text"
-                name="nombre"
-                className="input inputName has-custom-focus"
-                value={user.name}
-                onChange={(e) => inputHandle(e)}
-                placeholder="Nombre"
-                aria-required="false"
-                maxlength="100"
-                aria-label="Nombre"
-                aria-invalid="true"
-              />
+        <div className="container">
+          <form onSubmit={(e) => handleSubmit(e)}>
+            <div className="row mt-5 m-2 justify-content-center">
+              <div className="col-md-5 col-sm-10 p-0">
+                <input
+                  type="text"
+                  name="nombre"
+                  className="input inputName has-custom-focus"
+                  value={user.name}
+                  onChange={(e) => inputHandle(e)}
+                  placeholder="Nombre"
+                  aria-required="false"
+                  aria-label="Nombre"
+                  aria-invalid="true"
+                />
+              </div>
+              <div className="col-md-5 col-sm-10 p-0">
+                <input
+                  type="email"
+                  name="email"
+                  className="input inputEmail has-custom-focus"
+                  value={user.email}
+                  onChange={(e) => inputHandle(e)}
+                  placeholder="Email"
+                  required
+                  aria-required="true"
+                  pattern="^.+@.+\.[a-zA-Z]{2,63}$"
+                  maxLength="250"
+                  aria-label="Email"
+                  aria-invalid="false"
+                />
+              </div>
+              <div className="col-md-2 col-sm-10 p-0">
+                <button
+                  aria-disabled="false"
+                  data-testid="buttonElement"
+                  className="buttonForm"
+                >
+                  <span className="span">ENVIAR</span>
+                </button>
+              </div>
             </div>
-            <div className="col p-0">
-              <input
-                type="email"
-                name="email"
-                class="input inputEmail has-custom-focus"
-                value={user.email}
-                onChange={(e) => inputHandle(e)}
-                placeholder="Email"
-                required
-                aria-required="true"
-                pattern="^.+@.+\.[a-zA-Z]{2,63}$"
-                maxlength="250"
-                aria-label="Email"
-                aria-invalid="false"
-              />
-            </div>
-            <div className="col">
-              <button
-                aria-disabled="false"
-                data-testid="buttonElement"
-                className="buttonForm"
-              >
-                <span className="span">ENVIAR</span>
-              </button>
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
 
       <br />

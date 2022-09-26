@@ -35,7 +35,7 @@ export const About = ({ handleShow }) => (
       </div>
     </div>
     <div className="d-flex justify-content-center">
-      <p className="title-filter">Organización</p>
+      <p className="title-filter mt-5">Organización</p>
     </div>
     <div className="container">
       <VerticalTimeline layout="1-column-left" lineColor="black">
@@ -69,10 +69,9 @@ export const About = ({ handleShow }) => (
           </p>
           <div className="w-100">
             <img
-              className="d-block mt-3"
-              src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/MVC.png"
+              className="diagram-img d-block mt-3"
+              src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/MVC-Diagrama.png"
               alt="mvc"
-              style={{ width: 600 }}
             />
           </div>
           <p>
@@ -134,11 +133,11 @@ export const About = ({ handleShow }) => (
           <h4 className="vertical-timeline-element-subtitle"></h4>
           <p>
             La tercera etapa fue en su mayoría utilizada en arreglos generales
-            de diseño (como enseñarle Link las cartas de presentación Link dar una
-            voltereta), implementación de funciones nuevas y más eficientes (que
-            generaron nuevos y mejores errores), legibilidad del código (para
-            ocultar mejor esos errores); y finalmente deployment, utilizando{" "}
-            <span style={{ fontWeight: 700 }}>Vercel</span> y{" "}
+            de diseño (como enseñarle Link las cartas de presentación Link dar
+            una voltereta), implementación de funciones nuevas y más eficientes
+            (que generaron nuevos y mejores errores), legibilidad del código
+            (para ocultar mejor esos errores); y finalmente deployment,
+            utilizando <span style={{ fontWeight: 700 }}>Vercel</span> y{" "}
             <span style={{ fontWeight: 700 }}>Supabase</span> lo cuál nos
             permite Link nosotros presentar esta página y Link usted accederla.
           </p>
@@ -151,9 +150,9 @@ export const About = ({ handleShow }) => (
       ))}
 
       <div className="aboutRow row justify-content-center text-center">
-        <h1 className="title-filter">quiénes somos</h1>
+        <h1 className="title-filter mb-5">Quiénes somos</h1>
         {/*---------------CARD SOFIA-----------------*/}
-        <div className="col-12 col-xl-4 mb-3">
+        <div className="col-12 col-xl-4 mb-3 mt">
           <div className="card flip-card">
             <div className="flip-card-inner">
               <div className="flip-card-front imgBox">
@@ -437,7 +436,9 @@ export const About = ({ handleShow }) => (
                           <div className="indent">
                             <span className="property">email</span>
                             <span className="operator">:</span>
-                            <span className="string">"pmendez@gmail.com"</span>
+                            <span className="string string-mail">
+                              "valentino.mendez.rey@gmail.com"
+                            </span>
                             <span>,</span>
                           </div>
                           <div className="indent">
@@ -456,21 +457,53 @@ export const About = ({ handleShow }) => (
                             {" "}
                             {"["}
                             <div className="indent">
-                              <span className="string">""</span>
+                              <span className="string">"solve riddles"</span>
                               <span>,</span>
                             </div>
                             <div className="indent">
-                              <span className="string">""</span>
+                              <span className="string">"software development"</span>
                               <span>,</span>
                             </div>
                             <div className="indent">
-                              <span className="string">""</span>
+                              <span className="string">"sports"</span>
                               <span>,</span>
                             </div>
                           </span>
                           <span> {"]"}</span>
                         </div>
+                      </div>
+                      <div className="first-line mb-3">
                         <span> {"}"}</span>
+                      </div>
+                      <span className="first-line">
+                        <span className="variable">const </span>
+                        <span className="function">Linkedin </span>
+                        <span className="operator">{"="}</span>
+                        <span className="variable">{" ()"}</span>
+                        <span className="operator">{" =>"}</span>
+                        <Link
+                          className="mt-3 mx-2"
+                          to="https://www.linkedin.com/in/pablomendezrey/"
+                          target="_blank"
+                        >
+                          <i className="fa-brands fa-linkedin fa-xl icon"></i>
+                        </Link>
+                      </span>
+                      <div className="mt-2">
+                        <span className="first-line">
+                          <span className="variable">const </span>
+                          <span className="function">Github </span>
+                          <span className="operator">{"="}</span>
+                          <span className="variable">{" ()"}</span>
+                          <span className="operator">{" =>"}</span>
+                          <Link
+                            className="mt-3 mx-2"
+                            to="https://github.com/PVmendez"
+                            target="_blank"
+                          >
+                            <i class="fa-brands fa-github fa-xl icon-git"></i>
+                          </Link>
+                        </span>
                       </div>
                     </span>
                   </code>
@@ -478,13 +511,6 @@ export const About = ({ handleShow }) => (
               </div>
             </div>
           </div>
-          <Link
-            className="mt-3"
-            to="https://www.linkedin.com/in/pablomendezrey/"
-            target="_blank"
-          >
-            Contáctame: <i class="fa-brands fa-linkedin fa-xl"></i>
-          </Link>
         </div>
       </div>
     </div>

@@ -49,3 +49,19 @@
     width: 100%;
   }
 }
+
+.footerMarginServices {
+  margin-bottom: 350px;
+}
+
+@media (max-width: 992px) {
+  .footerMargin {
+    margin-bottom: 1000px;
+  }
+}
+
+@media (max-width: 205px) {
+  .footerMargin {
+    margin-bottom: 650px;
+  }
+}

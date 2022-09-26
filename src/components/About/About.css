@@ -256,6 +256,9 @@ code {
 .string {
   color: orange;
 }
+.string-mail {
+  font-size: 12px;
+}
 .variable {
   color: violet;
 }
@@ -264,4 +267,22 @@ code {
 }
 .function {
   color: yellow;
+}
+.icon:hover {
+  color: rgb(36, 106, 255);
+}
+.icon-git:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .diagram-img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerMargin {
+    margin-bottom: 600px;
+  }
 }

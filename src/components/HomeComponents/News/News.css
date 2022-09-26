@@ -33,11 +33,11 @@
 }
 
 .inputName {
-  width: 200px;
+  width: 100%;
 }
 
 .inputEmail {
-  width: 300px;
+  width: 100%;
 }
 
 .buttonForm {
@@ -49,18 +49,14 @@
   border: 2px solid var(--brown-color);
 }
 
-@media (min-width: 992px) {
-  .footerMargin {
-    margin-bottom: 350px;
-  }
-}
 @media (max-width: 992px) {
   .footerMargin {
-    margin-bottom: 1000px;
+    margin-bottom: 650px;
   }
 }
+
 @media (max-width: 768px) {
   .footerMargin {
-    margin-bottom: 600px;
+    margin-bottom: 300px;
   }
 }

@@ -2,8 +2,8 @@ import "./Services.css";
 
 export const Services = () => {
   return (
-    <div className="services footerMargin">
-      <p className="title-filter">tecnologías</p>
+    <div className="services footerMarginServices mt-5">
+      <p className="title-filter">Tecnologías</p>
       <div className="cen">
         <div className="service">
           <i className="fa-brands fa-react"></i>
