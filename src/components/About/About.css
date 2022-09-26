@@ -65,15 +65,18 @@
   margin-bottom: 2px;
 }
 .content .textIcon {
-  justify-content: space-between;
-  align-items: center;
-}
-.content .textIcon p {
   color: rgba(108, 73, 0, 0.8);
-  font-weight: 600;
+  align-items: center;
   text-transform: uppercase;
   font-family: var(--font-montserrat);
   letter-spacing: 1px;
+  font-weight: 600;
+}
+.content .textIcon p {
+  margin: 0;
+}
+.content .textIcon .flipText {
+  font-size: 12px;
 }
 .content .textIcon .fa-arrow-right {
   color: rgba(108, 73, 0, 0.8);
@@ -163,7 +166,7 @@
   font-size:x-large;
   background-color: #fff;
     border: 5px solid;
-    
+
 }
 
 @media (max-width: 1200px) {

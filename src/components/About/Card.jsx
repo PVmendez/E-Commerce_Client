@@ -20,12 +20,14 @@ export const Card = (props) => (
 
             <div className="content">
               <h3>
-                {props.name}
+                {props.name}{" "}
                 {props.lastname}
               </h3>
               <div className="textIcon">
-                <p>Full Stack Developer Jr.</p>
+                <p className="titleText">Full Stack Developer Jr.</p>
+                <p className="flipText">Dame la vuelta y conoceme más <i className="fa-solid fa-repeat"></i></p>
               </div>
+              
             </div>
           </div>
           <div className="flip-card-back">
@@ -117,8 +119,8 @@ export const Card = (props) => (
                     <span className="operator">{" =>"}</span>
                     <Link
                       className="mt-3 mx-2"
-                      to={`https://www.linkedin.com/in/${props.linkedin}/`}
-                      target="_blank"
+                      to={`//www.linkedin.com/in/${props.linkedin}/`}
+                      target="_blank" 
                     >
                       <i className="fa-brands fa-linkedin fa-xl icon"></i>
                     </Link>
@@ -133,7 +135,7 @@ export const Card = (props) => (
                         <span className="operator">{" =>"}</span>
                         <Link
                           className="mt-3 mx-2"
-                          to={`https://github.com/${props.github}`}
+                          to={`//github.com/${props.github}`}
                           target="_blank"
                         >
                           <i class="fa-brands fa-github fa-xl icon-git"></i>
