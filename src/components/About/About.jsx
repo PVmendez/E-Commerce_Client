@@ -10,6 +10,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { Card } from "./Card";
 
 export const About = ({ handleShow }) => (
   <>
@@ -17,25 +18,28 @@ export const About = ({ handleShow }) => (
 
     <div className="about-header">
       <div className="img-paralaxAbout"></div>
-      <div className="container aboutHeaderText">
-        <h1 className="title-filter" id="about-title">
-          Sobre este proyecto
-        </h1>
-        <p className="p-about mb-5 mt-3 fw-bold" id="about-p">
-          Este proyecto es el proyecto final del Coding Bootcamp de Hack
-          Academy, una institución educativa que se especializa en cursos de
-          programación ubicada en Montevideo, Uruguay. El Coding Bootcamp es un
-          curso intensivo de 3 meses de duración, full-time, con más de 600
-          horas de práctica, el cual nos prepara como Full Stack Developers. La
-          propuesta del proyecto final: un e-commerce, tres semanas, tres
-          estudiantes y la integración de todos los conocimientos adquiridos en
-          el curso. Te contamos en las siguientes secciones más sobre nosotros y
-          sobre las etapas de creación de este proyecto.
-        </p>
+      <div className="container aboutHeaderText p-5">
+        <div className="row justify-content-center">
+          <div className="col-12">
+            <h1 className="title-filter text-center" id="about-title">
+              ¿Como surgió FG Chocolates?
+            </h1>
+          </div>
+          <div className="col-12">
+            <p className="p-about mt-3 fw-bold " id="about-p">
+              Este es el trabajo final del Coding Bootcamp de Hack Academy, una
+              institución educativa que se especializa en cursos de programación
+              ubicada en Montevideo, Uruguay. El Coding Bootcamp es un curso
+              intensivo de 3 meses de duración, full-time, con más de 600 horas
+              de práctica, el cual nos prepara como Full Stack Developers. La
+              propuesta del proyecto final: un e-commerce, tres semanas, tres
+              estudiantes y la integración de todos los conocimientos adquiridos
+              en el curso. Te contamos en las siguientes secciones más sobre
+              nosotros y sobre las etapas de creación de este proyecto.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div className="d-flex justify-content-center">
-      <p className="title-filter mt-5">Organización</p>
     </div>
     <div className="container">
       <VerticalTimeline layout="1-column-left" lineColor="black">
@@ -55,31 +59,35 @@ export const About = ({ handleShow }) => (
           }
         >
           <h3 className="vertical-timeline-element-title">Semana 1</h3>
-          <h4 className="vertical-timeline-element-subtitle"></h4>
           <p>
             Iniciamos el proyecto dedicando un día para organizar, definir los
-            objetivos, y los pasos Link seguir para cumplirlos. La primera etapa
-            del proyecto consistió en: reconocer las entidades y sus relaciones;
-            crear los modelos de las entidades con sus respectivos seeders
-            utilizando <span style={{ fontWeight: 700 }}>MySQL</span> y{" "}
+            objetivos, y los pasos a seguir para cumplirlos. Reconocimos las
+            entidades y sus relaciones, creamos sus modelos con sus respectivos
+            seeders utilizando <span style={{ fontWeight: 700 }}>MySQL</span> y{" "}
             <span style={{ fontWeight: 700 }}>Sequelize</span> para levantar la
-            base de datos; crear vistas en el Front-End del cliente utilizando{" "}
-            <span style={{ fontWeight: 700 }}>React</span> y conectarlas Link la
-            base de datos.
+            base de datos, luego creamos las vistas en el Front-End del cliente
+            utilizando <span style={{ fontWeight: 700 }}>React</span> y las
+            conectamos al servicio DB.
           </p>
-          <div className="w-100">
-            <img
-              className="diagram-img d-block mt-3"
-              src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/MVC-Diagrama.png"
-              alt="mvc"
-            />
+          <div className="w-100 row align-items-center">
+            <div className="col">
+              <p>
+                Creamos el{" "}
+                <span style={{ fontWeight: 700 }}>
+                  Modelo Vista Controlador
+                </span>{" "}
+                en Figma, para definir las relaciones entre entidades (Usuarios,
+                Administradores, Pedidos, Productos y Categorías).
+              </p>
+            </div>
+            <div className="col-12">
+              <img
+                className="diagrama-img d-block mt-4"
+                src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/MVC-Diagrama.png"
+                alt="mvc"
+              />
+            </div>
           </div>
-          <p>
-            Creamos el{" "}
-            <span style={{ fontWeight: 700 }}>Modelo Vista Controlador</span> en
-            Figma, el cual nos permite reconocer las relaciones entre cada
-            entidad: Usuarios, Administradores, Pedidos, Productos y Categorías.
-          </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -97,21 +105,24 @@ export const About = ({ handleShow }) => (
           }
         >
           <h3 className="vertical-timeline-element-title">Semana 2</h3>
-          <h4 className="vertical-timeline-element-subtitle"></h4>
           <p>
-            Durante la segunda etapa del proyecto, nos concentramos en darle
-            mayor funcionalidad Link la aplicación. Para esto implementamos:{" "}
-            <span style={{ fontWeight: 700 }}>React Redux</span>, para guardar
-            información temporal de lo que se encuentra en la lista de compra;{" "}
-            <span style={{ fontWeight: 700 }}>JSON Web Token</span>, como método
-            de autenticación de usuarios al iniciar sesión y al confirmar un
-            pedido; funciones de administrador, los cuales pueden: crear nuevos
-            productos, editar productos existentes, modificar el estado de los
-            pedidos (pago, enviado, recibido), crear, modificar y eliminar
-            usuarios administradores, todas estas funciones también requieren un
-            token válido de administrador para ejecutarse. Link la página de
-            administrador y Link todas sus funciones se le accede por{" "}
-            <Link to="#">aquí</Link>.
+            Esta segunda etapa, nos concentramos en las funcionalidades. Para
+            esto usamos: <span style={{ fontWeight: 700 }}>React Redux </span>y
+            <span style={{ fontWeight: 700 }}> JSON Web Token </span>
+            Para guardar información temporal de lo que se encuentra en la lista
+            de compras y tener métodos de autenticación de usuarios. Además
+            implementamos funciones de administrador:
+            <ul>
+              <li>Crear y Editar productos</li>
+              <li>
+                Modificar el estado de los pedidos (pago, enviado, recibido)
+              </li>
+              <li>Crear, modificar y eliminar administradores</li>
+            </ul>
+            Todas estas funciones también requieren un token válido de
+            administrador para ejecutarse. A la página de administrador y a
+            todas sus funciones puedes acceder{" "}
+            <Link to="https://hackshop-admin-khaki.vercel.app/">aquí</Link>.
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -130,394 +141,63 @@ export const About = ({ handleShow }) => (
           }
         >
           <h3 className="vertical-timeline-element-title">Semana 3</h3>
-          <h4 className="vertical-timeline-element-subtitle"></h4>
           <p>
-            La tercera etapa fue en su mayoría utilizada en arreglos generales
-            de diseño (como enseñarle Link las cartas de presentación Link dar
-            una voltereta), implementación de funciones nuevas y más eficientes
-            (que generaron nuevos y mejores errores), legibilidad del código
-            (para ocultar mejor esos errores); y finalmente deployment,
-            utilizando <span style={{ fontWeight: 700 }}>Vercel</span> y{" "}
+            La tercera etapa fue dedicada a arreglos de diseño (como enseñarle a
+            las cartas de presentación a dar una voltereta), implementación de
+            funciones nuevas y más eficientes (que generaron nuevos y mejores
+            errores), legibilidad del código y finalmente deployment, utilizando{" "}
+            <span style={{ fontWeight: 700 }}>Vercel</span> y{" "}
             <span style={{ fontWeight: 700 }}>Supabase</span> lo cuál nos
-            permite Link nosotros presentar esta página y Link usted accederla.
+            permite presentar y compartir esta página.
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
     </div>
-    <div className="container our-team">
-      {["start", "end", "top", "bottom"].map((placement, idx) => (
-        <AboutOffCanvas key={idx} placement={placement} name={placement} />
-      ))}
+    <div className="sections">
+      <div className=" our-team">
+        {["start", "end", "top", "bottom"].map((placement, idx) => (
+          <AboutOffCanvas key={idx} placement={placement} name={placement} />
+        ))}
 
-      <div className="aboutRow row justify-content-center text-center">
-        <h1 className="title-filter mb-5">Quiénes somos</h1>
-        {/*---------------CARD SOFIA-----------------*/}
-        <div className="col-12 col-xl-4 mb-3 mt">
-          <div className="card flip-card">
-            <div className="flip-card-inner">
-              <div className="flip-card-front imgBox">
-                <img
-                  src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Sofia.jpg"
-                  alt=""
-                />
-                <div className="content">
-                  <h3>Sofía Valdéz</h3>
-                  <div className="textIcon">
-                    <p>Full Stack Developer Jr.</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="code-body">
-                  <div className="line-numbers d-none">
-                    <div id="1">1</div>
-                    <div id="2">2</div>
-                    <div id="3">3</div>
-                    <div id="4">4</div>
-                    <div id="5">5</div>
-                    <div id="6">6</div>
-                    <div id="7">7</div>
-                    <div id="8">8</div>
-                  </div>
-                  <code>
-                    <span className="first-line">
-                      <span className="variable">const </span>
-                      <span className="function">aboutMe </span>
-                      <span className="operator">=</span>
-                      <span> {"{"}</span>
-                      <div className="indent">
-                        <span className="property">name</span>
-                        <span className="operator">:</span>
-                        <span className="string">"Sofía Valdéz"</span>
-                        <span>,</span>
-                      </div>
-                      <div className="indent">
-                        <span className="property">title</span>
-                        <span className="operator">:</span>
-                        <span className="string">
-                          "Jr. Full Stack Developer"
-                        </span>
-                        <span>,</span>
-                      </div>
-                      <div className="indent">
-                        <span className="property">contact</span>
-                        <span className="operator">:</span>
-                        <span>
-                          {" "}
-                          {"{"}
-                          <div className="indent">
-                            <span className="property">email</span>
-                            <span className="operator">:</span>
-                            <span className="string">
-                              "valdezsofia7@gmail.com"
-                            </span>
-                            <span>,</span>
-                          </div>
-                          <div className="indent">
-                            <span className="property">phone</span>
-                            <span className="operator">:</span>
-                            <span className="string"> 091456333</span>
-                            <span>,</span>
-                          </div>
-                        </span>
-                        <span> {"}"}</span>
-                        <span>,</span>
-                      </div>
-                      <div className="indent">
-                        <span className="property">likes</span>
-                        <span className="operator">:</span>
-                        <span>
-                          {" "}
-                          {"["}
-                          <div className="indent">
-                            <span className="string">"Rollerblading"</span>
-                            <span>,</span>
-                          </div>
-                          <div className="indent">
-                            <span className="string">
-                              "Dulce de leche with almonds ice-cream"
-                            </span>
-                            <span>,</span>
-                          </div>
-                          <div className="indent">
-                            <span className="string">
-                              "Art galleries and camping"
-                            </span>
-                            <span>,</span>
-                          </div>
-                        </span>
-                        <span> {"]"}</span>
-                      </div>
-                      <span> {"}"}</span>
-                    </span>
-                  </code>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <Link
-            className="mt-3"
-            to="https://www.linkedin.com/in/sofia-valdez-silveira/"
-            target="_blank"
-          >
-            Contáctame:{" "}
-            <i className="fa-brands fa-linkedin fa-xl" aria-hidden="true"></i>
-          </Link>
-        </div>
-        {/*---------------CARD FELIPE-----------------*/}
-        <div className="col-12 col-xl-4 mb-3">
-          <div className="card flip-card">
-            <div className="flip-card-inner">
-              <div className="flip-card-front imgBox">
-                <img
-                  src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Felipe.jpeg"
-                  alt="Felipe"
-                />
-                <div className="content">
-                  <h3>Felipe Arzuaga</h3>
-                  <div className="textIcon">
-                    <p>Full Stack Developer Jr.</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="code-body">
-                  <div className="line-numbers d-none">
-                    <div id="1">1</div>
-                    <div id="2">2</div>
-                    <div id="3">3</div>
-                    <div id="4">4</div>
-                    <div id="5">5</div>
-                    <div id="6">6</div>
-                    <div id="7">7</div>
-                    <div id="8">8</div>
-                    <div id="9">9</div>
-                    <div id="10">10</div>
-                    <div id="11">11</div>
-                    <div id="12">12</div>
-                  </div>
-                  <code>
-                    <span className="first-line">
-                      <span className="variable">const </span>
-                      <span className="function">aboutMe </span>
-                      <span className="operator">=</span>
-                      <span> {"{"}</span>
-                      <div className="indent">
-                        <span className="property">name</span>
-                        <span className="operator">:</span>
-                        <span className="string">"Felipe Arzuaga"</span>
-                        <span>,</span>
-                      </div>
-                      <div className="indent">
-                        <span className="property">title</span>
-                        <span className="operator">:</span>
-                        <span className="string">
-                          "Jr. Full Stack Developer"
-                        </span>
-                        <span>,</span>
-                      </div>
-                      <div className="indent">
-                        <span className="property">contact</span>
-                        <span className="operator">:</span>
-                        <span>
-                          {" "}
-                          {"{"}
-                          <div className="indent">
-                            <span className="property">email</span>
-                            <span className="operator">:</span>
-                            <span className="string">
-                              "felipearax.2012@gmail.com"
-                            </span>
-                            <span>,</span>
-                          </div>
-                          <div className="indent">
-                            <span className="property">phone</span>
-                            <span className="operator">:</span>
-                            <span className="string">098123194</span>
-                            <span>,</span>
-                          </div>
-                        </span>
-                        <span> {"}"}</span>
-                        <span>,</span>
-                      </div>
-                      <div className="indent">
-                        <span className="property">likes</span>
-                        <span className="operator">:</span>
-                        <span>
-                          {" "}
-                          {"["}
-                          <div className="indent">
-                            <span className="string">"Excercise"</span>
-                            <span>,</span>
-                          </div>
-                          <div className="indent">
-                            <span className="string">
-                              "Tabletop role-playing games"
-                            </span>
-                            <span>,</span>
-                          </div>
-                          <div className="indent">
-                            <span className="string">"Coding"</span>
-                            <span>,</span>
-                          </div>
-                        </span>
-                        <span> {"]"}</span>
-                      </div>
-                      <span> {"}"}</span>
-                    </span>
-                  </code>
-                </div>
-              </div>
-            </div>
-          </div>
-          <Link
-            className="pt-3"
-            to="https://www.linkedin.com/in/felipe-arzuaga-1b8b3b20a/"
-            target="_blank"
-          >
-            Contáctame: <i class="fa-brands fa-linkedin fa-xl"></i>
-          </Link>
-        </div>
-        {/*---------------CARD PABLO-----------------*/}
-        <div className="col-12 col-xl-4 mb-3">
-          <div className="card flip-card">
-            <div className="flip-card-inner">
-              <div className="flip-card-front imgBox">
-                <img
-                  src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Pablo.jpeg"
-                  alt="Pablo"
-                />
-                <div className="content">
-                  <h3>Pablo Méndez</h3>
-                  <div className="textIcon">
-                    <p>Full Stack Developer Jr.</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flip-card-back">
-                <div className="code-body">
-                  <div className="line-numbers d-none">
-                    <div id="1">1</div>
-                    <div id="2">2</div>
-                    <div id="3">3</div>
-                    <div id="4">4</div>
-                    <div id="5">5</div>
-                    <div id="6">6</div>
-                    <div id="7">7</div>
-                    <div id="8">8</div>
-                  </div>
-                  <code>
-                    <span className="first-line">
-                      <span className="variable">const </span>
-                      <span className="function">aboutMe </span>
-                      <span className="operator">=</span>
-                      <span> {"{"}</span>
-                      <div className="indent">
-                        <span className="property">name</span>
-                        <span className="operator">:</span>
-                        <span className="string">"Pablo Méndez"</span>
-                        <span>,</span>
-                      </div>
-                      <div className="indent">
-                        <span className="property">title</span>
-                        <span className="operator">:</span>
-                        <span className="string">
-                          "Jr. Full Stack Developer"
-                        </span>
-                        <span>,</span>
-                      </div>
-                      <div className="indent">
-                        <span className="property">contact</span>
-                        <span className="operator">:</span>
-                        <span>
-                          {" "}
-                          {"{"}
-                          <div className="indent">
-                            <span className="property">email</span>
-                            <span className="operator">:</span>
-                            <span className="string string-mail">
-                              "valentino.mendez.rey@gmail.com"
-                            </span>
-                            <span>,</span>
-                          </div>
-                          <div className="indent">
-                            <span className="property">phone</span>
-                            <span className="operator">:</span>
-                            <span className="string"> 093415493</span>
-                            <span>,</span>
-                          </div>
-                        </span>
-                        <span> {"}"}</span>
-                        <span>,</span>
-                        <div className="indent">
-                          <span className="property">likes</span>
-                          <span className="operator">:</span>
-                          <span>
-                            {" "}
-                            {"["}
-                            <div className="indent">
-                              <span className="string">"solve riddles"</span>
-                              <span>,</span>
-                            </div>
-                            <div className="indent">
-                              <span className="string">"software development"</span>
-                              <span>,</span>
-                            </div>
-                            <div className="indent">
-                              <span className="string">"sports"</span>
-                              <span>,</span>
-                            </div>
-                          </span>
-                          <span> {"]"}</span>
-                        </div>
-                      </div>
-                      <div className="first-line mb-3">
-                        <span> {"}"}</span>
-                      </div>
-                      <span className="first-line">
-                        <span className="variable">const </span>
-                        <span className="function">Linkedin </span>
-                        <span className="operator">{"="}</span>
-                        <span className="variable">{" ()"}</span>
-                        <span className="operator">{" =>"}</span>
-                        <Link
-                          className="mt-3 mx-2"
-                          to="https://www.linkedin.com/in/pablomendezrey/"
-                          target="_blank"
-                        >
-                          <i className="fa-brands fa-linkedin fa-xl icon"></i>
-                        </Link>
-                      </span>
-                      <div className="mt-2">
-                        <span className="first-line">
-                          <span className="variable">const </span>
-                          <span className="function">Github </span>
-                          <span className="operator">{"="}</span>
-                          <span className="variable">{" ()"}</span>
-                          <span className="operator">{" =>"}</span>
-                          <Link
-                            className="mt-3 mx-2"
-                            to="https://github.com/PVmendez"
-                            target="_blank"
-                          >
-                            <i class="fa-brands fa-github fa-xl icon-git"></i>
-                          </Link>
-                        </span>
-                      </div>
-                    </span>
-                  </code>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="aboutRow row justify-content-center text-center">
+          <h1 className="title-filter mb-5">Quiénes somos</h1>
+          <Card
+            image="Sofia"
+            name="Sofía"
+            lastname="Valdéz"
+            email="valdezsofia7@gmail.com"
+            phone="091456333"
+            linkedin="sofia-valdez-silveira"
+            github="sofivaldez"
+            likes={["Rollerblading", "Dulce de leche with almonds ice-cream", "Art galleries and camping"]}
+          />
+          <Card
+            image="Felipe"
+            name="Felipe"
+            lastname="Arzuaga"
+            email="felipearax.2012@gmail.com"
+            phone="098123194"
+            linkedin="felipe-arzuaga-1b8b3b20a"
+            github=""
+            likes={["Excercise", "Tabletop role-playing games", "Coding"]}
+          />
+          <Card
+            image="Pablo"
+            name="Pablo"
+            lastname="Méndez"
+            email="valentino.mendez.rey@gmail.com"
+            phone="093415493"
+            linkedin="pablomendezrey"
+            github="PVmendez"
+            likes={["Solve riddles", "Software development", "Sports"]}
+          />
         </div>
       </div>
+      <Link to="/about" className="btn-flotante" onClick={handleShow}>
+        SOBRE ESTE PROYECTO
+      </Link>
+      <Services />
     </div>
-    <Link to="/about" className="btn-flotante" onClick={handleShow}>
-      SOBRE ESTE PROYECTO
-    </Link>
-    <Services />
     <Footer />
   </>
 );

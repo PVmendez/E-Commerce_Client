@@ -2,6 +2,7 @@
 
 .services {
   text-align: center;
+  background-color: #fff
 }
 
 .cen {
@@ -21,6 +22,7 @@
 }
 .service:hover {
   background: #ddd;
+  border: 1px solid;
 }
 .service i {
   color: rgba(108, 73, 0, 0.8);
@@ -51,7 +53,7 @@
 }
 
 .footerMarginServices {
-  margin-bottom: 350px;
+  margin-bottom: 300px;
 }
 
 @media (max-width: 992px) {
