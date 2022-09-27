@@ -21,7 +21,7 @@ export const About = ({ handleShow }) => (
       <div className="container aboutHeaderText p-5">
         <div className="row justify-content-center">
           <div className="col-12">
-            <h1 className="title-filter text-center" id="about-title">
+            <h1 className="title-filter1 text-center" id="about-title">
               ¿Como surgió FG Chocolates?
             </h1>
           </div>

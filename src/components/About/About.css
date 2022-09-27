@@ -165,7 +165,7 @@
   height: 100%;
   font-size:x-large;
   background-color: #fff;
-    border: 5px solid;
+  border: 5px solid;
 
 }
 
@@ -178,6 +178,27 @@
 @media (max-width: 992px) {
   .diagrama-img {
     width: 95%;
+  }
+}
+
+@media (max-width: 580px) {
+  .aboutHeaderText {
+    font-size: large;
+  }
+}
+
+.title-filter1 {
+  color: #8a7357 !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+}
+
+@media (max-width: 400px) {
+  .title-filter1 {
+    font-size: 40px;
+    color: #8a7357 !important;
+    font-style: italic !important;
+    font-weight: 500 !important;
   }
 }
 
