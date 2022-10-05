@@ -42,30 +42,36 @@ export default function AboutOffCanvas({ name, ...props }) {
             <div className="me-2 ms-2 d-flex flex-column justify-content-center ms-3">
               <div className="p-canvas mb-2">SOFÍA VALDEZ</div>
               <div>
-                <Link to="https://www.linkedin.com/in/sofia-valdez-silveira/">
+                <a
+                  target={"_blank"}
+                  href="https://www.linkedin.com/in/sofia-valdez-silveira/"
+                >
                   <i className="fa-brands fa-linkedin fa-xl me-2"></i>
-                </Link>
-                <Link to="https://github.com/sofivaldez">
+                </a>
+                <a target={"_blank"} href="https://github.com/sofivaldez">
                   <i className="fa-brands fa-github fa-xl "></i>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
           <div className="d-flex mt-4">
             <img
               className="avatarCanvas"
-              src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Pablo-1.jpeg"
+              src="https://taklnamocbdbysfkbsho.supabase.co/storage/v1/object/public/psfe-commerce/Pablo.jpeg"
               alt="avatar"
             />
             <div className="me-2 ms-2 d-flex flex-column justify-content-center ms-3">
               <div className="p-canvas mb-2">PABLO MÉNDEZ</div>
               <div>
-                <Link to="https://www.linkedin.com/in/pablomendezrey/">
+                <a
+                  target={"_blank"}
+                  href="https://www.linkedin.com/in/pablomendezrey/"
+                >
                   <i className="fa-brands fa-linkedin fa-xl me-2"></i>
-                </Link>
-                <Link to="https://github.com/PVmendez">
+                </a>
+                <a href="https://github.com/PVmendez" target={"_blank"}>
                   <i className="fa-brands fa-github fa-xl "></i>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -78,12 +84,15 @@ export default function AboutOffCanvas({ name, ...props }) {
             <div className="me-2 ms-2 d-flex flex-column justify-content-center ms-3">
               <div className="p-canvas mb-2">FELIPE ARZUAGA</div>
               <div>
-                <Link to="https://www.linkedin.com/in/felipe-arzuaga-1b8b3b20a/">
+                <a
+                  href="https://www.linkedin.com/in/felipe-arzuaga-1b8b3b20a/"
+                  target={"_blank"}
+                >
                   <i className="fa-brands fa-linkedin fa-xl me-2"></i>
-                </Link>
-                <Link to="https://github.com/F-Arzuaga">
+                </a>
+                <a href="https://github.com/F-Arzuaga" target={"_blank"}>
                   <i className="fa-brands fa-github fa-xl "></i>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
