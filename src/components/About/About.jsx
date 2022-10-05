@@ -122,7 +122,13 @@ export const About = ({ handleShow }) => (
             Todas estas funciones también requieren un token válido de
             administrador para ejecutarse. A la página de administrador y a
             todas sus funciones puedes acceder{" "}
-            <Link to="https://hackshop-admin-khaki.vercel.app/">aquí</Link>.
+            <a
+              target={"_blank"}
+              href="https://hackshop-admin-khaki.vercel.app/"
+            >
+              aquí
+            </a>
+            .
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -169,7 +175,11 @@ export const About = ({ handleShow }) => (
             phone="091456333"
             linkedin="sofia-valdez-silveira"
             github="sofivaldez"
-            likes={["Rollerblading", "Dulce de leche with almonds ice-cream", "Art galleries and camping"]}
+            likes={[
+              "Rollerblading",
+              "Dulce de leche with almonds ice-cream",
+              "Art galleries and camping",
+            ]}
           />
           <Card
             image="Felipe"
